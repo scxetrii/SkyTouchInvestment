@@ -57,13 +57,6 @@ const values = [
   { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-green-500 to-emerald-500' },
 ]
 
-const awards = [
-  { label: 'CARE Rated', desc: 'Bank facilities rated for financial strength', icon: Award },
-  { label: 'ISO 9001:2015', desc: 'Quality management systems certified', icon: CheckCircle },
-  { label: 'Nepal Finance Award', desc: 'Best Investment Advisory 2022', icon: Award },
-  { label: 'Top Employer Nepal', desc: 'Great Place to Work certified 2023', icon: Users },
-]
-
 export default function About() {
   return (
     <div className="pt-16 sm:pt-24">
@@ -338,40 +331,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* AWARDS & RECOGNITION */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
-          <ScrollReveal className="text-center mb-16">
-            <span className="section-label text-center">RECOGNITION</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-              Awards &{' '}
-              <span className="gold-accent">Accreditations</span>
-            </h2>
-            <p className="text-on-surface-variant/70 max-w-2xl mx-auto">
-              Our commitment to excellence has been recognized by leading industry bodies and institutions.
-            </p>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {awards.map((a, i) => (
-              <ScrollReveal key={a.label} delay={i * 0.1}>
-                <div className="group relative rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-8 text-center hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                  <div className="relative z-10">
-                    <div className="w-16 h-16 mx-auto mb-5 rounded-2xl bg-gradient-to-br from-primary/20 to-tertiary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <a.icon size={30} className="text-primary" />
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{a.label}</h3>
-                    <p className="text-xs text-slate-500 leading-relaxed">{a.desc}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* INVESTMENT APPROACH */}
+       {/* INVESTMENT APPROACH */}
       <section className="py-16 sm:py-24 bg-primary/5">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="relative overflow-hidden bg-black text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
