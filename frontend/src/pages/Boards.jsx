@@ -101,60 +101,76 @@ export default function Boards() {
         </section>
 
         <section className="relative mx-auto pb-24 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#060e1a] via-[#0a1628] to-[#0d1a30]" />
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-orange-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-sky-400/8 rounded-full blur-[100px]" />
+          {/* PREMIUM BLACK-GOLD CHAIRMAN BACKGROUND */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#080c14] via-[#0b1120] to-[#111827]" />
+          {/* Subtle gold mesh grid */}
+          <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(245,158,11,0.6) 1px, transparent 1px), radial-gradient(circle at 70% 70%, rgba(245,158,11,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+          {/* Gold ambient glow — top-left */}
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-400/10 via-amber-500/5 to-transparent rounded-full blur-[130px]" />
+          {/* Deep blue-purple ambient — bottom-right */}
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-primary/10 via-secondary/6 to-transparent rounded-full blur-[120px]" />
+          {/* Center spotlight behind chairman — radial gold glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-amber-400/8 via-amber-500/4 to-transparent rounded-full blur-[150px] opacity-60" />
+          {/* Subtle noise/grain overlay for premium texture */}
+          <div className="absolute inset-0 opacity-[0.018]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.5\'/%3E%3C/svg%3E")' }} />
+          {/* Thin gold border frame around section */}
+          <div className="absolute inset-0 border border-white/5 pointer-events-none" />
+
           <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
               <div className="lg:col-span-2 relative">
                 <div className="relative flex flex-col items-center">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-full blur-3xl opacity-60" />
-                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(255,255,255,0.06),0_24px_80px_rgba(15,23,42,0.2)] group">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/5 to-transparent pointer-events-none z-10" />
+                  {/* Outer premium glow ring around chairman image */}
+                  <div className="absolute -inset-6 bg-gradient-to-br from-amber-400/8 via-white/5 to-transparent rounded-full blur-3xl opacity-40" />
+                  <div className="absolute -inset-3 bg-gradient-to-tr from-amber-400/6 to-transparent rounded-full blur-2xl opacity-30" />
+                  <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_60px_rgba(245,158,11,0.12),0_24px_80px_rgba(15,23,42,0.3)] group">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-b from-amber-400/6 via-white/5 to-transparent pointer-events-none z-10" />
                     <img
                       src={chairman.image}
                       alt={chairman.name}
                       loading="eager"
                       className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-700 ease-out"
                     />
-                    <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/5 pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none z-10" />
+                    {/* Premium gold ring */}
+                    <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/10 pointer-events-none" />
+                    {/* Bottom gradient fade */}
+                    <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10" />
+                    {/* Social buttons — gold-tinted */}
                     <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-3 opacity-100 translate-y-0 z-20">
                       {chairman.facebookUrl ? (
-                        <a href={chairman.facebookUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white shadow-lg transition-all duration-300 hover:scale-110">
+                        <a href={chairman.facebookUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-[#1877F2] hover:bg-amber-400/20 hover:text-amber-300 shadow-lg transition-all duration-300 hover:scale-110 border border-white/10">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                           </svg>
                         </a>
                       ) : (
-                        <span className="h-10 w-10 rounded-full bg-white/50 flex items-center justify-center text-slate-300 cursor-not-allowed">
+                        <span className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-slate-500 cursor-not-allowed border border-white/5">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                           </svg>
                         </span>
                       )}
                       {chairman.instagramUrl ? (
-                        <a href={chairman.instagramUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#E4405F] hover:bg-gradient-to-br hover:from-[#feda75] hover:via-[#d62976] hover:to-[#4f5bd5] hover:text-white shadow-lg transition-all duration-300 hover:scale-110">
+                        <a href={chairman.instagramUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-[#E4405F] hover:bg-gradient-to-br hover:from-amber-300 hover:via-rose-400 hover:to-amber-500 hover:text-white shadow-lg transition-all duration-300 hover:scale-110 border border-white/10">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                           </svg>
                         </a>
                       ) : (
-                        <span className="h-10 w-10 rounded-full bg-white/50 flex items-center justify-center text-slate-300 cursor-not-allowed">
+                        <span className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-slate-500 cursor-not-allowed border border-white/5">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                           </svg>
                         </span>
                       )}
                       {chairman.linkedinUrl ? (
-                        <a href={chairman.linkedinUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white shadow-lg transition-all duration-300 hover:scale-110">
+                        <a href={chairman.linkedinUrl} target="_blank" rel="noopener noreferrer" className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-[#0A66C2] hover:bg-amber-400/20 hover:text-amber-300 shadow-lg transition-all duration-300 hover:scale-110 border border-white/10">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                           </svg>
                         </a>
                       ) : (
-                        <span className="h-10 w-10 rounded-full bg-white/50 flex items-center justify-center text-slate-300 cursor-not-allowed">
+                        <span className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center text-slate-500 cursor-not-allowed border border-white/5">
                           <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                           </svg>
@@ -168,26 +184,27 @@ export default function Boards() {
               <div className="lg:col-span-3">
                 <motion.div variants={staggerWrap} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="lg:mt-28">
                   <motion.div variants={fadeUp} className="inline-flex items-center gap-3 mb-4">
-                    <Quote size={20} className="text-orange-400/40" />
-                    <span className="text-xs tracking-[0.25em] font-bold text-orange-400 uppercase bg-white/5 px-4 py-1.5 rounded-full border border-white/10">Chairman's Profile</span>
-                    <Quote size={20} className="text-orange-400/40 rotate-180" />
+                    <Quote size={20} className="text-amber-400/50" />
+                    <span className="text-xs tracking-[0.25em] font-bold text-amber-300/80 uppercase bg-amber-400/5 px-4 py-1.5 rounded-full border border-amber-400/15">Chairman's Profile</span>
+                    <Quote size={20} className="text-amber-400/50 rotate-180" />
                   </motion.div>
 
                   <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
                     {chairman.name}
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 text-orange-400">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-amber-400/20 to-amber-500/10 text-amber-400 border border-amber-400/20 shadow-lg">
                       <Award size={18} />
                     </span>
                   </motion.h2>
-                  <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.25em] text-orange-400 font-semibold mb-6">
+                  <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold mb-6">
                     {chairman.role}
                   </motion.p>
 
-                   <motion.p variants={fadeUp} className="text-white leading-relaxed mb-8 text-base">
+                   <motion.p variants={fadeUp} className="text-white/85 leading-relaxed mb-8 text-base">
                      {chairman.bio}
                    </motion.p>
 
-                   <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-10">
+                   {/* Premium stats card — dark glass with gold accent */}
+                   <div className="bg-gradient-to-br from-white/[0.04] to-white/[0.02] rounded-2xl border border-white/10 backdrop-blur-md p-6 mb-10 shadow-lg">
                      <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4">
                      {[
                        { number: '30+', label: 'Years Experience' },
@@ -197,11 +214,11 @@ export default function Boards() {
                      ].map((stat, i) => (
                        <div
                          key={stat.label}
-                         className="relative bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-all duration-300"
+                         className="relative bg-gradient-to-br from-white/5 to-white/0 rounded-2xl p-5 border border-white/5 text-center shadow-sm hover:shadow-md hover:border-white/10 transition-all duration-300"
                        >
                          <div className="relative z-10">
-                           <p className="text-2xl font-bold text-slate-900">{stat.number}</p>
-                           <p className="text-[10px] uppercase tracking-[0.15em] text-slate-500 mt-2 font-semibold">{stat.label}</p>
+                           <p className="text-2xl font-bold text-white">{stat.number}</p>
+                           <p className="text-[10px] uppercase tracking-[0.15em] text-white/40 mt-2 font-semibold">{stat.label}</p>
                          </div>
                        </div>
                      ))}
@@ -211,7 +228,7 @@ export default function Boards() {
                     {chairman.expertise.map((skill, i) => (
                       <span
                         key={skill}
-                        className="px-4 py-2 text-xs font-semibold rounded-full bg-white/5 text-white/60 border border-white/10 hover:bg-white/10 hover:text-white/80 hover:border-white/20 transition-all duration-300 cursor-default"
+                        className="px-4 py-2 text-xs font-semibold rounded-full bg-gradient-to-r from-amber-400/8 to-white/5 text-amber-300/70 border border-amber-400/10 hover:from-amber-400/12 hover:via-amber-400/10 hover:to-white/5 hover:text-amber-300 hover:border-amber-400/20 transition-all duration-300 cursor-default"
                       >
                         {skill}
                       </span>
