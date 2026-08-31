@@ -583,17 +583,17 @@ export default function About() {
                { icon: Globe, title: 'Global Perspective', desc: 'Local expertise combined with international investment standards, regulatory frameworks, and cross-border capabilities.', stat: '15+', statLabel: 'Years Track Record' },
              ].map((feature, i) => (
                <ScrollReveal key={feature.title} delay={i * 0.1}>
-                 <div className="group relative h-full rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-8 backdrop-blur-xl hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(14,165,233,0.15)]">
-                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                 <div className="group relative h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
+                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                    <div className="relative z-10 flex flex-col h-full">
-                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                        <feature.icon size={24} className="text-primary" />
                      </div>
-                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                     <p className="text-sm text-white/50 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
-                     <div className="pt-6 border-t border-white/10">
+                     <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
+                     <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
+                     <div className="pt-6 border-t border-slate-100">
                        <p className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-primary bg-clip-text text-transparent">{feature.stat}</p>
-                       <p className="text-xs text-white/40 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
+                       <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
                      </div>
                    </div>
                  </div>
