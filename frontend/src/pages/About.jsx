@@ -43,9 +43,7 @@ const milestones = [
   { year: '2009', title: 'Establishment & Vision', desc: 'Founded in Kathmandu with a mandate to bridge strategic capital with high-potential enterprises across Nepal.' },
   { year: '2012', title: 'Inaugural Institutional Fund', desc: 'Launched our first institutional fund focused on infrastructure and renewable energy, marking our transition from advisory to active capital deployment.' },
   { year: '2015', title: 'CARE Accreditation', desc: 'Received CARE rating for bank facilities, strengthening stakeholder confidence and expanding access to institutional-grade financial partnerships.' },
-  { year: '2018', title: 'NPR 2B Portfolio Milestone', desc: 'Crossed NPR 2 billion AUM across five high-growth sectors including hydropower, real estate, financial services, and healthcare.' },
-  { year: '2021', title: 'Digital & Operational Modernization', desc: 'Implemented portfolio tracking systems, enhanced client dashboards, and cybersecurity frameworks to improve decision-making and transparency.' },
-  { year: '2026', title: 'Industry Leadership & Growth', desc: 'Surpassed NPR 5 billion AUM with 50+ professionals across 10+ sectors, recognized as a leading independent investment firm in Nepal.' },
+   { year: '2021', title: 'Digital & Operational Modernization', desc: 'Implemented portfolio tracking systems, enhanced client dashboards, and cybersecurity frameworks to improve decision-making and transparency.' },
 ]
 
 
@@ -113,10 +111,6 @@ export default function About() {
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
                       <p className="text-3xl font-bold text-primary"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Sectors</p>
-                    </div>
-                    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-white">5B+</p>
-                      <p className="text-xs text-white/40 mt-1">NPR AUM</p>
                     </div>
                   </div>
                 </div>
@@ -315,10 +309,6 @@ export default function About() {
                 <div>
                   <p className="text-3xl font-bold text-primary"><AnimatedCounter target={10} suffix="+" /></p>
                   <p className="text-xs text-on-surface-variant/60 mt-2">Sectors Invested</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary">NPR 5B+</p>
-                  <p className="text-xs text-on-surface-variant/60 mt-2">Portfolio Value</p>
                 </div>
               </div>
             </ScrollReveal>
