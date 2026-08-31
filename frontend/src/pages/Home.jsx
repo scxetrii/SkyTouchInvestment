@@ -13,9 +13,11 @@ import { Briefcase, Landmark, Users, Award, MessageCircle, BarChart3, Map, Scale
 const InvestmentSectorCard = lazy(() => import('../components/ui/investment-sector-card').then(m => ({ default: m.InvestmentSectorCard || m.default })))
 
 const testimonials = [
-  { quote: 'SkyTouch has been more than an investor; they have been true partners in our growth journey. When we needed capital to expand our multi-specialty hospital, they not only provided funding but brought governance expertise and strategic guidance.', name: 'Dr. James Mitchell', designation: 'Healthcare', src: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop&crop=face' },
-  { quote: 'SkyTouch demonstrated deep understanding of our sector from day one. Their patient capital and strategic guidance helped us navigate regulatory complexities and scale our hydropower operations across multiple provinces.', name: 'Michael Torres', designation: 'Energy', src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face' },
-  { quote: 'In my 25 years in business, I have worked with various financial partners, but SkyTouch stands apart in their professionalism and long-term orientation. They brought governance best practices and strategic discipline that transformed our portfolio.', name: 'Robert Williams', designation: 'Real Estate', src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face' },
+  { quote: 'SkyTouch didn\'t just fund our hospital expansion, they became true strategic partners. Their governance expertise and patient capital transformed our entire healthcare delivery model across Nepal.', name: 'Dr. Ananda Sharma', designation: 'CEO, Himalayan Healthcare Group', icon: 'Healthcare' },
+  { quote: 'Their deep understanding of the energy sector and long-term investment horizon helped us scale hydropower operations across multiple provinces with confidence.', name: 'Rajendra Basnet', designation: 'Director, Karnali Hydropower Pvt. Ltd.', icon: 'Energy' },
+  { quote: 'After working with numerous financial partners over two decades, SkyTouch stands apart. They brought governance best practices and strategic discipline that transformed our portfolio.', name: 'Suresh Thapa', designation: 'Chairman, Everest Real Estate', icon: 'Real Estate' },
+  { quote: 'SkyTouch\'s IT consulting transformed our digital infrastructure. Their full-stack expertise and performance optimization delivered a scalable platform serving millions of users.', name: 'Maya Gurung', designation: 'CTO, NepalTech Solutions', icon: 'Information Technology' },
+  { quote: 'Their patient capital and strategic guidance helped us navigate complex regulatory frameworks while expanding our private equity portfolio across diverse sectors.', name: 'Deepak Rai', designation: 'Managing Partner, Alpine Capital Advisors', icon: 'Private Equity' },
 ]
 
 export default function Home() {

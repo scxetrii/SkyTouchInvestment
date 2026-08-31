@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, MessageCircle } from 'lucide-react'
 
 const testimonials = [
   {
@@ -65,7 +65,7 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
               <AnimatePresence>
                 {testimonials.map((testimonial, index) => (
                   <motion.div
-                    key={testimonial.src}
+                    key={index}
                     initial={{ opacity: 0, scale: 0.9, y: 50, rotate: randomRotate() }}
                     animate={{
                       opacity: isActive(index) ? 1 : 0.5,
@@ -79,18 +79,9 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                     className="absolute inset-0 origin-bottom"
                     style={{ perspective: '1000px' }}
                   >
-                    <img
-                      src={testimonial.src}
-                      alt={testimonial.name}
-                      width={500}
-                      height={500}
-                      draggable={false}
-                      className="h-full w-full rounded-3xl object-cover shadow-2xl ring-1 ring-white/10"
-                      onError={(e) => {
-                        e.currentTarget.src = `https://placehold.co/500x500/1a0f0a/f97316?text=${testimonial.name.charAt(0)}`
-                        e.currentTarget.onerror = null
-                      }}
-                    />
+                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 flex items-center justify-center shadow-2xl ring-1 ring-white/10">
+                      <MessageCircle className="w-24 h-24 text-orange-400/40" />
+                    </div>
                   </motion.div>
                 ))}
               </AnimatePresence>
