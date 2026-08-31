@@ -66,21 +66,22 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                 {testimonials.map((testimonial, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9, y: 50, rotate: randomRotate() }}
+                     initial={{ opacity: 0, scale: 0.9, y: 50, rotate: randomRotate(), filter: 'blur(6px)' }}
                     animate={{
                       opacity: isActive(index) ? 1 : 0.5,
                       scale: isActive(index) ? 1 : 0.9,
                       y: isActive(index) ? 0 : 20,
                       zIndex: isActive(index) ? testimonials.length : testimonials.length - Math.abs(index - active),
                       rotate: isActive(index) ? '0deg' : randomRotate(),
+                      filter: isActive(index) ? 'blur(0px)' : 'blur(6px)',
                     }}
                     exit={{ opacity: 0, scale: 0.9, y: -50 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                     className="absolute inset-0 origin-bottom"
                     style={{ perspective: '1000px' }}
                   >
-                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-orange-500/10 to-orange-600/5 flex items-center justify-center shadow-2xl ring-1 ring-white/10">
-                      <MessageCircle className="w-24 h-24 text-orange-400/40" />
+                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-orange-500/15 via-orange-600/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
+                      <MessageCircle className="w-32 h-32 text-orange-400/30" />
                     </div>
                   </motion.div>
                 ))}
