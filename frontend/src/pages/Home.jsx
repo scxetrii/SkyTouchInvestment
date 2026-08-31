@@ -8,7 +8,7 @@ import { lazy, Suspense, useEffect, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Typewriter } from '../components/ui/typewriter-text'
 import { AnimatedTestimonials } from '../components/ui/testimonial'
-import { Briefcase, Landmark, Users, Award, MessageCircle, BarChart3, Map, Scale, TrendingUp, LineChart, Battery, Home, Laptop, Plane, Heart, Seedling } from 'lucide-react'
+import { Briefcase, Landmark, Users, Award, MessageCircle, BarChart3, Map, Scale, TrendingUp, LineChart, Battery, House, Laptop, Plane, Heart, Sprout } from 'lucide-react'
 
 const InvestmentSectorCard = lazy(() => import('../components/ui/investment-sector-card').then(m => ({ default: m.InvestmentSectorCard || m.default })))
 
@@ -29,11 +29,11 @@ export default function Home() {
     { icon: Briefcase, label: 'Private Equity', color: 'text-primary' },
     { icon: Battery, label: 'Energy', color: 'text-secondary' },
     { icon: TrendingUp, label: 'Capital Market', color: 'text-tertiary' },
-    { icon: Home, label: 'Real Estate', color: 'text-primary' },
+    { icon: House, label: 'Real Estate', color: 'text-primary' },
     { icon: Laptop, label: 'Information Technology', color: 'text-secondary' },
     { icon: Plane, label: 'Tourism & Hospitality', color: 'text-tertiary' },
     { icon: Heart, label: 'Healthcare', color: 'text-primary' },
-    { icon: Seedling, label: 'Agriculture', color: 'text-secondary' },
+    { icon: Sprout, label: 'Agriculture', color: 'text-secondary' },
   ]
 
   const protocolSteps = [
