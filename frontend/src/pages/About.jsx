@@ -44,6 +44,7 @@ const milestones = [
   { year: '2012', title: 'Inaugural Institutional Fund', desc: 'Launched our first institutional fund focused on infrastructure and renewable energy, marking our transition from advisory to active capital deployment.' },
   { year: '2015', title: 'CARE Accreditation', desc: 'Received CARE rating for bank facilities, strengthening stakeholder confidence and expanding access to institutional-grade financial partnerships.' },
    { year: '2021', title: 'Digital & Operational Modernization', desc: 'Implemented portfolio tracking systems, enhanced client dashboards, and cybersecurity frameworks to improve decision-making and transparency.' },
+   { year: '2026', title: 'Industry Leadership & Growth', desc: 'Recognized as a leading independent investment firm in Nepal with a growing portfolio and expanding team.' },
 ]
 
 
@@ -103,7 +104,7 @@ export default function About() {
                       <p className="text-xs text-white/40 mt-1">Years</p>
                     </div>
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-tertiary"><AnimatedCounter target={50} suffix="+" /></p>
+                      <p className="text-3xl font-bold text-tertiary"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Team</p>
                     </div>
                   </div>
@@ -172,7 +173,7 @@ export default function About() {
                         transition={{ type: 'spring', stiffness: 200, damping: 12, delay: i * 0.1 }}
                       >
                         <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg border-[3px] border-white">
-                          {m.year.slice(2)}
+                          {m.year}
                         </div>
                       </motion.div>
                       <motion.div
