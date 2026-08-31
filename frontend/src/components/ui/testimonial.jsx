@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, ArrowRight, MessageCircle } from 'lucide-react'
+import { ArrowLeft, ArrowRight, MessageSquareQuote } from 'lucide-react'
 
 const testimonials = [
   {
@@ -81,7 +81,7 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                     style={{ perspective: '1000px' }}
                   >
                     <div className="h-full w-full rounded-3xl bg-gradient-to-br from-orange-500/15 via-orange-600/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
-                      <MessageCircle className="w-32 h-32 text-orange-400/30" />
+                      <MessageSquareQuote className="w-32 h-32 text-orange-400/30" />
                     </div>
                   </motion.div>
                 ))}
