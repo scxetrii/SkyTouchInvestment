@@ -183,31 +183,29 @@ export default function Boards() {
                     {chairman.role}
                   </motion.p>
 
-                  <motion.p variants={fadeUp} className="text-white/60 leading-relaxed mb-8 text-base">
-                    {chairman.bio}
-                  </motion.p>
+                   <motion.p variants={fadeUp} className="text-white leading-relaxed mb-8 text-base">
+                     {chairman.bio}
+                   </motion.p>
 
-                  <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                    {[
-                      { number: '30+', label: 'Years Experience', gradient: 'from-orange-400 to-amber-400', accent: 'border-orange-500/20' },
-                      { number: '4+', label: 'Sectors', gradient: 'from-amber-400 to-orange-400', accent: 'border-amber-500/20' },
-                      { number: 'MBA', label: 'Highest Degree', gradient: 'from-orange-400 to-amber-400', accent: 'border-orange-500/20' },
-                      { number: '100%', label: 'Dedication', gradient: 'from-orange-400 to-amber-500', accent: 'border-amber-500/20' },
-                    ].map((stat, i) => (
-                      <div
-                        key={stat.label}
-                        className="relative bg-white/5 rounded-2xl p-5 border border-white/10 text-center group cursor-default overflow-hidden transition-all duration-300 hover:bg-white/[0.07] hover:border-white/20"
-                      >
-                        <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-8 transition-opacity duration-500`} />
-                        <div className="relative z-10">
-                          <p className={`text-2xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent inline-block`}>
-                            {stat.number}
-                          </p>
-                          <p className="text-[10px] uppercase tracking-[0.15em] text-white/40 mt-2 font-semibold">{stat.label}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </motion.div>
+                   <div className="bg-slate-50 rounded-2xl border border-slate-200 p-6 mb-10">
+                     <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                     {[
+                       { number: '30+', label: 'Years Experience' },
+                       { number: '4+', label: 'Sectors' },
+                       { number: 'MBA', label: 'Highest Degree' },
+                       { number: '100%', label: 'Dedication' },
+                     ].map((stat, i) => (
+                       <div
+                         key={stat.label}
+                         className="relative bg-white rounded-2xl p-5 border border-slate-200 text-center shadow-sm hover:shadow-md transition-all duration-300"
+                       >
+                         <div className="relative z-10">
+                           <p className="text-2xl font-bold text-slate-900">{stat.number}</p>
+                           <p className="text-[10px] uppercase tracking-[0.15em] text-slate-500 mt-2 font-semibold">{stat.label}</p>
+                         </div>
+                       </div>
+                     ))}
+                   </motion.div>
 
                   <motion.div variants={fadeUp} className="flex flex-wrap gap-2.5">
                     {chairman.expertise.map((skill, i) => (
@@ -218,10 +216,11 @@ export default function Boards() {
                         {skill}
                       </span>
                     ))}
-                  </motion.div>
-                </motion.div>
-              </div>
-            </div>
+                   </motion.div>
+                   </div>
+                 </motion.div>
+               </div>
+             </div>
           </div>
         </section>
 
