@@ -575,31 +575,31 @@ export default function About() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            {[
-              { icon: Target, title: 'Precision Targeting', desc: 'Data-driven investment selection with high success rate across sectors.', stat: '95%', statLabel: 'Success Rate', color: 'text-primary' },
-              { icon: Handshake, title: 'Trusted Partnerships', desc: 'Long-term relationships built on transparency, integrity, and mutual growth.', stat: '500+', statLabel: 'Partners', color: 'text-secondary' },
-              { icon: TrendingUp, title: 'Proven Returns', desc: 'Consistent strong IRR with risk-adjusted portfolio strategies.', stat: '18.5%', statLabel: 'Avg. IRR', color: 'text-tertiary' },
-              { icon: Globe, title: 'Global Perspective', desc: 'Local expertise combined with international investment standards.', stat: '10+', statLabel: 'Sectors', color: 'text-primary' },
-            ].map((feature, i) => (
-              <ScrollReveal key={feature.title} delay={i * 0.1}>
-                <div className="group relative h-full rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-8 backdrop-blur-xl hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(14,165,233,0.15)]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
-                  <div className="relative z-10 flex flex-col h-full">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                      <feature.icon size={24} className={feature.color} />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-sm text-white/50 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
-                    <div className="pt-6 border-t border-white/10">
-                      <p className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-primary bg-clip-text text-transparent">{feature.stat}</p>
-                      <p className="text-xs text-white/40 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+             {[
+               { icon: Target, title: 'Precision Targeting', desc: 'Rigorous due diligence and quantitative stress-testing across private equity, hydropower, and real estate sectors in Nepal.', stat: '10+', statLabel: 'Sectors Analyzed' },
+               { icon: Handshake, title: 'Trusted Partnerships', desc: 'Long-term strategic alliances built on transparency, governance oversight, and mutual value creation with portfolio companies.', stat: '50+', statLabel: 'Active Partners' },
+               { icon: TrendingUp, title: 'Proven Returns', desc: 'Consistent risk-adjusted returns through disciplined portfolio construction, active governance, and strategic rebalancing.', stat: '18.5%', statLabel: 'Avg. IRR' },
+               { icon: Globe, title: 'Global Perspective', desc: 'Local expertise combined with international investment standards, regulatory frameworks, and cross-border capabilities.', stat: '15+', statLabel: 'Years Track Record' },
+             ].map((feature, i) => (
+               <ScrollReveal key={feature.title} delay={i * 0.1}>
+                 <div className="group relative h-full rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-8 backdrop-blur-xl hover:border-primary/40 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(14,165,233,0.15)]">
+                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                   <div className="relative z-10 flex flex-col h-full">
+                     <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                       <feature.icon size={24} className="text-primary" />
+                     </div>
+                     <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                     <p className="text-sm text-white/50 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
+                     <div className="pt-6 border-t border-white/10">
+                       <p className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-primary bg-clip-text text-transparent">{feature.stat}</p>
+                       <p className="text-xs text-white/40 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
+                     </div>
+                   </div>
+                 </div>
+               </ScrollReveal>
+             ))}
+           </div>
 
 
         </div>
