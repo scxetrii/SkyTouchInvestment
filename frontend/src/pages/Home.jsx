@@ -26,10 +26,14 @@ export default function Home() {
   const stepRefs = useRef([])
 
   const stats = [
-    { icon: Briefcase, label: 'Sectors Invested', desc: 'Across diverse industries', color: 'text-primary' },
-    { icon: Landmark, label: 'NPR 5B+ AUM', desc: 'Assets under management', color: 'text-secondary' },
-    { icon: Users, label: '50+ Team', desc: 'Expert professionals', color: 'text-tertiary' },
-    { icon: Award, label: 'CARE Rated', desc: 'Bank facilities rated', color: 'text-primary' },
+    'Private Equity',
+    'Energy',
+    'Capital Market',
+    'Real Estate',
+    'Information Technology',
+    'Tourism & Hospitality',
+    'Healthcare',
+    'Agriculture',
   ]
 
   const protocolSteps = [
@@ -191,13 +195,9 @@ export default function Home() {
               className="flex w-max gap-3 sm:gap-4 md:gap-8"
               style={{ animation: 'partnerMarquee 24s linear infinite' }}
             >
-              {[...stats, ...stats].map((stat, i) => (
-                <ScrollReveal key={`${stat.label}-${i}`} delay={(i % stats.length) * 0.08} className="text-center shrink-0 min-w-[130px] sm:min-w-[170px] md:min-w-[260px] px-2 sm:px-3 md:px-6">
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24 mx-auto mb-2 sm:mb-3 md:mb-4 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center ${stat.color}`}>
-                    <stat.icon size={24} strokeWidth={1.5} className="sm:w-8 sm:h-8 md:w-12 md:h-12" />
-                  </div>
-                  <p className="text-sm sm:text-base md:text-2xl font-bold text-slate-900">{stat.label}</p>
-                  <p className="text-[10px] sm:text-xs md:text-sm text-slate-500 mt-0.5 sm:mt-1">{stat.desc}</p>
+              {[...stats, ...stats].map((sector, i) => (
+                <ScrollReveal key={`${sector}-${i}`} delay={(i % stats.length) * 0.08} className="text-center shrink-0 min-w-[130px] sm:min-w-[170px] md:min-w-[260px] px-2 sm:px-3 md:px-6">
+                  <p className="text-sm sm:text-base md:text-2xl font-bold text-slate-900">{sector}</p>
                 </ScrollReveal>
               ))}
             </div>
