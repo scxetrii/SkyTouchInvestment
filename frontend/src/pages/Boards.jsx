@@ -225,7 +225,7 @@ export default function Boards() {
           </div>
         </section>
 
-        <section className="relative py-24">
+        {/* <section className="relative py-24">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
           <div className="relative max-w-[1440px] mx-auto px-6 md:px-16">
             <motion.div variants={staggerWrap} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="text-center mb-16">
@@ -251,7 +251,7 @@ export default function Boards() {
               </ScrollReveal>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 py-24">
           <motion.div variants={staggerWrap} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="text-center mb-16">
