@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import ScrollReveal from '../ScrollReveal'
 
 export function InvestmentSectorCard() {
   const [activeIndex, setActiveIndex] = useState(0)
   const glowRef = useRef(null)
+  const navigate = useNavigate()
   
   // Initialize glow effect - single listener on container
   useEffect(() => {
@@ -198,6 +200,9 @@ export function InvestmentSectorCard() {
                 {/* Action Button */}
                 <motion.button
                   whileHover={{ x: 4 }}
+                  onClick={() => {
+                    navigate('/investment', { state: { scrollTo: 'portfolio-organized' } })
+                  }}
                   className="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg text-sm font-semibold text-white hover:shadow-lg shadow-lg drop-shadow-lg transition-all"
                 >
                   Explore Sectors →

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import ScrollReveal from '../components/ScrollReveal'
 import { TextParallaxDemo } from '../components/blocks/text-parallax-demo'
 import { Folder } from '../components/ui/folder-components'
@@ -99,6 +100,18 @@ const sectors = [
 ]
 
 export default function Investment() {
+  const location = useLocation()
+
+  useEffect(() => {
+    const targetId = location.state?.scrollTo
+    if (targetId) {
+      const el = document.getElementById(targetId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [location.state])
+
   return (
     <div className="pt-24">
       {/* HERO */}
@@ -177,7 +190,7 @@ export default function Investment() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="text-center mb-20">
             <span className="section-label text-center">Explore Our Investment Sectors</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold">
+            <h2 className="text-3xl md:text-5xl font-display font-bold" id="portfolio-organized">
               Our <span className="gold-accent">Portfolio</span> Organized
             </h2>
             <p className="text-lg text-on-surface-variant/70 max-w-3xl mx-auto mt-4">
