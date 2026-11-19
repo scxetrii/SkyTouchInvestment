@@ -40,7 +40,7 @@ const AntiGravityCanvas = () => {
         vx: 0,
         vy: 0,
         size: randomRange(1, 2.5), 
-        color: Math.random() > 0.9 ? '#0f5fa8' : '#ffffff', 
+        color: Math.random() > 0.94 ? '#d4a017' : Math.random() > 0.86 ? '#34d399' : Math.random() > 0.78 ? '#0f5fa8' : '#ffffff', 
         angle: Math.random() * Math.PI * 2,
       });
     }
@@ -78,21 +78,6 @@ const AntiGravityCanvas = () => {
     }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
-    const pulseSpeed = 0.0008;
-    const pulseOpacity = Math.sin(time * pulseSpeed) * 0.045 + 0.13; 
-    
-    const gradient = ctx.createRadialGradient(
-        centerX, centerY, 0, 
-        centerX, centerY, Math.max(canvas.width, canvas.height) * 0.7
-    );
-    gradient.addColorStop(0, `rgba(11,58,102, ${pulseOpacity})`);
-    gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
-    
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     const bgParticles = backgroundParticlesRef.current;
     ctx.fillStyle = "#ffffff";
@@ -319,7 +304,7 @@ const HeroContent = () => {
                     speed={90}
                     cursor="|"
                     loop={true}
-                    className="inline-block bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent"
+                    className="inline-block bg-gradient-to-r from-primary-light via-secondary to-gold-light bg-clip-text text-transparent"
                   />
                 </h1>
                 
@@ -328,10 +313,10 @@ const HeroContent = () => {
                 </p>
 
                 <div className="pt-8 pointer-events-auto">
-                    <Link to="/investment" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold tracking-wide overflow-hidden transition-transform hover:scale-105 active:scale-95">
+                    <Link to="/investment" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-light via-gold-mid to-gold-dark text-[#1c1405] rounded-full font-bold tracking-wide overflow-hidden transition-all hover:scale-105 hover:shadow-[0_12px_40px_rgba(212,160,23,0.45)] active:scale-95">
                         <span className="relative z-10">Start Investing</span>
                         <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
-                        <div className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out opacity-10"></div>
+                        <div className="absolute inset-0 bg-white/30 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
                     </Link>
                 </div>
             </div>

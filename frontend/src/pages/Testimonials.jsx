@@ -45,7 +45,7 @@ export default function Testimonials() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-gold/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -72,7 +72,7 @@ export default function Testimonials() {
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, s) => (
-                    <Star key={s} size={14} className="text-tertiary fill-tertiary" />
+                    <Star key={s} size={14} className="text-gold fill-gold" />
                   ))}
                 </div>
                 <p className="text-sm text-on-surface-variant/70 leading-relaxed italic mb-6 flex-1">
@@ -84,7 +84,7 @@ export default function Testimonials() {
                       src={review.src}
                       alt={review.name}
                       loading="lazy"
-                      className="w-10 h-10 rounded-full object-cover border-2 border-primary/20"
+                      className="w-10 h-10 rounded-full object-cover border-2 border-gold/40"
                     />
                   )}
                   <div>

@@ -49,9 +49,6 @@ export default function Contact() {
           className="absolute inset-0 h-full w-full object-cover opacity-[0.04]"
           loading="lazy"
         />
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute top-24 right-0 h-72 w-72 rounded-full bg-tertiary/10 blur-3xl" />
-        <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-slate-100 blur-3xl" />
       </div>
 
       <section className="relative py-24 md:py-28">
@@ -63,7 +60,7 @@ export default function Contact() {
               transition={{ duration: 0.7 }}
               className="relative"
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-xs font-bold tracking-[0.22em] text-primary uppercase mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs font-bold tracking-[0.22em] text-gold-dark uppercase mb-6">
                 Get in Touch
               </span>
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
@@ -89,8 +86,8 @@ export default function Contact() {
 
             <ScrollReveal>
               <div id="contact-form" className="relative rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_80px_rgba(15,23,42,0.08)] p-8 md:p-10 overflow-hidden">
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
-                <p className="text-xs uppercase tracking-[0.24em] text-primary font-bold mb-3">Start the conversation</p>
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-gold" />
+                <p className="text-xs uppercase tracking-[0.24em] text-gold-dark font-bold mb-3">Start the conversation</p>
                 <h2 className="text-2xl md:text-3xl font-display font-bold mb-3">Send a Message</h2>
                 <p className="text-sm text-slate-600 mb-8">Tell us what you need and we will connect you with the right team member.</p>
 
@@ -113,7 +110,7 @@ export default function Contact() {
                         name="company"
                         value={form.company}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-gold-dark focus:bg-white focus:shadow-[0_0_0_4px_rgba(212,160,23,0.12)]"
                         placeholder="Your company or organization"
                       />
                     </div>
@@ -127,7 +124,7 @@ export default function Contact() {
                           required
                           value={form.name}
                           onChange={handleChange}
-                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
+                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-gold-dark focus:bg-white focus:shadow-[0_0_0_4px_rgba(212,160,23,0.12)]"
                           placeholder="Full name"
                         />
                       </div>
@@ -139,7 +136,7 @@ export default function Contact() {
                           required
                           value={form.email}
                           onChange={handleChange}
-                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
+                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-gold-dark focus:bg-white focus:shadow-[0_0_0_4px_rgba(212,160,23,0.12)]"
                           placeholder="name@company.com"
                         />
                       </div>
@@ -152,7 +149,7 @@ export default function Contact() {
                         name="phone"
                         value={form.phone}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-gold-dark focus:bg-white focus:shadow-[0_0_0_4px_rgba(212,160,23,0.12)]"
                         placeholder="Phone number"
                       />
                     </div>
@@ -165,7 +162,7 @@ export default function Contact() {
                         rows={6}
                         value={form.message}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)] resize-none"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-gold-dark focus:bg-white focus:shadow-[0_0_0_4px_rgba(212,160,23,0.12)] resize-none"
                         placeholder="How can we help you?"
                       />
                     </div>
@@ -212,8 +209,8 @@ export default function Contact() {
               },
             ].map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 0.08}>
-                <div className="group h-full rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_16px_50px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,95,168,0.10)]">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <div className="group h-full rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_16px_50px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(212,160,23,0.12)]">
+                  <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-2xl ${index % 2 === 0 ? 'bg-primary/10 text-primary' : 'bg-gold/10 text-gold-dark'}`}>
                     <item.icon size={22} />
                   </div>
                   <h3 className="text-lg font-display font-semibold mb-2 text-slate-900">{item.title}</h3>
@@ -233,15 +230,9 @@ export default function Contact() {
 
       {/* Map Section */}
       <section className="relative pb-24">
-        {/* Decorative blobs behind the map */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute -left-32 top-1/4 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
-          <div className="absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-tertiary/5 blur-3xl" />
-        </div>
-
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="mb-12 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/15 bg-primary/5 px-4 py-2 text-xs font-bold tracking-[0.22em] text-primary uppercase">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-2 text-xs font-bold tracking-[0.22em] text-gold-dark uppercase">
               Find Us
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-6 mb-4">
@@ -255,7 +246,7 @@ export default function Contact() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] overflow-hidden border border-slate-200 shadow-[0_32px_100px_rgba(15,23,42,0.12)] group">
               {/* Top gradient accent bar */}
-              <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-tertiary z-10" />
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-gold z-10" />
 
               <div className="relative h-[300px] md:h-[520px]">
                 <iframe

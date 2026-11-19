@@ -87,14 +87,14 @@ export default function Navbar() {
                 ? 'max-w-[1320px] mx-auto rounded-[2rem] border border-white/20 bg-white/5 backdrop-blur-3xl backdrop-saturate-150 shadow-2xl shadow-black/20'
                 : 'w-full rounded-none border-b border-white/10 bg-transparent')
               : (scrolled
-                ? 'max-w-[1320px] mx-auto rounded-[2rem] border border-primary/25 bg-gradient-to-r from-primary/10 via-white/85 to-tertiary/10 backdrop-blur-3xl backdrop-saturate-150 shadow-2xl shadow-black/20'
+                ? 'max-w-[1320px] mx-auto rounded-[2rem] border border-gold/25 bg-gradient-to-r from-primary/10 via-white/85 to-gold/10 backdrop-blur-3xl backdrop-saturate-150 shadow-2xl shadow-black/20'
                 : 'w-full rounded-none border-b border-primary/20 bg-gradient-to-r from-primary/90 via-[#06182b] to-tertiary/90')
           } ${scrolled ? 'navbar-gradient-bg' : ''}`}
         >
           {scrolled && (
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.55)_18%,rgba(255,255,255,0.12)_42%,rgba(255,255,255,0.2)_68%,rgba(255,255,255,0.75)_100%)] opacity-85 mix-blend-screen" />
           )}
-          <div className={`relative z-10 h-0.5 ${isHomePage ? (scrolled ? 'bg-gradient-to-r from-primary via-white to-tertiary' : 'bg-gradient-to-r from-primary via-tertiary to-primary') : (scrolled ? 'bg-gradient-to-r from-primary via-white to-tertiary' : 'bg-gradient-to-r from-primary via-tertiary to-primary')}`} />
+          <div className="relative z-10 h-0.5 bg-gradient-to-r from-primary via-secondary to-gold" />
 
           <div className="relative z-10 max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-6 md:px-16 transition-all duration-500 ease-out h-16 sm:h-20">
           {/* Logo */}
@@ -130,12 +130,12 @@ export default function Navbar() {
                   to={link.path}
                   className={`relative text-xs tracking-[0.15em] font-semibold transition-all duration-300 nav-link-underline group ${
                     location.pathname === link.path
-                      ? 'text-white bg-emerald-400/20 border border-emerald-300/30 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(16,185,129,0.18)]'
+                      ? `bg-gold/15 border border-gold/40 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(212,160,23,0.22)] ${scrolled && !isHomePage ? 'text-gold-dark' : 'text-gold-light'}`
                       : (isHomePage ? (scrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white') : (scrolled ? 'text-slate-700 hover:text-slate-950' : 'text-white/80 hover:text-white'))
                   }`}
                 >
                   <span className="inline-flex items-center gap-2">
-                    <link.icon size={14} strokeWidth={2.25} className={location.pathname === link.path ? 'text-emerald-300' : 'text-current'} />
+                    <link.icon size={14} strokeWidth={2.25} className={location.pathname === link.path ? (scrolled && !isHomePage ? 'text-gold-dark' : 'text-gold') : 'text-current'} />
                     <span>{link.label}</span>
                   </span>
                   
@@ -143,7 +143,7 @@ export default function Navbar() {
                   {hoveredLink === link.path && (
                     <div
                       className={`absolute -inset-1 blur-md rounded -z-10 transition-all duration-300 ${
-                        isHomePage ? (scrolled ? 'bg-white/35' : 'bg-primary/15') : (scrolled ? 'bg-primary/20' : 'bg-primary/10')
+                        isHomePage ? (scrolled ? 'bg-gold/20' : 'bg-primary/15') : (scrolled ? 'bg-gold/20' : 'bg-primary/10')
                       }`}
                     />
                   )}
@@ -198,7 +198,7 @@ export default function Navbar() {
           className={`lg:hidden border-t overflow-hidden transition-all duration-300 ease-in-out ${
             mobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           } ${
-            isHomePage ? (scrolled ? 'bg-white/10 border-white/20 backdrop-blur-xl' : 'bg-transparent border-white/10 backdrop-blur-xl') : (scrolled ? 'bg-gradient-to-b from-primary/10 via-white to-tertiary/10 border-primary/20' : 'bg-gradient-to-b from-primary/90 via-[#06182b] to-tertiary/90 border-primary/20')
+            isHomePage ? (scrolled ? 'bg-white/10 border-white/20 backdrop-blur-xl' : 'bg-transparent border-white/10 backdrop-blur-xl') : (scrolled ? 'bg-gradient-to-b from-primary/10 via-white to-gold/10 border-primary/20' : 'bg-gradient-to-b from-primary/90 via-[#06182b] to-tertiary/90 border-primary/20')
           }`}
         >
           <div className="px-4 sm:px-6 py-6 sm:py-8 flex flex-col gap-1.5 sm:gap-2">
@@ -208,12 +208,12 @@ export default function Navbar() {
                 to={link.path}
                 className={`block px-4 py-3 sm:py-3 rounded-lg text-sm tracking-wider font-semibold transition-all duration-300 min-h-[44px] flex items-center ${
                   location.pathname === link.path
-                    ? 'text-white bg-emerald-400/20 border border-emerald-300/30 shadow-[0_0_18px_rgba(16,185,129,0.18)]'
+                    ? `bg-gold/15 border border-gold/40 shadow-[0_0_18px_rgba(212,160,23,0.22)] ${scrolled && !isHomePage ? 'text-gold-dark' : 'text-gold-light'}`
                     : (isHomePage ? (scrolled ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10') : (scrolled ? 'text-slate-700 hover:text-slate-950 hover:bg-white/50' : 'text-white/80 hover:text-white hover:bg-white/10'))
                 }`}
               >
                 <span className="inline-flex items-center gap-2">
-                  <link.icon size={16} strokeWidth={2.2} className={location.pathname === link.path ? 'text-emerald-300' : 'text-current'} />
+                  <link.icon size={16} strokeWidth={2.2} className={location.pathname === link.path ? (scrolled && !isHomePage ? 'text-gold-dark' : 'text-gold') : 'text-current'} />
                   <span>{link.label}</span>
                 </span>
               </Link>

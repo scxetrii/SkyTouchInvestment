@@ -61,7 +61,6 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
       <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-20">
         <div className="flex items-center justify-center">
             <div className="relative h-80 w-full max-w-xs">
-              <div className="absolute -inset-4 bg-gradient-to-br from-emerald-400/20 via-tertiary/10 to-emerald-600/20 rounded-[2rem] blur-2xl" />
               <AnimatePresence>
                 {testimonials.map((testimonial, index) => (
                   <motion.div
@@ -80,8 +79,8 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                     className="absolute inset-0 origin-bottom"
                     style={{ perspective: '1000px' }}
                   >
-                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-tertiary/15 via-emerald-600/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
-                      <MessageSquareQuote className="w-32 h-32 text-emerald-400/30" />
+                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-tertiary/15 via-gold/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
+                      <MessageSquareQuote className="w-32 h-32 text-gold/25" />
                     </div>
                   </motion.div>
                 ))}
@@ -101,13 +100,13 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
             >
                 <div>
                     <div className="inline-flex items-center gap-2 mb-4">
-                      <span className="h-px w-8 bg-gradient-to-r from-emerald-400 to-emerald-600" />
-                      <span className="text-xs tracking-[0.2em] font-semibold text-tertiary uppercase">Testimonial</span>
+                      <span className="h-px w-8 bg-gradient-to-r from-emerald-400 to-gold" />
+                      <span className="text-xs tracking-[0.2em] font-semibold text-gold-dark uppercase">Testimonial</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-emerald-500 via-secondary to-gold-dark bg-clip-text text-transparent">
                         {testimonials[active].name}
                     </h3>
-                    <p className="text-sm text-tertiary/70">
+                    <p className="text-sm text-gold-dark/70">
                         {testimonials[active].designation}
                     </p>
                     <motion.p className="mt-8 text-lg text-tertiary leading-relaxed">
@@ -120,14 +119,14 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
             <button
               onClick={handlePrev}
               aria-label="Previous testimonial"
-              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-tertiary hover:border-tertiary transition-all duration-300"
+              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-gold hover:border-gold transition-all duration-300"
             >
               <ArrowLeft className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-1" />
             </button>
             <button
               onClick={handleNext}
               aria-label="Next testimonial"
-              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-tertiary hover:border-tertiary transition-all duration-300"
+              className="group flex h-10 w-10 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-gold hover:border-gold transition-all duration-300"
             >
               <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
@@ -171,8 +170,6 @@ export function Component() {
           </g>
         </svg>
 
-        <div className="absolute -top-1/4 -right-1/4 w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-[150px]" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[150px]" />
         <div className="relative z-10 w-full">
             <AnimatedTestimonials testimonials={testimonials} />
         </div>

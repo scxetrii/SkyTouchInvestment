@@ -64,7 +64,7 @@ export default function Blogs() {
   return (
     <div className="pt-24">
       {/* FEATURED BLOGS CAROUSEL */}
-      <section className="py-24 bg-gradient-to-br from-primary/[0.06] via-white to-secondary/[0.08]">
+      <section className="py-24 bg-gradient-to-br from-primary/[0.06] via-white to-gold/[0.07]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="text-center mb-16">
             <span className="section-label text-center">Latest Insights</span>
@@ -92,7 +92,7 @@ export default function Blogs() {
               <motion.article
                 whileHover={{ y: -8 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                className="relative group cursor-pointer rounded-2xl overflow-hidden bg-white border border-slate-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.12)] transition-all duration-500"
+                className="relative group cursor-pointer rounded-2xl overflow-hidden bg-white border border-slate-200/60 hover:border-gold/30 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_rgba(212,160,23,0.16)] transition-all duration-500"
               >
                 {/* Image Container */}
                 <div className="relative h-56 overflow-hidden">
@@ -106,7 +106,7 @@ export default function Blogs() {
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="inline-block px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-primary to-primary/80 rounded-full shadow-lg backdrop-blur-sm">
+                    <span className="inline-block px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-primary via-secondary to-gold-dark rounded-full shadow-lg backdrop-blur-sm">
                       {post.category}
                     </span>
                   </div>
@@ -130,7 +130,7 @@ export default function Blogs() {
                     <span className="text-[10px] font-medium text-slate-400">{post.date}</span>
                   </div>
                   
-                  <h3 className="text-lg font-display font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-300 leading-snug">
+                  <h3 className="text-lg font-display font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-gold-dark transition-colors duration-300 leading-snug">
                     {post.title}
                   </h3>
                   
@@ -142,7 +142,7 @@ export default function Blogs() {
                   <div className="pt-4 border-t border-slate-100">
                     <Link 
                       to={`/blogs/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:text-primary/80 transition-colors duration-300"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-gold-dark group-hover:text-gold transition-colors duration-300"
                     >
                       <span>Read Article</span>
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

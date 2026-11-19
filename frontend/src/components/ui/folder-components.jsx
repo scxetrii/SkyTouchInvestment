@@ -61,6 +61,16 @@ const colorMap = {
     labelBg: "bg-emerald-900/20",
     folderBorder: "border-white/30",
   },
+  gold: {
+    folder: "from-gold-light to-gold-dark",
+    flap: "bg-gold-light/50",
+    paperBack: "bg-gold/20",
+    paperFront: "bg-gold/10",
+    paperLine: "bg-gold/40",
+    paperBorder: "border-gold/30",
+    labelBg: "bg-gold-dark/25",
+    folderBorder: "border-white/30",
+  },
   red: {
     folder: "from-red-400 to-red-500",
     flap: "bg-red-300/50",
@@ -116,9 +126,8 @@ export const Folder = ({
         className
       )}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.10),transparent_30%)] opacity-80" />
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
-      <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(212,160,23,0.10),transparent_30%)] opacity-80" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-gold" />
 
       <div className="relative z-10 flex h-full flex-col">
         <div className={cn('relative overflow-hidden rounded-[28px] border border-slate-200 bg-slate-100', s.image)}>
@@ -180,7 +189,7 @@ export const Folder = ({
             <p className="max-w-[62%] truncate text-xs text-slate-500">
               {subtitle || 'Investment opportunity'}
             </p>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/15 bg-primary/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/25 bg-gold/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dark">
               View detail
               <span aria-hidden="true">→</span>
             </span>
@@ -197,8 +206,8 @@ export const Folder = ({
             transition={{ duration: 0.22, ease: 'easeOut' }}
             className="absolute inset-0 z-20 pointer-events-none"
           >
-            <div className="relative h-full rounded-[28px] border border-primary/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-4 shadow-2xl pointer-events-auto">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_30%)]" />
+            <div className="relative h-full rounded-[28px] border border-gold/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-4 shadow-2xl pointer-events-auto">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(212,160,23,0.12),transparent_30%)]" />
               <div className="relative z-10 flex h-full flex-col overflow-hidden">
                 {image && (
                   <div className="mb-3 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
@@ -207,7 +216,7 @@ export const Folder = ({
                 )}
 
                 <div className="mb-3 border-b border-white/10 pb-3">
-                  <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary/80">
+                  <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold/80">
                     {pct}% portfolio allocation
                   </p>
                   <h3 className="text-xl font-display font-bold leading-tight text-white">
@@ -238,7 +247,7 @@ export const Folder = ({
                     <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-slate-400">
                       Portfolio overview
                     </p>
-                    <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
+                    <span className="rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-light">
                       Explore sector
                     </span>
                   </div>

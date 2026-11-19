@@ -135,7 +135,7 @@ export function BoardMemberCard({
             >
               <div className="relative h-full bg-white rounded-2xl overflow-hidden border-2 border-primary/35 shadow-2xl p-5 flex flex-col pointer-events-auto">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.10),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.08),transparent_30%)]" />
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
+
 
                 <div className="relative z-10 flex flex-col h-full overflow-y-auto custom-scrollbar">
                   <div className="mb-3 pb-3 border-b border-slate-200">

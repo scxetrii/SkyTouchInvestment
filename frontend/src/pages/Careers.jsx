@@ -19,7 +19,7 @@ export default function Careers() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-gold/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -62,7 +62,7 @@ export default function Careers() {
                   transition={{ delay: i * 0.1 }}
                   className="flex items-center gap-3"
                 >
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <span className={`w-2 h-2 rounded-full flex-shrink-0 ${i % 2 === 0 ? 'bg-primary' : 'bg-gold'}`} />
                   <span className="text-sm text-on-surface-variant/80">{perk}</span>
                 </motion.li>
               ))}
@@ -94,10 +94,10 @@ export default function Careers() {
         <ContainerScroll
           titleComponent={
             <>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">
-                Join Our <span className="bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">Dynamic Team</span>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-gold bg-clip-text text-transparent">
+                Join Our <span className="bg-gradient-to-r from-primary via-secondary to-gold bg-clip-text text-transparent">Dynamic Team</span>
               </h2>
-              <p className="text-lg max-w-2xl mx-auto bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">
+              <p className="text-lg max-w-2xl mx-auto bg-gradient-to-r from-primary via-secondary to-gold bg-clip-text text-transparent">
                 Experience the innovation and culture that drives SkyTouch Investment & Consultant
               </p>
             </>

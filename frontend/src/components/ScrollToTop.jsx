@@ -38,7 +38,7 @@ export default function ScrollToTop() {
       >
         <button
           onClick={scrollToTop}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-tertiary text-white shadow-2xl shadow-primary/30 hover:shadow-primary/50 transition-shadow duration-300"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-tertiary via-primary to-gold-dark text-white shadow-2xl shadow-gold/30 hover:shadow-gold/50 transition-shadow duration-300"
         >
           <ChevronUp size={22} strokeWidth={2.5} />
         </button>

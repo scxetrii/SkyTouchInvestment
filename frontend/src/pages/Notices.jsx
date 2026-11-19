@@ -33,7 +33,7 @@ export default function Notices() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-gold/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -60,14 +60,14 @@ export default function Notices() {
               >
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[10px] tracking-wider px-2 py-1 bg-primary/10 text-primary rounded-full font-semibold">
+                    <span className={`text-[10px] tracking-wider px-2 py-1 rounded-full font-semibold ${i % 2 === 0 ? 'bg-primary/10 text-primary' : 'bg-gold/10 text-gold-dark'}`}>
                       {notice.type}
                     </span>
                     <span className="text-[10px] tracking-wider text-outline">{notice.date}</span>
                   </div>
                   <h3 className="font-display font-semibold">{notice.title}</h3>
                 </div>
-                <span className="text-sm text-primary whitespace-nowrap cursor-pointer hover:underline">
+                <span className="text-sm text-gold-dark whitespace-nowrap cursor-pointer hover:underline">
                   Download PDF →
                 </span>
               </motion.div>

@@ -71,12 +71,12 @@ export default function DirectorHoverCard({
         onHoverEnd={() => setIsHovered(false)}
         className="relative h-full"
       >
-        <div className="relative h-full bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-[0_18px_45px_rgba(15,23,42,0.08)] hover:shadow-[0_28px_70px_rgba(15,23,42,0.12)] transition-shadow duration-300 p-5 flex flex-col group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.08),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.06),transparent_30%)] opacity-90" />
-          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
+        <div className="relative h-full bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-[0_18px_45px_rgba(15,23,42,0.08)] hover:shadow-[0_28px_70px_rgba(212,160,23,0.14)] transition-shadow duration-300 p-5 flex flex-col group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.08),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(212,160,23,0.06),transparent_30%)] opacity-90" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-gold" />
 
           <div className="relative z-10">
-            <div className="relative overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-primary/10 via-white to-tertiary/10 border border-slate-200 shadow-sm">
+            <div className="relative overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-primary/10 via-white to-gold/10 border border-slate-200 shadow-sm">
               {image ? (
                 <img
                   src={image}
@@ -99,10 +99,10 @@ export default function DirectorHoverCard({
             </div>
 
             <div className="px-1 pt-5 text-center">
-              <h3 className="text-xl font-bold text-tertiary mb-1 group-hover:text-tertiary transition-colors">
+              <h3 className={`text-xl font-bold mb-1 group-hover:text-gold-dark transition-colors ${index % 2 === 0 ? 'text-tertiary' : 'text-gold-dark'}`}>
                 {name}
               </h3>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-tertiary/80">
+              <p className={`text-xs font-semibold uppercase tracking-[0.22em] ${index % 2 === 0 ? 'text-tertiary/80' : 'text-gold-dark/80'}`}>
                 {role}
               </p>
 
@@ -117,7 +117,7 @@ export default function DirectorHoverCard({
                         rel="noreferrer"
                         aria-label={label}
                         title={label}
-                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 transition-colors group-hover:border-tertiary/40 group-hover:text-tertiary"
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 transition-colors group-hover:border-gold/40 group-hover:text-gold-dark"
                       >
                         <Icon size={16} strokeWidth={2.2} />
                       </a>
@@ -146,14 +146,14 @@ export default function DirectorHoverCard({
               transition={{ duration: 0.22, ease: 'easeOut' }}
               className="absolute inset-0 z-20"
             >
-              <div className="h-full rounded-[2rem] overflow-hidden border border-primary/20 bg-white shadow-[0_25px_80px_rgba(15,95,168,0.16)] p-6 flex flex-col text-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] via-transparent to-tertiary/[0.04] pointer-events-none" />
+              <div className="h-full rounded-[2rem] overflow-hidden border border-gold/25 bg-white shadow-[0_25px_80px_rgba(212,160,23,0.16)] p-6 flex flex-col text-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.04] via-transparent to-gold/[0.05] pointer-events-none" />
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="pb-4 border-b border-primary/10">
                     <h3 className="text-lg md:text-xl font-bold text-slate-900">
                       {name}
                     </h3>
-                    <p className="text-xs tracking-wider text-tertiary font-semibold uppercase mt-2">
+                    <p className="text-xs tracking-wider text-gold-dark font-semibold uppercase mt-2">
                       {role}
                     </p>
                   </div>
@@ -168,7 +168,7 @@ export default function DirectorHoverCard({
                     <p className="text-xs uppercase tracking-[0.18em] text-slate-500 font-semibold mb-2">
                       Leadership Focus
                     </p>
-                    <div className="inline-flex items-center justify-center gap-2 rounded-full bg-tertiary/10 px-3 py-1 text-xs font-semibold text-tertiary">
+                    <div className="inline-flex items-center justify-center gap-2 rounded-full bg-gold/10 border border-gold/20 px-3 py-1 text-xs font-semibold text-gold-dark">
                       {focus}
                     </div>
                     {socialLinks.length > 0 && (
@@ -182,7 +182,7 @@ export default function DirectorHoverCard({
                               rel="noreferrer"
                               aria-label={label}
                               title={label}
-                              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 hover:border-tertiary/40 hover:text-tertiary transition-colors"
+                              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 hover:border-gold/40 hover:text-gold-dark transition-colors"
                             >
                               <Icon size={16} strokeWidth={2.2} />
                             </a>

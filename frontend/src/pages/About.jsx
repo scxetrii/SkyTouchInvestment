@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import ScrollReveal from '../components/ScrollReveal'
 import AnimatedCounter from '../components/AnimatedCounter'
 import { InteractiveGlobe } from '../components/ui/interactive-globe'
@@ -51,8 +52,8 @@ const milestones = [
 
 const values = [
   { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-emerald-600 to-emerald-400' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-emerald-400 to-tertiary' },
-  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-tertiary to-emerald-600' },
+  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-gold-mid to-gold-dark' },
+  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-gold to-gold-dark' },
   { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-emerald-400 to-emerald-600' },
 ]
 
@@ -63,21 +64,19 @@ export default function About() {
       <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#03140d] via-[#0b3b26] to-[#062f1c]">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-400/15 to-transparent" />
-          <div className="absolute bottom-0 left-1/3 w-48 sm:w-96 h-48 sm:h-96 bg-tertiary/10 rounded-full blur-[60px] sm:blur-[120px]" />
-          <div className="absolute top-1/4 right-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-emerald-400/20 rounded-full blur-[50px] sm:blur-[100px]" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-gold/40" />
         </div>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
             <div className="text-center lg:text-left">
               <ScrollReveal>
                 <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 mb-4 sm:mb-6 backdrop-blur-sm">
-                  <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-tertiary animate-pulse" />
-                  <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-white/60">EST. 2009</span>
+                  <span className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-gold animate-pulse" />
+                  <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gold-light/80">EST. 2009</span>
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
                   About{' '}
-                  <span className="bg-gradient-to-r from-emerald-300 via-secondary to-teal-300 bg-clip-text text-transparent">SkyTouch</span>
+                  <span className="bg-gradient-to-r from-emerald-300 via-secondary to-gold-light bg-clip-text text-transparent">SkyTouch</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-6 sm:mb-8">
                   A privately-held investment and consulting company built on principles of strategic capital allocation, 
@@ -96,15 +95,14 @@ export default function About() {
             </div>
             <ScrollReveal delay={0.15} className="hidden lg:flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/30 to-teal-400/30 rounded-full blur-[60px]" />
                 <div className="relative grid grid-cols-2 gap-4">
                   <div className="space-y-4 pt-8">
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
                       <p className="text-3xl font-bold text-white"><AnimatedCounter target={15} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Years</p>
                     </div>
-                    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-emerald-300"><AnimatedCounter target={10} suffix="+" /></p>
+                    <div className="rounded-2xl bg-white/5 border border-gold/20 p-6 backdrop-blur-sm text-center">
+                      <p className="text-3xl font-bold text-gold-light"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Team</p>
                     </div>
                   </div>
@@ -142,7 +140,7 @@ export default function About() {
                 const isLeft = i % 2 === 0
                 const content = (
                   <>
-                    <span className="text-[10px] sm:text-xs font-bold text-emerald-600 uppercase tracking-[0.2em]">{m.year}</span>
+                    <span className={`text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] ${i % 2 === 0 ? 'text-emerald-600' : 'text-gold-dark'}`}>{m.year}</span>
                     <h3 className="text-sm sm:text-lg font-bold text-slate-900 mt-1 mb-1">{m.title}</h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{m.desc}</p>
                   </>
@@ -172,7 +170,9 @@ export default function About() {
                         viewport={{ once: true }}
                         transition={{ type: 'spring', stiffness: 200, damping: 12, delay: i * 0.1 }}
                       >
-                        <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg border-[3px] border-white">
+                        <div className={`w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg border-[3px] border-white ${
+                          i % 2 === 0 ? 'from-emerald-600 to-emerald-800' : 'from-gold-mid to-gold-dark'
+                        }`}>
                           {m.year}
                         </div>
                       </motion.div>
@@ -198,7 +198,7 @@ export default function About() {
       </section>
 
       {/* MISSION / VISION / VALUES */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-teal-500/[0.05]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-gold/[0.06]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <ScrollReveal className="text-center mb-8 sm:mb-16">
             <span className="section-label text-center">OUR FOUNDATION</span>
@@ -227,25 +227,23 @@ export default function About() {
                     professional guidance unlock the nation's full economic potential.
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-600/[0.02] to-transparent rounded-full blur-2xl" />
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(20,184,166,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(212,160,23,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-emerald-400 to-secondary/50 group-hover:h-1.5 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-gold-mid to-gold/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(20,184,166,0.25)] transition-all duration-500">
-                    <BarChart3 className="text-secondary" size={26} />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(212,160,23,0.25)] transition-all duration-500">
+                    <BarChart3 className="text-gold-dark" size={26} />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-secondary transition-colors duration-500">Our Mission</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-gold-dark transition-colors duration-500">Our Mission</h3>
                   <p className="text-slate-600 leading-relaxed text-[15px]">
                     Provide reliable consulting, support sustainable business growth, and create value through strategic 
                     planning and professional guidance. We empower our clients with the insights, networks, and 
                     capital they need to achieve enduring success.
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary/[0.02] to-transparent rounded-full blur-2xl" />
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
@@ -263,7 +261,6 @@ export default function About() {
                     their long-term success.
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-tertiary/[0.02] to-transparent rounded-full blur-2xl" />
               </div>
             </ScrollReveal>
           </div>
@@ -289,7 +286,7 @@ export default function About() {
       </section>
 
       {/* GLOBAL REACH */}
-      <section className="py-16 sm:py-24 bg-emerald-500/[0.05]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.05] via-white to-gold/[0.05]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -308,7 +305,7 @@ export default function About() {
                   <p className="text-xs text-on-surface-variant/60 mt-2">Team Members</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-emerald-700"><AnimatedCounter target={10} suffix="+" /></p>
+                  <p className="text-3xl font-bold text-gold-dark"><AnimatedCounter target={10} suffix="+" /></p>
                   <p className="text-xs text-on-surface-variant/60 mt-2">Sectors Invested</p>
                 </div>
               </div>
@@ -323,175 +320,247 @@ export default function About() {
       </section>
 
        {/* INVESTMENT APPROACH */}
-      <section className="py-16 sm:py-24 bg-emerald-500/[0.07]">
+      <section className="relative py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.07] via-white to-gold/[0.06] overflow-hidden">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
-          <div className="relative overflow-hidden bg-gradient-to-br from-[#03140d] via-[#0b3322] to-[#052518] text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.22),transparent_30%)]" />
-            <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent" />
-            <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/8 to-transparent" />
+          <ScrollReveal className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+            <span className="section-label text-center">How We Invest</span>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900">
+              Our Investment{' '}
+              <span className="bg-gradient-to-r from-emerald-600 via-secondary to-gold-dark bg-clip-text text-transparent">
+                Approach
+              </span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              We combine market intelligence, trusted relationships, and disciplined execution to build a clear, credible approach to investment and consulting.
+            </p>
+          </ScrollReveal>
 
-            <div className="relative z-10 px-6 md:px-16 pt-10 pb-24">
-              <ScrollReveal className="mb-12 text-center">
-                <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 backdrop-blur-xl">
-                  <span className="h-2 w-2 rounded-full bg-tertiary shadow-[0_0_18px_rgba(16,185,129,0.8)]" />
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">How We Invest</span>
-                  <span className="h-1 w-1 rounded-full bg-white/30" />
-                  <span className="text-[11px] uppercase tracking-[0.24em] text-white/45">The SkyTouch Perspective</span>
-                </div>
-                <h2 className="mt-6 text-3xl md:text-5xl font-display font-bold leading-tight">
-                  Our <span className="bg-gradient-to-r from-emerald-300 via-secondary to-teal-300 bg-clip-text text-transparent">Investment Approach</span>
-                </h2>
-                <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent" />
-                <p className="mt-5 text-white/70 max-w-3xl mx-auto leading-relaxed">
-                  We combine market intelligence, trusted relationships, and disciplined execution to build a clear, credible approach to investment and consulting.
-                </p>
-              </ScrollReveal>
+          <ScrollReveal>
+            <div className="relative overflow-hidden rounded-[2rem] border border-emerald-950/10 bg-gradient-to-br from-[#04150e] via-[#0a3323] to-[#052a1c] text-white shadow-[0_40px_140px_rgba(4,21,14,0.35)] sm:rounded-[2.5rem]">
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.035]"
+                style={{
+                  backgroundImage:
+                    'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
+                  backgroundSize: '56px 56px',
+                }}
+              />
 
-              <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 items-stretch">
-                <ScrollReveal className="xl:col-span-7 flex flex-col gap-4">
-                  <div className="rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_30px_120px_rgba(0,0,0,0.35)]">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3 bg-white/5 backdrop-blur-xl">
-                      <img
-                        src="/investment-image.jpg"
-                        alt="Investment strategy"
-                        loading="lazy"
-                        className="h-56 sm:h-full w-full object-cover rounded-[1.5rem] border border-white/10"
-                      />
-                      <div className="grid grid-rows-2 gap-3">
-                        <div className="rounded-[1.5rem] bg-white/8 border border-white/10 flex items-center justify-center p-5">
-                          <img
-                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
-                            alt="Investment analytics dashboard"
-                            loading="lazy"
-                            className="h-full w-full object-cover rounded-xl"
-                          />
-                        </div>
-                        <div className="rounded-[1.5rem] bg-gradient-to-br from-emerald-600/20 to-tertiary/20 border border-white/10 p-5 flex items-center justify-between gap-4">
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12">
+                <div className="border-b border-white/10 p-5 sm:p-8 lg:col-span-5 lg:border-b-0 lg:border-r lg:p-10">
+                  <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl backdrop-blur-xl sm:p-5">
+                    <div className="mb-5 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 p-1.5">
                           <img
                             src="/logo.jpeg"
                             alt="SkyTouch mark"
                             loading="lazy"
-                            className="h-16 w-16 rounded-2xl object-cover bg-white/10 p-2"
+                            className="h-full w-full rounded-xl object-cover"
                           />
-                          <div className="text-right">
-                            <p className="text-sm uppercase tracking-[0.24em] text-white/50">Smart Capital</p>
-                            <p className="text-lg font-semibold text-white">Clarity, trust, and growth</p>
-                          </div>
+                        </span>
+                        <div>
+                          <p className="text-[9px] font-semibold uppercase tracking-[0.24em] text-gold-light/70">
+                            Smart Capital
+                          </p>
+                          <p className="text-sm font-semibold text-white">Portfolio overview</p>
                         </div>
                       </div>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-emerald-300">
+                        <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                        Live
+                      </span>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/10 bg-[#02120c]/70 p-4">
+                      <div className="flex items-end justify-between gap-3">
+                        <div>
+                          <p className="text-[9px] uppercase tracking-[0.22em] text-white/40">Portfolio IRR</p>
+                          <p className="mt-1 text-3xl font-bold leading-none">
+                            18.5<span className="text-lg text-gold-light">%</span>
+                          </p>
+                        </div>
+                        <span className="rounded-full border border-gold/20 bg-gold/10 px-2.5 py-1 text-[10px] font-semibold text-gold-light">
+                          +12.4% YoY
+                        </span>
+                      </div>
+                      <svg viewBox="0 0 320 110" className="mt-4 h-24 w-full" role="img" aria-label="Portfolio growth chart">
+                        <defs>
+                          <linearGradient id="aboutChartFill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="#34d399" stopOpacity="0.35" />
+                            <stop offset="100%" stopColor="#d4a017" stopOpacity="0" />
+                          </linearGradient>
+                          <linearGradient id="aboutChartLine" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stopColor="#34d399" />
+                            <stop offset="55%" stopColor="#10b981" />
+                            <stop offset="100%" stopColor="#f7e08a" />
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M0 96 C28 92 44 76 70 79 C96 82 110 61 136 63 C162 65 178 46 204 49 C230 52 246 32 274 27 C292 24 306 18 320 12 L320 110 L0 110 Z"
+                          fill="url(#aboutChartFill)"
+                        />
+                        <path
+                          d="M0 96 C28 92 44 76 70 79 C96 82 110 61 136 63 C162 65 178 46 204 49 C230 52 246 32 274 27 C292 24 306 18 320 12"
+                          fill="none"
+                          stroke="url(#aboutChartLine)"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                        />
+                        <circle cx="320" cy="12" r="4" fill="#f7e08a" />
+                      </svg>
+                      <div className="mt-2 flex justify-between text-[9px] uppercase tracking-[0.14em] text-white/30">
+                        <span>2021</span>
+                        <span>2023</span>
+                        <span>2025</span>
+                        <span>2026</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-2 gap-3">
+                      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                        <p className="text-[9px] uppercase tracking-[0.18em] text-white/40">Client retention</p>
+                        <p className="mt-1 text-2xl font-bold">
+                          98<span className="text-base text-emerald-300">%</span>
+                        </p>
+                        <div className="mt-3 h-1 rounded-full bg-white/10">
+                          <div className="h-1 w-[98%] rounded-full bg-gradient-to-r from-emerald-400 to-gold" />
+                        </div>
+                      </div>
+                      <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                        <p className="text-[9px] uppercase tracking-[0.18em] text-white/40">Projects delivered</p>
+                        <p className="mt-1 text-2xl font-bold text-gold-light">150+</p>
+                        <p className="mt-3 text-[10px] font-medium text-white/40">Across 10+ sectors</p>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
-                      <img
-                        src="/investment-new-business-launch-plan-concept.jpg"
-                        alt="Investment strategy planning"
-                        loading="lazy"
-                        className="h-56 w-full object-cover"
-                      />
-                      <div className="p-6 text-left">
-                        <p className="text-sm uppercase tracking-[0.22em] text-white/45 mb-2">Built For</p>
-                        <p className="text-xl font-semibold">Businesses, founders, and investors seeking clarity with ambition.</p>
+                  <div className="group relative mt-4 overflow-hidden rounded-[1.75rem] border border-white/10">
+                    <img
+                      src="/investment-hero.jpg"
+                      alt="Investment opportunities rooted in Nepal"
+                      loading="lazy"
+                      className="h-48 w-full object-cover object-[72%_center] transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#03140d] via-[#03140d]/35 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-5">
+                      <div>
+                        <p className="text-[9px] uppercase tracking-[0.22em] text-gold-light/75">Investment landscape</p>
+                        <p className="mt-1 text-sm font-semibold text-white">Rooted in Nepal. Built for the long term.</p>
                       </div>
-                    </div>
-                    <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
-                      <img
-                        src="/7250345.jpg"
-                        alt="Long-term investment growth"
-                        loading="lazy"
-                        className="h-56 w-full object-cover"
-                      />
-                      <div className="p-6 text-left">
-                        <p className="text-sm uppercase tracking-[0.22em] text-white/45 mb-2">Experience</p>
-                        <p className="text-xl font-semibold">A premium, modern, and highly focused advisory presence.</p>
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-
-                <ScrollReveal className="xl:col-span-5 flex flex-col justify-between gap-6 text-left items-start">
-                  <div className="rounded-[1.75rem] border border-white/10 bg-white/6 p-8 backdrop-blur-xl">
-                    <p className="text-xs tracking-[0.28em] uppercase text-white/50 mb-3">Why It Feels Extraordinary</p>
-                    <h3 className="text-2xl md:text-3xl font-display font-semibold mb-4">Local insight. Global discipline. Elevated execution.</h3>
-                    <p className="text-white/70 leading-relaxed mb-6">
-                      Our approach is designed to uncover practical opportunities, structure them with clarity, and deliver support that goes beyond conventional consulting.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-emerald-400">01</p>
-                        <p className="text-sm text-white/70 mt-2">Curated opportunities</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-emerald-300">02</p>
-                        <p className="text-sm text-white/70 mt-2">Strategic structure</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-emerald-400">03</p>
-                        <p className="text-sm text-white/70 mt-2">Reliable execution</p>
-                      </div>
-                      <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-emerald-300">04</p>
-                        <p className="text-sm text-white/70 mt-2">Long-term value</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-emerald-600/10 to-tertiary/10 p-8 backdrop-blur-xl">
-                    <p className="text-xs tracking-[0.28em] uppercase text-white/50 mb-4">Performance Metrics</p>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Portfolio IRR</span>
-                        <span className="text-2xl font-bold text-emerald-400">18.5%</span>
-                      </div>
-                      <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-2 rounded-full" style={{width: '85%'}} />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Client Retention</span>
-                        <span className="text-2xl font-bold text-emerald-300">98%</span>
-                      </div>
-                      <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-emerald-400 to-tertiary h-2 rounded-full" style={{width: '98%'}} />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-white/70 text-sm">Projects Delivered</span>
-                        <span className="text-2xl font-bold text-emerald-400">150+</span>
-                      </div>
-                      <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-2 rounded-full" style={{width: '92%'}} />
-                      </div>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              </div>
-
-              <ScrollReveal className="mt-8 rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.28)]">
-                <div className="relative h-56 md:h-72">
-                  <img
-                    src="/investment-image.jpg"
-                    alt="Strategic investment landscape"
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#03140d]/85 via-[#0b3b26]/45 to-transparent" />
-                  <div className="absolute inset-0 flex items-end p-6 md:p-10">
-                    <div className="max-w-2xl">
-                      <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-2">AI-inspired outlook</p>
-                      <h3 className="text-2xl md:text-4xl font-display font-bold mb-3">A visual ending that feels forward-looking and premium.</h3>
-                      <p className="text-white/75 max-w-xl leading-relaxed">
-                        This closing image gives the section a clean finish and reinforces the investment-first identity of SkyTouch.
-                      </p>
+                      <span className="rounded-full border border-white/15 bg-black/30 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-white/70 backdrop-blur">
+                        Est. 2009
+                      </span>
                     </div>
                   </div>
                 </div>
-              </ScrollReveal>
-            </div>
-          </div>
 
-          <ScrollReveal className="text-center mb-16">
-            <span className="section-label text-center">How We Invest</span>
-            <h2 className="text-3xl md:text-5xl font-display font-bold">Our Investment Approach</h2>
+                <div className="flex flex-col p-6 sm:p-8 lg:col-span-7 lg:p-10">
+                  <div className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.28em] text-gold-light/70">
+                    <span className="h-px w-8 bg-gradient-to-r from-gold/70 to-transparent" />
+                    The SkyTouch Perspective
+                  </div>
+                  <h3 className="mt-4 text-2xl font-display font-bold leading-tight text-white sm:text-3xl md:text-4xl">
+                    Local insight. Global discipline.<br className="hidden sm:block" /> Elevated execution.
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
+                    Our approach is designed to uncover practical opportunities, structure them with clarity, and deliver support that goes beyond conventional consulting.
+                  </p>
+
+                  <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {[
+                      { num: '01', title: 'Curated opportunities', desc: 'Sourcing with conviction across high-growth sectors.' },
+                      { num: '02', title: 'Strategic structure', desc: 'Capital, governance, and terms aligned from day one.' },
+                      { num: '03', title: 'Reliable execution', desc: 'Hands-on partnership through every stage of growth.' },
+                      { num: '04', title: 'Long-term value', desc: 'Patient capital focused on multi-generational outcomes.' },
+                    ].map((step, index) => (
+                      <div
+                        key={step.num}
+                        className={`group flex items-start gap-3 rounded-2xl border p-4 transition-all duration-300 ${
+                          index % 2 === 0
+                            ? 'border-emerald-400/15 bg-emerald-400/[0.05] hover:border-emerald-400/35 hover:bg-emerald-400/[0.08]'
+                            : 'border-gold/15 bg-gold/[0.05] hover:border-gold/35 hover:bg-gold/[0.08]'
+                        }`}
+                      >
+                        <span
+                          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border text-[11px] font-bold ${
+                            index % 2 === 0
+                              ? 'border-emerald-400/20 bg-emerald-400/10 text-emerald-300'
+                              : 'border-gold/25 bg-gold/10 text-gold-light'
+                          }`}
+                        >
+                          {step.num}
+                        </span>
+                        <div>
+                          <p className="text-sm font-semibold text-white">{step.title}</p>
+                          <p className="mt-1 text-xs leading-relaxed text-white/45">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-7 flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold/25 bg-gold/10 text-gold-light">
+                        <Shield size={18} />
+                      </span>
+                      <p className="text-sm leading-relaxed text-white/70">
+                        Disciplined governance. Transparent reporting. Enduring partnerships.
+                      </p>
+                    </div>
+                    <Link
+                      to="/investment"
+                      className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-light via-gold-mid to-gold-dark px-5 py-2.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1c1405] transition-all hover:shadow-[0_10px_35px_rgba(212,160,23,0.4)]"
+                    >
+                      Explore Portfolio
+                      <ArrowRight size={14} />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative z-10 grid grid-cols-1 border-t border-white/10 sm:grid-cols-3">
+                <div className="flex gap-4 border-b border-white/10 p-6 sm:border-b-0 sm:border-r sm:p-7">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-400/20 bg-emerald-400/10 text-emerald-300">
+                    <Users size={18} />
+                  </span>
+                  <div>
+                    <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-white/40">Built for</p>
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-white/80">
+                      Businesses, founders, and investors seeking clarity with ambition.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 border-b border-white/10 p-6 sm:border-b-0 sm:border-r sm:p-7">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gold/25 bg-gold/10 text-gold-light">
+                    <Award size={18} />
+                  </span>
+                  <div>
+                    <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-white/40">Experience</p>
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-white/80">
+                      A premium, modern, and highly focused advisory presence.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 p-6 sm:p-7">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-emerald-400/20 bg-emerald-400/10 text-emerald-300">
+                    <Target size={18} />
+                  </span>
+                  <div>
+                    <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-white/40">Why it feels extraordinary</p>
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-white/80">
+                      Practical opportunities, structured with clarity, supported beyond conventional consulting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal className="mt-16 text-center sm:mt-20">
+            <span className="section-label text-center">Our Principles</span>
+            <h3 className="mb-10 text-2xl md:text-4xl font-display font-bold">What Guides Every Decision</h3>
           </ScrollReveal>
           <CircularTestimonials
             testimonials={approachTestimonials}
@@ -500,9 +569,9 @@ export default function About() {
               name: "#0a0a0a",
               designation: "#6b7280",
               testimony: "#4b5563",
-              arrowBackground: "#059669",
-              arrowForeground: "#ffffff",
-              arrowHoverBackground: "#047857",
+              arrowBackground: "#d4a017",
+              arrowForeground: "#1c1405",
+              arrowHoverBackground: "#b8860b",
             }}
             fontSizes={{
               name: "24px",
@@ -514,7 +583,7 @@ export default function About() {
       </section>
 
       {/* IMPACT & SUSTAINABILITY */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-teal-500/[0.05]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-gold/[0.06]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -534,10 +603,10 @@ export default function About() {
                   { icon: Users, title: 'Social Responsibility', desc: 'Our investments create meaningful employment and support community development across Nepal.' },
                   { icon: Shield, title: 'Governance Excellence', desc: 'We maintain the highest standards of corporate governance, transparency, and accountability.' },
                   { icon: GraduationCap, title: 'Knowledge Transfer', desc: 'We invest in capacity building and professional development for local talent and partners.' },
-                ].map((item) => (
+                ].map((item, index) => (
                   <div key={item.title} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-600/10 flex items-center justify-center shrink-0">
-                      <item.icon size={20} className="text-emerald-600" />
+                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${index === 2 ? 'bg-gold/10' : 'bg-emerald-600/10'}`}>
+                      <item.icon size={20} className={index === 2 ? 'text-gold-dark' : 'text-emerald-600'} />
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">{item.title}</h4>
@@ -568,7 +637,7 @@ export default function About() {
               <span className="text-xs font-semibold uppercase tracking-widest text-white/60">The SkyTouch Difference</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
-              Why Choose <span className="bg-gradient-to-r from-secondary-light to-teal-300 bg-clip-text text-transparent">SkyTouch</span>
+              Why Choose <span className="bg-gradient-to-r from-secondary-light via-secondary to-gold-light bg-clip-text text-transparent">SkyTouch</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4">
               Discover what sets us apart in the world of strategic investments
@@ -592,7 +661,7 @@ export default function About() {
                      <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                      <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
                      <div className="pt-6 border-t border-slate-100">
-                       <p className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">{feature.stat}</p>
+                       <p className="text-3xl font-bold bg-gradient-to-r from-emerald-500 via-secondary to-gold-dark bg-clip-text text-transparent">{feature.stat}</p>
                        <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
                      </div>
                    </div>
@@ -607,10 +676,6 @@ export default function About() {
 
       {/* CTA SECTION */}
       <section className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-r from-[#03140d] via-[#0b3b26] to-[#14532d]">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_40%)]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
-        </div>
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 text-center relative">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-sm">
@@ -619,7 +684,7 @@ export default function About() {
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
               Ready to Invest in{' '}
-              <span className="bg-gradient-to-r from-emerald-300 to-emerald-200 bg-clip-text text-transparent">Nepal's Future?</span>
+              <span className="bg-gradient-to-r from-emerald-300 via-secondary-light to-gold-light bg-clip-text text-transparent">Nepal's Future?</span>
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
               Partner with SkyTouch for strategic investment opportunities that deliver sustainable growth 

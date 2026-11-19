@@ -144,16 +144,6 @@ export function CardStack({
         tabIndex={0}
         onKeyDown={onKeyDown}
       >
-        {/* background wash / spotlight */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-6 mx-auto h-48 w-[70%] rounded-full bg-black/5 blur-3xl "
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 mx-auto h-40 w-[76%] rounded-full bg-black/10 blur-3xl "
-          aria-hidden="true"
-        />
-
         <div
           className="absolute inset-0 flex items-end justify-center"
           style={{
@@ -276,8 +266,8 @@ export function CardStack({
                   className={cn(
                     "h-2 w-2 rounded-full transition",
                     on
-                      ? "bg-foreground"
-                      : "bg-foreground/30 hover:bg-foreground/50",
+                      ? "bg-gold"
+                      : "bg-gold/30 hover:bg-gold/50",
                   )}
                   aria-label={`Go to ${it.title}`}
                 />
@@ -327,7 +317,7 @@ function DefaultFanCard({ item, active }) {
       {/* content */}
       <div className="relative z-10 flex h-full flex-col justify-end p-5">
         {item.tag && (
-          <div className="mb-2 inline-block w-fit rounded-full bg-primary/80 px-3 py-1 text-xs font-semibold text-white">
+          <div className="mb-2 inline-block w-fit rounded-full bg-gradient-to-r from-gold-light to-gold-dark px-3 py-1 text-xs font-semibold text-[#1c1405]">
             {item.tag}
           </div>
         )}

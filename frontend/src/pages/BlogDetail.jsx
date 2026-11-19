@@ -213,7 +213,7 @@ export default function BlogDetail() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16">
           <div className="max-w-4xl mx-auto">
-            <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-primary rounded-full mb-4">
+            <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-widest text-[#1c1405] bg-gradient-to-r from-gold-light via-gold-mid to-gold-dark rounded-full mb-4">
               {blog.category}
             </span>
             <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-4">
@@ -250,7 +250,7 @@ export default function BlogDetail() {
                   <ul className="space-y-3 ml-6">
                     {section.points.map((point, j) => (
                       <li key={j} className="flex items-start gap-3 text-slate-600">
-                        <span className="mt-2 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                        <span className={`mt-2 w-2 h-2 rounded-full flex-shrink-0 ${j % 2 === 0 ? 'bg-emerald-500' : 'bg-gold'}`} />
                         <span>{point}</span>
                       </li>
                     ))}
@@ -266,7 +266,7 @@ export default function BlogDetail() {
           <div className="mt-16 pt-8 border-t border-slate-200">
             <Link
               to="/blogs"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
+              className="inline-flex items-center gap-2 text-gold-dark font-semibold hover:text-gold transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

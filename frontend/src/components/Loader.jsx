@@ -11,7 +11,8 @@ export default function Loader() {
       </picture>
       <div className="relative w-14 h-14">
         <div className="absolute inset-0 rounded-full border-2 border-primary/20" />
-        <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary animate-spin" />
+        <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-secondary animate-spin" />
+        <div className="absolute inset-0 rounded-full border-2 border-transparent border-b-gold animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.6s' }} />
       </div>
       <span className="text-[11px] tracking-[0.2em] text-outline font-semibold animate-fade-in-delay">
         INVESTMENT & CONSULTANT PVT. LTD.

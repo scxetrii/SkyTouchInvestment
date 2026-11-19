@@ -6,12 +6,12 @@ import { TextParallaxDemo } from '../components/blocks/text-parallax-demo'
 import { Folder } from '../components/ui/folder-components'
 import { SectorHoverCard } from '../components/ui/sector-hover-card'
 
-const investmentHeroImage = 'https://img.lightshot.app/edM1-W54Ro2nYBDHgMMFJw.png'
+const investmentHeroImage = '/investment-hero.jpg'
 
 const portfolioPartners = [
   { name: 'IME Prudential Insurance', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/imepraillogo.png', tint: 'from-primary/15 via-white to-primary/5' },
   { name: 'Gaura Construction', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/gaurg.png', tint: 'from-primary-light/20 via-white to-primary-light/10' },
-  { name: 'Hathway Investment', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/Hathway-Logo-2.png', tint: 'from-emerald-500/20 via-white to-emerald-100' },
+  { name: 'Hathway Investment', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/Hathway-Logo-2.png', tint: 'from-gold/20 via-white to-gold/10' },
 ]
 
 const marqueePartners = [...portfolioPartners, ...portfolioPartners]
@@ -74,8 +74,8 @@ const sectors = [
     details: 'Hospitality and tourism assets that benefit from Nepal growing visitor economy, premium destinations, and infrastructure upgrades.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80',
     pct: 43,
-    color: '#059669',
-    folderColor: 'green',
+    color: '#d4a017',
+    folderColor: 'gold',
   },
   {
     title: 'Healthcare',
@@ -94,8 +94,8 @@ const sectors = [
     details: 'Agro-processing and sustainable farming initiatives designed to modernize rural value chains and strengthen food security.',
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80',
     pct: 40,
-    color: '#3b9ae0',
-    folderColor: 'green',
+    color: '#d4a017',
+    folderColor: 'gold',
   },
 ]
 
@@ -136,10 +136,10 @@ export default function Investment() {
 
             <ScrollReveal className="relative">
               <div className="relative rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)] p-3 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_35%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(212,160,23,0.10),transparent_30%)]" />
                 <img
                   src={investmentHeroImage}
-                  alt="Original uploaded investment image"
+                  alt="SkyTouch strategic investments"
                   className="relative z-10 w-full h-full object-contain rounded-[1.6rem] bg-white"
                   loading="lazy"
                 />
@@ -150,18 +150,18 @@ export default function Investment() {
       </section>
 
       {/* PORTFOLIO PARTNERS */}
-      <section className="py-16 bg-gradient-to-br from-primary/10 via-white to-secondary/10">
+      <section className="py-16 bg-gradient-to-br from-primary/10 via-white to-gold/10">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <div className="sr-only">Marquee animation defined in global CSS</div>
           <ScrollReveal className="text-center mb-10">
             <span className="section-label text-center">Trusted Portfolio Partners</span>
-            <h2 className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent">
+            <h2 className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-primary via-secondary to-gold bg-clip-text text-transparent">
               Each selected for its growth potential and alignment with Nepal Economic Transformation
             </h2>
             <div className="flex items-center justify-center gap-3 mt-6">
-              <span className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-tertiary" />
-              <span className="h-2.5 w-2.5 rotate-45 bg-gradient-to-br from-primary to-tertiary" />
-              <span className="h-px w-16 bg-gradient-to-r from-tertiary via-primary to-transparent" />
+              <span className="h-px w-16 bg-gradient-to-r from-transparent via-primary to-gold" />
+              <span className="h-2.5 w-2.5 rotate-45 bg-gradient-to-br from-primary to-gold" />
+              <span className="h-px w-16 bg-gradient-to-r from-gold via-primary to-transparent" />
             </div>
           </ScrollReveal>
           <div className="relative overflow-hidden rounded-2xl border border-outline/10 bg-white py-8">
@@ -186,7 +186,7 @@ export default function Investment() {
       </section>
 
       {/* SECTORS FOLDERS */}
-      <section className="py-24 bg-gradient-to-br from-primary/[0.05] via-white to-secondary/[0.08]">
+      <section className="py-24 bg-gradient-to-br from-primary/[0.05] via-white to-gold/[0.07]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="text-center mb-20">
             <span className="section-label text-center">Explore Our Investment Sectors</span>

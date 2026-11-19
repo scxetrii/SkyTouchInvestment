@@ -51,7 +51,7 @@ export function BlogDetailModal({ post, isOpen, onClose }) {
               <div className="max-w-4xl mx-auto px-6 md:px-8 py-12">
                 {/* Tag */}
                 {post.tag && (
-                  <div className="inline-block mb-4 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                  <div className="inline-block mb-4 rounded-full bg-gold/10 border border-gold/25 px-4 py-2 text-sm font-semibold text-gold-dark">
                     {post.tag}
                   </div>
                 )}
@@ -101,7 +101,7 @@ export function BlogDetailModal({ post, isOpen, onClose }) {
                   </p>
                   <a
                     href="/contact"
-                    className="inline-block px-8 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-colors"
+                    className="inline-block px-8 py-3 bg-gradient-to-r from-gold-light via-gold-mid to-gold-dark text-[#1c1405] rounded-xl font-semibold hover:shadow-[0_10px_35px_rgba(212,160,23,0.4)] transition-all"
                   >
                     Get In Touch With Us
                   </a>

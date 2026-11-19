@@ -65,7 +65,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Tourism', 
       pct: 43, 
-      color: '#059669', 
+      color: '#d4a017', 
       desc: 'Growth in Nepal tourism sector',
       icon: '🏔️',
       details: 'Strategic investments in tourism infrastructure and hospitality ventures.',
@@ -83,7 +83,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Technology & AI', 
       pct: 72, 
-      color: '#3b9ae0', 
+      color: '#b8860b', 
       desc: 'Innovation in digital transformation',
       icon: '🤖',
       details: 'Strategic investments in cutting-edge technology and artificial intelligence companies driving digital innovation and automation.',
@@ -108,7 +108,7 @@ export function InvestmentSectorCard() {
             <div className="max-w-3xl">
               {/* Header */}
               <ScrollReveal>
-                <span className="text-xs tracking-[0.2em] font-semibold text-tertiary uppercase block mb-2">
+                <span className="text-xs tracking-[0.2em] font-semibold text-gold uppercase block mb-2">
                   Strategic Investments
                 </span>
                 <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white drop-shadow-lg">
@@ -203,7 +203,7 @@ export function InvestmentSectorCard() {
                   onClick={() => {
                     navigate('/investment', { state: { scrollTo: 'portfolio-organized' } })
                   }}
-                  className="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg text-sm font-semibold text-white hover:shadow-lg shadow-lg drop-shadow-lg transition-all"
+                  className="px-6 py-3 bg-gradient-to-r from-tertiary via-primary to-gold-dark rounded-lg text-sm font-semibold text-white hover:shadow-lg shadow-lg drop-shadow-lg transition-all"
                 >
                   Explore Sectors →
                 </motion.button>
@@ -214,17 +214,14 @@ export function InvestmentSectorCard() {
           {/* Right - Image */}
           <div className="relative h-full min-h-[400px] lg:min-h-full flex items-center justify-center p-8 md:p-12">
             <div className="relative group">
-              {/* Decorative glow behind image */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/10 to-tertiary/20 rounded-[2rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-              
               {/* Decorative border ring */}
-              <div className="absolute -inset-3 border border-white/10 rounded-[2rem] group-hover:border-primary/30 transition-colors duration-500" />
+              <div className="absolute -inset-3 border border-white/10 rounded-[2rem] group-hover:border-gold/30 transition-colors duration-500" />
               
               {/* Decorative corner accents */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary/40 rounded-tl-xl" />
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary/40 rounded-tr-xl" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-primary/40 rounded-bl-xl" />
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary/40 rounded-br-xl" />
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold/50 rounded-tl-xl" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-gold/50 rounded-tr-xl" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-emerald-400/40 rounded-bl-xl" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-emerald-400/40 rounded-br-xl" />
               
               <img
                 src="/investment-image.jpg"
@@ -240,7 +237,7 @@ export function InvestmentSectorCard() {
                 <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg backdrop-blur-sm">
                   Growth
                 </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-emerald-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-[#1c1405] bg-gradient-to-r from-gold-light to-gold-dark rounded-full shadow-lg backdrop-blur-sm">
                   Secure
                 </span>
               </div>

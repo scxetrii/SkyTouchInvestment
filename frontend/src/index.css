@@ -23,22 +23,10 @@
 
   body {
     @apply font-body text-on-surface overflow-x-hidden transition-colors duration-300;
-    background:
-      radial-gradient(circle at top, rgba(11, 58, 102, 0.14), transparent 38%),
-      radial-gradient(circle at right bottom, rgba(16, 185, 129, 0.10), transparent 32%),
-      linear-gradient(180deg, #f8fbff 0%, #f2f9f6 100%);
+    background: linear-gradient(180deg, #f8fbff 0%, #f2f9f6 100%);
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
-  }
-
-  @media (max-width: 640px) {
-    body {
-      background:
-        radial-gradient(circle at top, rgba(11, 58, 102, 0.10), transparent 40%),
-        radial-gradient(circle at right bottom, rgba(16, 185, 129, 0.08), transparent 35%),
-        linear-gradient(180deg, #f8fbff 0%, #f2f9f6 100%);
-    }
   }
 
   @media (max-width: 640px) {
@@ -66,12 +54,12 @@
     inset-inline: 0;
     top: 0;
     height: 1px;
-    background: linear-gradient(90deg, rgba(11, 58, 102, 0.55), rgba(16, 185, 129, 0.55));
+    background: linear-gradient(90deg, rgba(11, 58, 102, 0.55), rgba(16, 185, 129, 0.55), rgba(212, 160, 23, 0.6));
     opacity: 0.7;
   }
   .glass-card:hover {
-    @apply border-secondary/40;
-    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.16);
+    @apply border-gold/40;
+    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.12), 0 18px 50px rgba(212, 160, 23, 0.1);
   }
   .btn-primary {
     @apply px-6 sm:px-8 py-3 bg-[#d4a017] text-[#1c1405] rounded-xl font-semibold text-sm tracking-wider;
@@ -90,8 +78,20 @@
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .btn-outline:hover {
-    @apply border-primary/50;
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+    @apply border-gold/60;
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.12), 0 8px 22px rgba(212, 160, 23, 0.12);
+  }
+  .btn-gold {
+    @apply px-6 sm:px-8 py-3 text-[#1c1405] rounded-xl font-semibold text-sm tracking-wider;
+    background-image: linear-gradient(135deg, #f7e08a 0%, #e0b33c 45%, #b8860b 100%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .btn-gold:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 35px rgba(212, 160, 23, 0.45);
+  }
+  .btn-gold:active {
+    transform: scale(0.97);
   }
   .btn-outline:active {
     transform: scale(0.97);
@@ -103,19 +103,22 @@
 }
 
 .accent-gradient {
-    background: linear-gradient(135deg, #34d399, #059669 55%, #0b3a66);
+    background: linear-gradient(135deg, #34d399, #059669 45%, #d4a017 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   .accent-gradient-dark {
-    background: linear-gradient(135deg, #6ee7b7, #34d399 45%, #2f7db3);
+    background: linear-gradient(135deg, #6ee7b7, #34d399 35%, #f7e08a 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  .gold-gradient {
+    background-image: linear-gradient(135deg, #f7e08a 0%, #e0b33c 45%, #b8860b 100%);
+  }
   .section-label {
-    @apply text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold text-tertiary mb-3 sm:mb-4 block;
+    @apply text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold text-gold-dark mb-3 sm:mb-4 block;
   }
 }
 
@@ -236,7 +239,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #0b3a66, #10b981);
+  background: linear-gradient(90deg, #059669, #d4a017);
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -257,7 +260,7 @@
 
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: rgba(11,58,102, 0.05); }
-::-webkit-scrollbar-thumb { background: #0b3a66; border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #059669, #d4a017); border-radius: 10px; }
 
 @keyframes fade-in {
   from { opacity: 0; }

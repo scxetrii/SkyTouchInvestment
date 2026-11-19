@@ -36,7 +36,7 @@ export default function Terms() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-gold/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -58,7 +58,7 @@ export default function Terms() {
           {sections.map((section, i) => (
             <ScrollReveal key={section.title} delay={i * 0.05}>
               <div className="glass-card rounded-xl p-8">
-                <h2 className="text-xl font-display font-semibold mb-4 text-primary">{section.title}</h2>
+                <h2 className={`text-xl font-display font-semibold mb-4 ${i % 2 === 0 ? 'text-emerald-700' : 'text-gold-dark'}`}>{section.title}</h2>
                 <p className="text-sm text-on-surface-variant/70 leading-relaxed">{section.content}</p>
               </div>
             </ScrollReveal>
@@ -68,7 +68,7 @@ export default function Terms() {
         <ScrollReveal className="mt-12 text-center">
           <p className="text-sm text-outline">
             Last updated: January 2026. For questions about these terms, please{' '}
-            <a href="/contact" className="text-primary hover:underline">contact us</a>.
+            <a href="/contact" className="text-gold-dark hover:underline">contact us</a>.
           </p>
         </ScrollReveal>
       </section>

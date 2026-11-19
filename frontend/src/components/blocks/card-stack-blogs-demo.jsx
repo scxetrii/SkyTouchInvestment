@@ -274,7 +274,7 @@ export function CardStackBlogsDemo() {
                 </div>
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
                 <div className="relative z-10 flex h-full flex-col justify-end p-6">
-                  <div className="mb-3 inline-block w-fit rounded-full bg-primary/90 px-3 py-1 text-xs font-bold text-white">
+                  <div className="mb-3 inline-block w-fit rounded-full bg-gradient-to-r from-gold-light to-gold-dark px-3 py-1 text-xs font-bold text-[#1c1405]">
                     {item.tag}
                   </div>
                   <div className="truncate text-xl font-bold text-white mb-2">
@@ -283,7 +283,7 @@ export function CardStackBlogsDemo() {
                   <div className="line-clamp-2 text-sm text-white/80 mb-4">
                     {item.description}
                   </div>
-                  <div className="text-xs text-white/60">
+                  <div className="text-xs text-gold-light/80">
                     {active ? "Double-click to read full article →" : "Click to scroll"}
                   </div>
                 </div>
