@@ -61,9 +61,17 @@ export default function About() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* HERO */}
-      <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#03140d] via-[#0b3b26] to-[#062f1c]">
+      <section className="relative flex min-h-[50vh] items-center overflow-hidden bg-[#03140d] sm:min-h-[70vh]">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-400/15 to-transparent" />
+          <img
+            src="/about-banner.jpg"
+            alt="SkyTouch projects and investments across Nepal"
+            className="h-full w-full object-cover object-center"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#03140d]/95 via-[#03140d]/75 to-[#03140d]/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#03140d]/80 via-transparent to-[#03140d]/40" />
+          <div className="absolute inset-0 bg-[#03140d]/35 sm:hidden" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-gold/40" />
         </div>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative w-full">
