@@ -476,9 +476,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             <ScrollReveal>
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&fit=crop"
-                alt="About"
-                className="rounded-xl sm:rounded-2xl w-full object-cover h-48 sm:h-64 md:h-auto"
+                src="/about-company.jpg"
+                alt="SkyTouch Investment team meeting in Kathmandu"
+                className="rounded-xl sm:rounded-2xl w-full object-cover object-center h-48 sm:h-64 md:h-auto"
                 loading="lazy"
               />
             </ScrollReveal>
