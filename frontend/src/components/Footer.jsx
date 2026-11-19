@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 text-sm">
               <span className="inline-flex items-center gap-1.5 text-white/60">
                 <span className="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_rgba(245,158,11,0.7)]" />
-                Mon – Fri: 9:00 AM – 6:00 PM
+                Sun – Fri: 9:30 AM – 5:30 PM
               </span>
             </div>
           </div>

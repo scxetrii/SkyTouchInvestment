@@ -76,7 +76,7 @@ export default function Contact() {
               <div className="flex flex-wrap gap-4">
                 {[
                   { label: 'Fast Response', value: 'Within 24 hours' },
-                  { label: 'Office Hours', value: 'Sun - Fri, 9AM - 5PM' },
+                  { label: 'Office Hours', value: 'Sun - Fri, 9:30 AM - 5:30 PM' },
                   { label: 'Location', value: 'Panipokhari, Kathmandu' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 shadow-[0_12px_40px_rgba(15,23,42,0.06)] backdrop-blur-sm">
@@ -208,7 +208,7 @@ export default function Contact() {
               {
                 icon: Clock,
                 title: 'Office Hours',
-                text: 'Sunday - Friday: 9:00 AM - 5:00 PM',
+                text: 'Sunday - Friday: 9:30 AM - 5:30 PM',
               },
             ].map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 0.08}>
