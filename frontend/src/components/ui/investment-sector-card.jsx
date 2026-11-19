@@ -1,270 +1,320 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import ScrollReveal from '../ScrollReveal'
+import { ArrowUpRight } from 'lucide-react'
 
 export function InvestmentSectorCard() {
   const [activeIndex, setActiveIndex] = useState(0)
   const glowRef = useRef(null)
   const navigate = useNavigate()
-  
-  // Initialize glow effect - single listener on container
+
   useEffect(() => {
     const container = glowRef.current
     if (!container) return
 
     const syncPointer = (e) => {
-      const { clientX: x, clientY: y } = e
-      container.style.setProperty('--x', x.toFixed(2))
-      container.style.setProperty('--xp', (x / window.innerWidth).toFixed(2))
-      container.style.setProperty('--y', y.toFixed(2))
-      container.style.setProperty('--yp', (y / window.innerHeight).toFixed(2))
+      const rect = container.getBoundingClientRect()
+      container.style.setProperty('--x', `${(e.clientX - rect.left).toFixed(0)}px`)
+      container.style.setProperty('--y', `${(e.clientY - rect.top).toFixed(0)}px`)
     }
 
-    document.addEventListener('pointermove', syncPointer, { passive: true })
-    return () => document.removeEventListener('pointermove', syncPointer)
+    container.addEventListener('pointermove', syncPointer, { passive: true })
+    return () => container.removeEventListener('pointermove', syncPointer)
   }, [])
-  
+
   const sectors = [
-    { 
-      title: 'Private Equity', 
-      pct: 65, 
-      color: '#0f5fa8', 
+    {
+      title: 'Private Equity',
+      pct: 65,
+      color: '#0f5fa8',
       desc: 'Partnering for growth and transformation',
       icon: '📈',
       details: 'Strategic investments in high-growth companies with strong fundamentals and experienced management teams.',
-      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Real Estate', 
-      pct: 44, 
-      color: '#059669', 
+    {
+      title: 'Real Estate',
+      pct: 44,
+      color: '#059669',
       desc: 'Creating value through strategic property investment',
       icon: '🏗️',
       details: 'Premium commercial and residential properties in prime locations with strong rental yields.',
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Capital Markets', 
-      pct: 84, 
-      color: '#0f5fa8', 
+    {
+      title: 'Capital Markets',
+      pct: 84,
+      color: '#0f5fa8',
       desc: 'Strategic public market investments',
       icon: '📊',
       details: 'Well-researched public market investments across diverse sectors and geographies.',
-      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Hydropower', 
-      pct: 48, 
-      color: '#3b9ae0', 
+    {
+      title: 'Hydropower',
+      pct: 48,
+      color: '#3b9ae0',
       desc: 'Sustainable energy production',
       icon: '💧',
       details: 'Long-term investments in renewable energy projects with stable cash flows.',
-      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Tourism', 
-      pct: 43, 
-      color: '#d4a017', 
+    {
+      title: 'Tourism',
+      pct: 43,
+      color: '#d4a017',
       desc: 'Growth in Nepal tourism sector',
       icon: '🏔️',
       details: 'Strategic investments in tourism infrastructure and hospitality ventures.',
-      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Hospitality', 
-      pct: 66, 
-      color: '#0f5fa8', 
+    {
+      title: 'Hospitality',
+      pct: 66,
+      color: '#0f5fa8',
       desc: 'Premium hotel and resort investments',
       icon: '🏨',
       details: 'High-quality hotel properties with consistent occupancy and revenue growth.',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=90&fit=crop&auto=format',
     },
-    { 
-      title: 'Technology & AI', 
-      pct: 72, 
-      color: '#b8860b', 
+    {
+      title: 'Technology & AI',
+      pct: 72,
+      color: '#b8860b',
       desc: 'Innovation in digital transformation',
       icon: '🤖',
       details: 'Strategic investments in cutting-edge technology and artificial intelligence companies driving digital innovation and automation.',
-      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=90&fit=crop&auto=format'
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=90&fit=crop&auto=format',
     },
   ]
-  
+
   const currentSector = sectors[activeIndex]
 
   return (
-    <>
-      <div ref={glowRef} className="w-full relative overflow-hidden rounded-[2rem] border border-white/10">
-        {/* Full-width background image */}
+    <div
+      ref={glowRef}
+      className="relative w-full overflow-hidden rounded-[2rem] border border-white/10 bg-[#050d16]"
+    >
+      {/* Ambient background image */}
+      <AnimatePresence mode="wait">
         <motion.img
           key={currentSector.image}
           src={currentSector.image}
           alt=""
           aria-hidden="true"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105 saturate-110"
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 0.5, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/15" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
-        <div className="absolute inset-x-0 top-0 h-[16px] bg-white/10 backdrop-blur-md border-b border-white/20 shadow-[0_8px_30px_rgba(255,255,255,0.08)]" />
-        <div className="absolute inset-x-0 top-0 h-[2px] bg-white/35" />
-        
-        {/* Content Container */}
-        <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#04131f]/95 via-[#04131f]/85 to-[#04131f]/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#020a12]/90 via-transparent to-[#020a12]/40" />
+
+      {/* Accent glow */}
+      <div
+        className="pointer-events-none absolute -left-40 top-1/3 h-[30rem] w-[30rem] rounded-full opacity-25 blur-[130px] transition-colors duration-700"
+        style={{ backgroundColor: currentSector.color }}
+      />
+
+      {/* Grid + cursor spotlight */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px)',
+          backgroundSize: '44px 44px',
+        }}
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(520px circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.07), transparent 45%)',
+        }}
+      />
+
+      <div className="relative px-5 py-10 sm:px-8 sm:py-12 md:px-14 md:py-16">
+        {/* Top bar */}
+        <div className="mb-8 flex items-center justify-between gap-4 md:mb-12">
+          <div className="flex items-center gap-3">
+            <span className="relative flex h-2.5 w-2.5">
+              <span
+                className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60"
+                style={{ backgroundColor: currentSector.color }}
+              />
+              <span
+                className="relative inline-flex h-2.5 w-2.5 rounded-full"
+                style={{ backgroundColor: currentSector.color }}
+              />
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-white/60 sm:text-xs">
+              Strategic Investments
+            </span>
+          </div>
+          <span className="font-mono text-[10px] tracking-[0.25em] text-white/40 sm:text-xs">
+            {String(activeIndex + 1).padStart(2, '0')} <span className="text-white/20">/</span>{' '}
+            {String(sectors.length).padStart(2, '0')}
+          </span>
+        </div>
+
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Left - Content */}
-          <div className="px-6 md:px-16 py-16 md:py-24 flex items-center">
-            <div className="max-w-3xl">
-              {/* Header */}
-              <ScrollReveal>
-                <span className="text-xs tracking-[0.2em] font-semibold text-gold uppercase block mb-2">
-                  Strategic Investments
-                </span>
-                <h3 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white drop-shadow-lg">
+          <div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSector.title}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35, ease: 'easeOut' }}
+              >
+                <h3 className="font-display text-4xl font-bold leading-[1.05] text-white sm:text-5xl md:text-6xl">
                   {currentSector.title}
                 </h3>
-                <p className="text-base text-white/90 mb-8 max-w-xl drop-shadow">
+                <p className="mt-3 text-xs font-medium uppercase tracking-[0.18em] text-white/45 sm:text-sm">
+                  {currentSector.desc}
+                </p>
+                <p className="mt-5 max-w-xl text-sm leading-relaxed text-white/70 md:text-base">
                   {currentSector.details}
                 </p>
-                
-                {/* Progress Indicator */}
-                <div className="mb-12">
-                  <div className="flex justify-between items-center mb-3">
-                    <span className="text-xs tracking-wider text-white/80 font-semibold drop-shadow">
-                      Portfolio Allocation
-                    </span>
-                    <span className="text-3xl font-bold font-display drop-shadow-lg" style={{ color: currentSector.color }}>
-                      {currentSector.pct}%
-                    </span>
-                  </div>
-                  <div className="h-2.5 bg-white/20 rounded-full overflow-hidden drop-shadow">
-                    <motion.div
-                      className="h-full rounded-full"
-                      style={{ backgroundColor: currentSector.color }}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${currentSector.pct}%` }}
-                      transition={{ duration: 1, ease: 'easeOut' }}
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
-              
-              {/* Sector Grid */}
-              <div>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                  {sectors.slice(0, -1).map((sector, i) => (
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Allocation */}
+            <div className="mt-8 md:mt-10">
+              <div className="mb-3 flex items-end justify-between">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/40 sm:text-xs">
+                  Portfolio Allocation
+                </span>
+                <span
+                  className="font-display text-2xl font-bold transition-colors duration-500 sm:text-3xl"
+                  style={{ color: currentSector.color }}
+                >
+                  {currentSector.pct}%
+                </span>
+              </div>
+              <div className="relative h-2 overflow-hidden rounded-full bg-white/10">
+                <motion.div
+                  className="absolute inset-y-0 left-0 rounded-full"
+                  style={{
+                    background: `linear-gradient(90deg, ${currentSector.color}66, ${currentSector.color})`,
+                  }}
+                  initial={false}
+                  animate={{ width: `${currentSector.pct}%` }}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                />
+              </div>
+            </div>
+
+            {/* Sector selector */}
+            <div className="mt-8 md:mt-10">
+              <div className="mb-3 flex items-center justify-between">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/40">
+                  Select Sector
+                </span>
+                <span className="text-[10px] text-white/25">Tap to explore</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {sectors.map((sector, i) => {
+                  const active = activeIndex === i
+                  return (
                     <motion.button
                       key={sector.title}
                       onClick={() => setActiveIndex(i)}
-                      whileHover={{ scale: 1.05 }}
-                      data-glow-button
-                      className={`relative p-0 rounded-xl text-left transition-all border-2 overflow-hidden group h-40 ${
-                        activeIndex === i 
-                          ? 'border-current shadow-2xl' 
-                          : 'border-white/20 shadow-lg'
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.97 }}
+                      aria-pressed={active}
+                      className={`inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-medium transition-colors duration-300 ${
+                        active
+                          ? 'border-transparent bg-white text-slate-900 shadow-lg'
+                          : 'border-white/10 bg-white/5 text-white/60 hover:bg-white/10 hover:text-white'
                       }`}
-                      style={activeIndex === i ? { borderColor: sector.color } : {}}
                     >
-                      {/* Background Image */}
-                      <img
-                        src={sector.image}
-                        alt={sector.title}
-                        loading="lazy"
-                        decoding="async"
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      
-                      {/* Overlay Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-                      
-                      {/* Content Overlay */}
-                      <div className="absolute inset-0 p-3 flex flex-col justify-end backdrop-blur-sm">
-                        <div className="flex items-start justify-between mb-2">
-                          <div>
-                            <p className="text-xs font-semibold leading-tight text-white drop-shadow font-display">{sector.title}</p>
-                            <p className="text-[10px] text-white/80 mt-0.5 drop-shadow">{sector.desc}</p>
-                          </div>
-                          <span className="text-lg drop-shadow">{sector.icon}</span>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1 h-1 bg-white/20 rounded-full overflow-hidden mr-2">
-                            <motion.div
-                              className="h-full rounded-full"
-                              style={{ backgroundColor: sector.color }}
-                              initial={{ width: 0 }}
-                              whileInView={{ width: `${sector.pct}%` }}
-                              viewport={{ once: true }}
-                              transition={{ duration: 1.2, ease: 'easeOut' }}
-                            />
-                          </div>
-                          <span className="text-xs font-bold drop-shadow" style={{ color: sector.color }}>
-                            {sector.pct}%
-                          </span>
-                        </div>
-                      </div>
+                      <span className="text-sm leading-none">{sector.icon}</span>
+                      <span>{sector.title}</span>
+                      {active && (
+                        <span
+                          className="ml-0.5 rounded-full px-1.5 py-0.5 text-[9px] font-bold text-white"
+                          style={{ backgroundColor: sector.color }}
+                        >
+                          {sector.pct}%
+                        </span>
+                      )}
                     </motion.button>
-                  ))}
-                </div>
-                
-                {/* Action Button */}
-                <motion.button
-                  whileHover={{ x: 4 }}
-                  onClick={() => {
-                    navigate('/investment', { state: { scrollTo: 'portfolio-organized' } })
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-tertiary via-primary to-gold-dark rounded-lg text-sm font-semibold text-white hover:shadow-lg shadow-lg drop-shadow-lg transition-all"
-                >
-                  Explore Sectors →
-                </motion.button>
+                  )
+                })}
               </div>
             </div>
+
+            {/* CTA */}
+            <motion.button
+              whileHover={{ x: 4 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => navigate('/investment', { state: { scrollTo: 'portfolio-organized' } })}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-tertiary via-primary to-gold-dark px-6 py-3 text-sm font-semibold text-white shadow-lg transition-shadow hover:shadow-xl"
+            >
+              Explore Sectors
+              <ArrowUpRight size={16} strokeWidth={2.5} />
+            </motion.button>
           </div>
-          
+
           {/* Right - Image */}
-          <div className="relative h-full min-h-[400px] lg:min-h-full flex items-center justify-center p-8 md:p-12">
-            <div className="relative group">
-              {/* Decorative border ring */}
-              <div className="absolute -inset-3 border border-white/10 rounded-[2rem] group-hover:border-gold/30 transition-colors duration-500" />
-              
-              {/* Decorative corner accents */}
-              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-gold/50 rounded-tl-xl" />
-              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-gold/50 rounded-tr-xl" />
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-emerald-400/40 rounded-bl-xl" />
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-emerald-400/40 rounded-br-xl" />
-              
-              <img
-                src="/investment-image.jpg"
-                alt="SkyTouch Investment"
-                className="relative w-full h-[350px] md:h-[420px] object-cover rounded-2xl shadow-2xl"
-              />
-              
-              {/* Tags overlay */}
-              <div className="absolute top-4 right-4 flex flex-col gap-2">
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-emerald-600 rounded-full shadow-lg backdrop-blur-sm">
-                  Profit +
+          <div className="relative mx-auto w-full max-w-xl">
+            <div
+              className="absolute -inset-4 rounded-[2.5rem] opacity-40 blur-2xl transition-colors duration-700"
+              style={{
+                background: `radial-gradient(circle at 30% 20%, ${currentSector.color}55, transparent 60%)`,
+              }}
+            />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/5 p-2 backdrop-blur-sm">
+              <div className="relative h-[280px] overflow-hidden rounded-[1.6rem] sm:h-[340px] md:h-[440px]">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentSector.image}
+                    src={currentSector.image}
+                    alt={currentSector.title}
+                    initial={{ opacity: 0, scale: 1.08 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+
+                <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                  Sector {String(activeIndex + 1).padStart(2, '0')}
                 </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg backdrop-blur-sm">
-                  Growth
-                </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-[#1c1405] bg-gradient-to-r from-gold-light to-gold-dark rounded-full shadow-lg backdrop-blur-sm">
-                  Secure
-                </span>
+
+                <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-3 rounded-2xl border border-white/10 bg-black/40 p-3 backdrop-blur-xl sm:p-4">
+                  <div>
+                    <p className="text-[9px] uppercase tracking-[0.22em] text-white/50">Focus</p>
+                    <p className="mt-0.5 text-xs font-semibold text-white sm:text-sm">
+                      {currentSector.desc}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-[9px] uppercase tracking-[0.22em] text-white/50">Allocation</p>
+                    <p
+                      className="font-display text-lg font-bold sm:text-xl"
+                      style={{ color: currentSector.color }}
+                    >
+                      {currentSector.pct}%
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="absolute bottom-4 left-4 flex gap-2">
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-black/40 backdrop-blur-md border border-white/20 rounded-full shadow-lg">
-                  ROI 24%
-                </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-black/40 backdrop-blur-md border border-white/20 rounded-full shadow-lg">
-                  Trusted
-                </span>
-              </div>
+            </div>
+
+            <div className="absolute -right-2 -top-4 rotate-3 rounded-2xl border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-xl sm:-right-4">
+              <p className="text-[9px] uppercase tracking-[0.25em] text-white/50">Since 2012</p>
+              <p className="text-sm font-bold text-white">Nepal Focused</p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
-
