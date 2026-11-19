@@ -40,16 +40,16 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 overflow-hidden bg-gradient-to-br from-[#040b16] via-[#081a2e] to-[#0c2a49] text-white">
+    <footer className="relative z-10 overflow-hidden bg-gradient-to-br from-[#04130d] via-[#07281b] to-[#0b3d2a] text-white">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-primary/25 rounded-full blur-[150px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/3 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: '6s' }} />
-        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px]" />
+        <div className="absolute top-0 left-1/4 w-[700px] h-[700px] bg-emerald-500/20 rounded-full blur-[150px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/3 w-[600px] h-[600px] bg-emerald-600/15 rounded-full blur-[140px] animate-pulse" style={{ animationDuration: '6s' }} />
+        <div className="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-emerald-400/10 rounded-full blur-[150px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[340px] h-[340px] bg-tertiary/10 rounded-full blur-[120px] animate-pulse" style={{ animationDuration: '9s' }} />
         <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-tertiary/70 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-tertiary/20 to-transparent" />
-        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-primary/10 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-primary/10 via-transparent to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-emerald-400/10 via-transparent to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-emerald-400/10 via-transparent to-transparent" />
         <svg className="absolute inset-0 w-full h-full opacity-[0.02]" viewBox="0 0 1440 800" preserveAspectRatio="none">
           <defs>
             <pattern id="footer-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
