@@ -63,7 +63,7 @@ export default function Boards() {
   return (
     <div className="min-h-screen bg-white text-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-primary/8 to-transparent rounded-full blur-[150px]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-emerald-400/12 to-transparent rounded-full blur-[150px]" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-tertiary/8 to-transparent rounded-full blur-[150px]" />
         <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
       </div>
@@ -71,7 +71,7 @@ export default function Boards() {
       <div className="relative z-10">
 
         <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.03] via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/[0.05] via-transparent to-transparent" />
           <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-32 pb-16 md:pb-24">
             <motion.div variants={staggerWrap} initial="hidden" animate="visible" className="text-center max-w-4xl mx-auto">
               <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-6">
@@ -101,19 +101,19 @@ export default function Boards() {
         </section>
 
         <section className="relative mx-auto pb-24 overflow-hidden">
-          {/* PREMIUM NAVY-GREEN CHAIRMAN BACKGROUND */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#051320] via-[#0a2740] to-[#062a1f]" />
-          {/* Subtle gold mesh grid */}
+          {/* PREMIUM FOREST-GREEN CHAIRMAN BACKGROUND */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#03140d] via-[#0b3b26] to-[#052518]" />
+          {/* Subtle green mesh grid */}
           <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(16,185,129,0.6) 1px, transparent 1px), radial-gradient(circle at 70% 70%, rgba(16,185,129,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-          {/* Gold ambient glow — top-left */}
+          {/* Emerald ambient glow — top-left */}
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-emerald-400/10 via-emerald-500/5 to-transparent rounded-full blur-[130px]" />
-          {/* Deep blue ambient — bottom-right */}
-          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-primary/10 via-secondary/6 to-transparent rounded-full blur-[120px]" />
-          {/* Center spotlight behind chairman — radial gold glow */}
+          {/* Deep green ambient — bottom-right */}
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-emerald-600/10 via-secondary/6 to-transparent rounded-full blur-[120px]" />
+          {/* Center spotlight behind chairman — emerald glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-emerald-400/8 via-emerald-500/4 to-transparent rounded-full blur-[150px] opacity-60" />
           {/* Subtle noise/grain overlay for premium texture */}
           <div className="absolute inset-0 opacity-[0.018]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.85\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.5\'/%3E%3C/svg%3E")' }} />
-          {/* Thin gold border frame around section */}
+          {/* Thin emerald border frame around section */}
           <div className="absolute inset-0 border border-white/5 pointer-events-none" />
 
           <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative z-10">
@@ -131,7 +131,7 @@ export default function Boards() {
                       loading="eager"
                       className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform duration-700 ease-out"
                     />
-                    {/* Premium gold ring */}
+                    {/* Premium emerald ring */}
                     <div className="absolute inset-0 rounded-full ring-1 ring-inset ring-white/10 pointer-events-none" />
                     {/* Bottom gradient fade */}
                     <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10" />
@@ -203,7 +203,7 @@ export default function Boards() {
                      {chairman.bio}
                    </motion.p>
 
-                   {/* Premium stats card — dark glass with gold accent */}
+                   {/* Premium stats card — dark glass with emerald accent */}
                    <div className="bg-gradient-to-br from-white/[0.04] to-white/[0.02] rounded-2xl border border-white/10 backdrop-blur-md p-6 mb-10 shadow-lg">
                      <motion.div variants={fadeUp} className="grid grid-cols-2 md:grid-cols-4 gap-4">
                      {[
@@ -246,12 +246,12 @@ export default function Boards() {
           <div className="relative max-w-[1440px] mx-auto px-6 md:px-16">
             <motion.div variants={staggerWrap} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="text-center mb-16">
               <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-4">
-                <span className="h-px w-6 bg-gradient-to-r from-transparent to-primary/40" />
-                <span className="text-xs tracking-[0.3em] font-bold text-primary uppercase">Our People</span>
-                <span className="h-px w-6 bg-gradient-to-l from-transparent to-primary/40" />
+                <span className="h-px w-6 bg-gradient-to-r from-transparent to-emerald-600/40" />
+                <span className="text-xs tracking-[0.3em] font-bold text-emerald-600 uppercase">Our People</span>
+                <span className="h-px w-6 bg-gradient-to-l from-transparent to-emerald-600/40" />
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
-                Meet the <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Team</span>
+                Meet the <span className="bg-gradient-to-r from-emerald-600 to-secondary bg-clip-text text-transparent">Team</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-slate-500 max-w-2xl mx-auto text-lg">
                 The dedicated professionals driving our vision forward
@@ -272,9 +272,9 @@ export default function Boards() {
         <section className="max-w-[1440px] mx-auto px-6 md:px-16 py-24">
           <motion.div variants={staggerWrap} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="text-center mb-16">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-4">
-              <span className="h-px w-6 bg-gradient-to-r from-transparent to-primary/40" />
-              <span className="text-xs tracking-[0.3em] font-bold text-primary uppercase">Our Values</span>
-              <span className="h-px w-6 bg-gradient-to-l from-transparent to-primary/40" />
+              <span className="h-px w-6 bg-gradient-to-r from-transparent to-emerald-600/40" />
+              <span className="text-xs tracking-[0.3em] font-bold text-emerald-600 uppercase">Our Values</span>
+              <span className="h-px w-6 bg-gradient-to-l from-transparent to-emerald-600/40" />
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold text-slate-900 mb-4">
               Leadership <span className="bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent">Principles</span>
@@ -290,10 +290,10 @@ export default function Boards() {
                 title: 'Integrity',
                 desc: 'We maintain the highest ethical standards in all our dealings and transactions.',
                 icon: Scale,
-                gradient: 'from-primary/20 to-primary/5',
-                iconBg: 'bg-primary/10',
-                iconColor: 'text-primary',
-                borderHover: 'hover:border-primary/30',
+                gradient: 'from-emerald-600/20 to-emerald-600/5',
+                iconBg: 'bg-emerald-600/10',
+                iconColor: 'text-emerald-600',
+                borderHover: 'hover:border-emerald-600/30',
               },
               {
                 title: 'Excellence',
@@ -317,10 +317,10 @@ export default function Boards() {
                 title: 'Transparency',
                 desc: 'We communicate openly and honestly with all stakeholders.',
                 icon: Eye,
-                gradient: 'from-primary/20 to-primary/5',
-                iconBg: 'bg-primary/10',
-                iconColor: 'text-primary',
-                borderHover: 'hover:border-primary/30',
+                gradient: 'from-emerald-600/20 to-emerald-600/5',
+                iconBg: 'bg-emerald-600/10',
+                iconColor: 'text-emerald-600',
+                borderHover: 'hover:border-emerald-600/30',
               },
             ].map((value) => (
               <motion.div
@@ -335,7 +335,7 @@ export default function Boards() {
                   <div className={`w-14 h-14 mb-5 rounded-2xl ${value.iconBg} flex items-center justify-center group-hover:scale-110 transition-all duration-300 ${value.iconColor} group-hover:shadow-lg`}>
                     <value.icon size={26} />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">{value.title}</h3>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">{value.title}</h3>
                   <p className="text-sm text-slate-600 leading-relaxed">{value.desc}</p>
                 </div>
               </motion.div>
@@ -351,16 +351,16 @@ export default function Boards() {
             viewport={{ once: true, amount: 0.3 }}
             className="relative rounded-3xl overflow-hidden group/cta"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#04131f] via-[#082941] to-[#0a2f3c]" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#03140d] via-[#0b3322] to-[#0a4429]" />
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
             <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
             <div className="absolute top-0 left-1/4 w-64 h-64 bg-tertiary/15 rounded-full blur-[100px] group-hover/cta:bg-tertiary/20 transition-all duration-700" />
-            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary-light/10 rounded-full blur-[100px] group-hover/cta:bg-primary-light/20 transition-all duration-700" />
+            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-emerald-400/10 rounded-full blur-[100px] group-hover/cta:bg-emerald-400/20 transition-all duration-700" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-400/8 rounded-full blur-[120px]" />
 
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-tertiary/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-light/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent" />
 
             <div className="relative px-8 py-20 md:px-20 md:py-24 text-center">
               <motion.span
@@ -385,12 +385,12 @@ export default function Boards() {
                   href="/contact"
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group/btn relative px-9 py-4 font-semibold rounded-2xl inline-flex items-center gap-3 overflow-hidden transition-all duration-500 bg-gradient-to-r from-tertiary via-emerald-500 to-tertiary text-white shadow-[0_0_30px_rgba(16,185,129,0.3)] hover:shadow-[0_0_50px_rgba(16,185,129,0.5)]"
+                  className="group/btn relative px-9 py-4 font-semibold rounded-2xl inline-flex items-center gap-3 overflow-hidden transition-all duration-500 bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] shadow-[0_0_30px_rgba(212,160,23,0.35)] hover:shadow-[0_0_50px_rgba(212,160,23,0.55)]"
                 >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-all duration-700" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-all duration-700" />
                   <span className="relative z-10 flex items-center gap-2.5">
                     Schedule a Meeting
-                    <span className="w-6 h-6 rounded-lg bg-white/15 flex items-center justify-center group-hover/btn:bg-white/25 transition-colors">
+                    <span className="w-6 h-6 rounded-lg bg-black/10 flex items-center justify-center group-hover/btn:bg-black/15 transition-colors">
                       <ChevronRight size={14} className="group-hover/btn:translate-x-0.5 transition-transform" />
                     </span>
                   </span>
@@ -416,4 +416,7 @@ export default function Boards() {
     </div>
   )
 }
+
+
+
 

@@ -160,7 +160,7 @@ export default function Navbar() {
           >
             <Link
               to="/contact#contact-form"
-              className={`glow-button relative group inline-flex items-center justify-center min-h-[44px] px-8 py-3 text-xs tracking-[0.1em] font-bold rounded-full transition-all duration-300 border ${isHomePage ? (scrolled ? 'bg-white/10 text-white hover:shadow-2xl hover:shadow-white/10 border-white/25 hover:border-white/35 backdrop-blur-2xl backdrop-saturate-150' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40') : (scrolled ? 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-primary/25 border-primary/70 hover:border-tertiary/70' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40')}`}
+              className={`glow-button relative group inline-flex items-center justify-center min-h-[44px] px-8 py-3 text-xs tracking-[0.1em] font-bold rounded-full transition-all duration-300 border ${isHomePage ? (scrolled ? 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-2xl hover:shadow-amber-500/30 border-amber-500/70 hover:border-amber-400/70' : 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40') : (scrolled ? 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-2xl hover:shadow-amber-500/30 border-amber-500/70 hover:border-amber-400/70' : 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40')}`}
             >
               <span>GET IN TOUCH</span>
             </Link>
@@ -221,7 +221,7 @@ export default function Navbar() {
             <div className={`pt-3 sm:pt-4 ${isHomePage ? (scrolled ? 'border-t border-white/20' : 'border-t border-white/10') : (scrolled ? 'border-t border-primary/20' : 'border-t border-white/10')}`}>
               <Link
                 to="/contact#contact-form"
-                className={`block mt-3 sm:mt-4 px-6 py-3 rounded-full text-sm tracking-wider font-bold text-center transition-all duration-300 min-h-[44px] flex items-center justify-center ${isHomePage ? (scrolled ? 'bg-white/15 text-white hover:shadow-lg hover:shadow-white/10 backdrop-blur-md' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-black/30') : (scrolled ? 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-primary/25' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-black/30')}`}
+                className={`block mt-3 sm:mt-4 px-6 py-3 rounded-full text-sm tracking-wider font-bold text-center transition-all duration-300 min-h-[44px] flex items-center justify-center ${isHomePage ? (scrolled ? 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-lg hover:shadow-amber-500/30' : 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-lg hover:shadow-black/30') : (scrolled ? 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-lg hover:shadow-amber-500/30' : 'bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] hover:shadow-lg hover:shadow-black/30')}`}
               >
                 GET IN TOUCH
               </Link>
@@ -233,5 +233,7 @@ export default function Navbar() {
     </>
   )
 }
+
+
 
 

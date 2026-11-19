@@ -6,10 +6,10 @@ import CircularTestimonials from '../components/ui/circular-testimonials'
 import { Briefcase, Target, Handshake, TrendingUp, Globe, BarChart3, Building2, Lightbulb, Heart, Shield, Leaf, GraduationCap, ArrowRight, CheckCircle, Award, Users } from 'lucide-react'
 
 const approach = [
-  { icon: BarChart3, title: 'Rigorous Analysis', desc: 'Comprehensive due diligence on every potential investment opportunity.', color: 'text-primary' },
+  { icon: BarChart3, title: 'Rigorous Analysis', desc: 'Comprehensive due diligence on every potential investment opportunity.', color: 'text-emerald-600' },
   { icon: Handshake, title: 'Active Partnership', desc: 'True partners through board participation, governance oversight, and strategic guidance.', color: 'text-secondary' },
   { icon: Target, title: 'Strategic Diversification', desc: 'Balanced exposure across private equity, real estate, capital markets, and hydropower.', color: 'text-tertiary' },
-  { icon: Building2, title: 'Multi-generational', desc: 'Long-term perspective, building value that lasts for generations.', color: 'text-primary' },
+  { icon: Building2, title: 'Multi-generational', desc: 'Long-term perspective, building value that lasts for generations.', color: 'text-emerald-600' },
 ]
 
 const approachTestimonials = [
@@ -50,22 +50,22 @@ const milestones = [
 
 
 const values = [
-  { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-primary to-primary-light' },
+  { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-emerald-600 to-emerald-400' },
   { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-emerald-400 to-tertiary' },
   { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-tertiary to-emerald-600' },
-  { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-primary-light to-primary' },
+  { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-emerald-400 to-emerald-600' },
 ]
 
 export default function About() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* HERO */}
-      <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#04131f] via-[#0a2c48] to-[#052a1f]">
+      <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#03140d] via-[#0b3b26] to-[#062f1c]">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent" />
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-400/15 to-transparent" />
           <div className="absolute bottom-0 left-1/3 w-48 sm:w-96 h-48 sm:h-96 bg-tertiary/10 rounded-full blur-[60px] sm:blur-[120px]" />
-          <div className="absolute top-1/4 right-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-primary/20 rounded-full blur-[50px] sm:blur-[100px]" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+          <div className="absolute top-1/4 right-1/4 w-32 sm:w-64 h-32 sm:h-64 bg-emerald-400/20 rounded-full blur-[50px] sm:blur-[100px]" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent" />
         </div>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 items-center">
@@ -77,7 +77,7 @@ export default function About() {
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
                   About{' '}
-                  <span className="bg-gradient-to-r from-primary-light via-secondary to-emerald-300 bg-clip-text text-transparent">SkyTouch</span>
+                  <span className="bg-gradient-to-r from-emerald-300 via-secondary to-teal-300 bg-clip-text text-transparent">SkyTouch</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-6 sm:mb-8">
                   A privately-held investment and consulting company built on principles of strategic capital allocation, 
@@ -85,7 +85,7 @@ export default function About() {
                   and investors across Nepal.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                  <a href="#story" className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-colors min-h-[44px]">
+                  <a href="#story" className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] font-semibold rounded-full shadow-[0_10px_30px_rgba(212,160,23,0.25)] hover:shadow-[0_14px_40px_rgba(212,160,23,0.4)] hover:-translate-y-0.5 transition-all min-h-[44px]">
                     Our Story <ArrowRight size={16} />
                   </a>
                   <a href="/contact" className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 border border-white/20 text-white/80 font-semibold rounded-full hover:bg-white/10 transition-colors min-h-[44px]">
@@ -96,7 +96,7 @@ export default function About() {
             </div>
             <ScrollReveal delay={0.15} className="hidden lg:flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-tertiary/30 rounded-full blur-[60px]" />
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/30 to-teal-400/30 rounded-full blur-[60px]" />
                 <div className="relative grid grid-cols-2 gap-4">
                   <div className="space-y-4 pt-8">
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
@@ -110,7 +110,7 @@ export default function About() {
                   </div>
                   <div className="space-y-4">
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-primary-light"><AnimatedCounter target={10} suffix="+" /></p>
+                      <p className="text-3xl font-bold text-emerald-300"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Sectors</p>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export default function About() {
                 const isLeft = i % 2 === 0
                 const content = (
                   <>
-                    <span className="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-[0.2em]">{m.year}</span>
+                    <span className="text-[10px] sm:text-xs font-bold text-emerald-600 uppercase tracking-[0.2em]">{m.year}</span>
                     <h3 className="text-sm sm:text-lg font-bold text-slate-900 mt-1 mb-1">{m.title}</h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{m.desc}</p>
                   </>
@@ -172,7 +172,7 @@ export default function About() {
                         viewport={{ once: true }}
                         transition={{ type: 'spring', stiffness: 200, damping: 12, delay: i * 0.1 }}
                       >
-                        <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg border-[3px] border-white">
+                        <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center text-white font-bold text-xs sm:text-sm shadow-lg border-[3px] border-white">
                           {m.year}
                         </div>
                       </motion.div>
@@ -198,7 +198,7 @@ export default function About() {
       </section>
 
       {/* MISSION / VISION / VALUES */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/[0.03] via-white to-tertiary/[0.03]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-teal-500/[0.05]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <ScrollReveal className="text-center mb-8 sm:mb-16">
             <span className="section-label text-center">OUR FOUNDATION</span>
@@ -213,29 +213,29 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
             <ScrollReveal>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(15,95,168,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-light to-primary/50 group-hover:h-1.5 transition-all duration-500" />
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(16,185,129,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-600 via-emerald-400 to-emerald-600/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(15,95,168,0.25)] transition-all duration-500">
-                    <Target className="text-primary" size={26} />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-600/20 to-emerald-600/5 border border-emerald-600/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.25)] transition-all duration-500">
+                    <Target className="text-emerald-600" size={26} />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-500">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-500">Our Vision</h3>
                   <p className="text-slate-600 leading-relaxed text-[15px]">
                     To become a trusted investment and consulting partner that contributes to the growth of businesses, 
                     entrepreneurs, and investors across Nepal. We envision a Nepal where strategic capital and 
                     professional guidance unlock the nation's full economic potential.
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/[0.02] to-transparent rounded-full blur-2xl" />
+                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-600/[0.02] to-transparent rounded-full blur-2xl" />
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(59,154,224,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(20,184,166,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-primary-light to-secondary/50 group-hover:h-1.5 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-emerald-400 to-secondary/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(59,154,224,0.25)] transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(20,184,166,0.25)] transition-all duration-500">
                     <BarChart3 className="text-secondary" size={26} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-secondary transition-colors duration-500">Our Mission</h3>
@@ -289,7 +289,7 @@ export default function About() {
       </section>
 
       {/* GLOBAL REACH */}
-      <section className="py-16 sm:py-24 bg-primary/[0.03]">
+      <section className="py-16 sm:py-24 bg-emerald-500/[0.05]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <ScrollReveal>
@@ -304,11 +304,11 @@ export default function About() {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 mt-8">
                 <div>
-                  <p className="text-3xl font-bold text-primary"><AnimatedCounter target={50} suffix="+" /></p>
+                  <p className="text-3xl font-bold text-emerald-600"><AnimatedCounter target={50} suffix="+" /></p>
                   <p className="text-xs text-on-surface-variant/60 mt-2">Team Members</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary-light"><AnimatedCounter target={10} suffix="+" /></p>
+                  <p className="text-3xl font-bold text-emerald-700"><AnimatedCounter target={10} suffix="+" /></p>
                   <p className="text-xs text-on-surface-variant/60 mt-2">Sectors Invested</p>
                 </div>
               </div>
@@ -323,10 +323,10 @@ export default function About() {
       </section>
 
        {/* INVESTMENT APPROACH */}
-      <section className="py-16 sm:py-24 bg-primary/5">
+      <section className="py-16 sm:py-24 bg-emerald-500/[0.07]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
-          <div className="relative overflow-hidden bg-gradient-to-br from-[#04131f] via-[#0a2740] to-[#062a1f] text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(15,95,168,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.22),transparent_30%)]" />
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#03140d] via-[#0b3322] to-[#052518] text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.22),transparent_30%)]" />
             <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent" />
             <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/8 to-transparent" />
 
@@ -339,7 +339,7 @@ export default function About() {
                   <span className="text-[11px] uppercase tracking-[0.24em] text-white/45">The SkyTouch Perspective</span>
                 </div>
                 <h2 className="mt-6 text-3xl md:text-5xl font-display font-bold leading-tight">
-                  Our <span className="bg-gradient-to-r from-primary-light via-secondary to-emerald-300 bg-clip-text text-transparent">Investment Approach</span>
+                  Our <span className="bg-gradient-to-r from-emerald-300 via-secondary to-teal-300 bg-clip-text text-transparent">Investment Approach</span>
                 </h2>
                 <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent" />
                 <p className="mt-5 text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -366,7 +366,7 @@ export default function About() {
                             className="h-full w-full object-cover rounded-xl"
                           />
                         </div>
-                        <div className="rounded-[1.5rem] bg-gradient-to-br from-primary/20 to-tertiary/20 border border-white/10 p-5 flex items-center justify-between gap-4">
+                        <div className="rounded-[1.5rem] bg-gradient-to-br from-emerald-600/20 to-tertiary/20 border border-white/10 p-5 flex items-center justify-between gap-4">
                           <img
                             src="/logo.jpeg"
                             alt="SkyTouch mark"
@@ -419,7 +419,7 @@ export default function About() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-primary-light">01</p>
+                        <p className="text-2xl font-bold text-emerald-400">01</p>
                         <p className="text-sm text-white/70 mt-2">Curated opportunities</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
@@ -427,7 +427,7 @@ export default function About() {
                         <p className="text-sm text-white/70 mt-2">Strategic structure</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-primary-light">03</p>
+                        <p className="text-2xl font-bold text-emerald-400">03</p>
                         <p className="text-sm text-white/70 mt-2">Reliable execution</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
@@ -437,15 +437,15 @@ export default function About() {
                     </div>
                   </div>
 
-                  <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-primary/10 to-tertiary/10 p-8 backdrop-blur-xl">
+                  <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-emerald-600/10 to-tertiary/10 p-8 backdrop-blur-xl">
                     <p className="text-xs tracking-[0.28em] uppercase text-white/50 mb-4">Performance Metrics</p>
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Portfolio IRR</span>
-                        <span className="text-2xl font-bold text-primary-light">18.5%</span>
+                        <span className="text-2xl font-bold text-emerald-400">18.5%</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-primary-light to-primary h-2 rounded-full" style={{width: '85%'}} />
+                        <div className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-2 rounded-full" style={{width: '85%'}} />
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Client Retention</span>
@@ -456,10 +456,10 @@ export default function About() {
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Projects Delivered</span>
-                        <span className="text-2xl font-bold text-primary-light">150+</span>
+                        <span className="text-2xl font-bold text-emerald-400">150+</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-primary-light to-primary h-2 rounded-full" style={{width: '92%'}} />
+                        <div className="bg-gradient-to-r from-emerald-400 to-emerald-600 h-2 rounded-full" style={{width: '92%'}} />
                       </div>
                     </div>
                   </div>
@@ -474,7 +474,7 @@ export default function About() {
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/45 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#03140d]/85 via-[#0b3b26]/45 to-transparent" />
                   <div className="absolute inset-0 flex items-end p-6 md:p-10">
                     <div className="max-w-2xl">
                       <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-2">AI-inspired outlook</p>
@@ -500,9 +500,9 @@ export default function About() {
               name: "#0a0a0a",
               designation: "#6b7280",
               testimony: "#4b5563",
-              arrowBackground: "#0f5fa8",
+              arrowBackground: "#059669",
               arrowForeground: "#ffffff",
-              arrowHoverBackground: "#0b4c86",
+              arrowHoverBackground: "#047857",
             }}
             fontSizes={{
               name: "24px",
@@ -514,7 +514,7 @@ export default function About() {
       </section>
 
       {/* IMPACT & SUSTAINABILITY */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/[0.04] via-white to-tertiary/[0.04]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-500/[0.06] via-white to-teal-500/[0.05]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -536,8 +536,8 @@ export default function About() {
                   { icon: GraduationCap, title: 'Knowledge Transfer', desc: 'We invest in capacity building and professional development for local talent and partners.' },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                      <item.icon size={20} className="text-primary" />
+                    <div className="w-10 h-10 rounded-xl bg-emerald-600/10 flex items-center justify-center shrink-0">
+                      <item.icon size={20} className="text-emerald-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">{item.title}</h4>
@@ -560,15 +560,15 @@ export default function About() {
       </section>
 
       {/* WHY CHOOSE SKYTOUCH */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-[#04131f] via-[#0a2c48] to-[#062a1f]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-[#03140d] via-[#0b3b26] to-[#062f1c]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <ScrollReveal className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-xs font-semibold uppercase tracking-widest text-white/60">The SkyTouch Difference</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
-              Why Choose <span className="bg-gradient-to-r from-secondary-light to-primary-light bg-clip-text text-transparent">SkyTouch</span>
+              Why Choose <span className="bg-gradient-to-r from-secondary-light to-teal-300 bg-clip-text text-transparent">SkyTouch</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4">
               Discover what sets us apart in the world of strategic investments
@@ -583,16 +583,16 @@ export default function About() {
                { icon: Globe, title: 'Global Perspective', desc: 'Local expertise combined with international investment standards, regulatory frameworks, and cross-border capabilities.', stat: '15+', statLabel: 'Years Track Record' },
              ].map((feature, i) => (
                <ScrollReveal key={feature.title} delay={i * 0.1}>
-                 <div className="group relative h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-primary/30">
-                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
+                 <div className="group relative h-full rounded-3xl border border-slate-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-emerald-600/30">
+                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/5 to-tertiary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl" />
                    <div className="relative z-10 flex flex-col h-full">
-                     <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                       <feature.icon size={24} className="text-primary" />
+                     <div className="w-14 h-14 rounded-2xl bg-emerald-600/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                       <feature.icon size={24} className="text-emerald-600" />
                      </div>
                      <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                      <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
                      <div className="pt-6 border-t border-slate-100">
-                       <p className="text-3xl font-bold bg-gradient-to-r from-secondary-light to-primary-light bg-clip-text text-transparent">{feature.stat}</p>
+                       <p className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">{feature.stat}</p>
                        <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
                      </div>
                    </div>
@@ -606,7 +606,7 @@ export default function About() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-r from-primary via-primary-dark to-primary">
+      <section className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-r from-[#03140d] via-[#0b3b26] to-[#14532d]">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_40%)]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
@@ -626,7 +626,7 @@ export default function About() {
               and exceptional returns. Let's build something extraordinary together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-full hover:bg-slate-100 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
+              <a href="/contact" className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#f7e08a] via-[#e0b33c] to-[#b8860b] text-[#1c1405] font-semibold rounded-full hover:shadow-[0_16px_45px_rgba(212,160,23,0.45)] transition-all duration-300 shadow-xl hover:-translate-y-0.5">
                 <span>Schedule a Consultation</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -640,5 +640,8 @@ export default function About() {
     </div>
   )
 }
+
+
+
 
 

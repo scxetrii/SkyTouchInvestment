@@ -172,7 +172,7 @@ export default function Contact() {
 
                     <button
                       type="submit"
-                      className="btn-primary w-full rounded-2xl shadow-[0_20px_45px_rgba(15,95,168,0.18)]"
+                      className="btn-primary w-full rounded-2xl shadow-[0_20px_45px_rgba(212,160,23,0.25)]"
                     >
                       SEND MESSAGE
                     </button>
@@ -303,4 +303,5 @@ export default function Contact() {
     </div>
   )
 }
+
 
