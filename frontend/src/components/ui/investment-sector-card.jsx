@@ -103,17 +103,18 @@ export function InvestmentSectorCard() {
           alt=""
           aria-hidden="true"
           initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 0.5, scale: 1 }}
+          animate={{ opacity: 0.4, scale: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
           className="absolute inset-0 h-full w-full object-cover"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#04131f]/92 via-[#062033]/75 to-[#04131f]/35" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020a12]/90 via-transparent to-[#020a12]/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#04131f]/95 via-[#051a2a]/85 to-[#04131f]/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#020a12]/95 via-[#020a12]/20 to-[#020a12]/45" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020a12]/75 via-[#020a12]/30 to-transparent" />
 
       {/* Rich color mesh */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(15,95,168,0.5),transparent_55%),radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.3),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(212,160,23,0.22),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(15,95,168,0.34),transparent_55%),radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.22),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(212,160,23,0.16),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,transparent_35%,rgba(212,160,23,0.09)_50%,transparent_65%)]" />
 
       {/* Accent glows */}
