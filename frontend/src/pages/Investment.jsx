@@ -11,7 +11,7 @@ const investmentHeroImage = 'https://img.lightshot.app/edM1-W54Ro2nYBDHgMMFJw.pn
 const portfolioPartners = [
   { name: 'IME Prudential Insurance', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/imepraillogo.png', tint: 'from-primary/15 via-white to-primary/5' },
   { name: 'Gaura Construction', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/gaurg.png', tint: 'from-primary-light/20 via-white to-primary-light/10' },
-  { name: 'Hathway Investment', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/Hathway-Logo-2.png', tint: 'from-amber-500/20 via-white to-amber-100' },
+  { name: 'Hathway Investment', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/Hathway-Logo-2.png', tint: 'from-emerald-500/20 via-white to-emerald-100' },
 ]
 
 const marqueePartners = [...portfolioPartners, ...portfolioPartners]
@@ -54,8 +54,8 @@ const sectors = [
     details: 'Commercial and residential property projects in prime growth corridors, focused on rental yield, occupancy, and capital appreciation.',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
     pct: 44,
-    color: '#f59e0b',
-    folderColor: 'orange',
+    color: '#059669',
+    folderColor: 'green',
   },
   {
     title: 'Information Technology',
@@ -74,8 +74,8 @@ const sectors = [
     details: 'Hospitality and tourism assets that benefit from Nepal growing visitor economy, premium destinations, and infrastructure upgrades.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80',
     pct: 43,
-    color: '#f59e0b',
-    folderColor: 'orange',
+    color: '#059669',
+    folderColor: 'green',
   },
   {
     title: 'Healthcare',
@@ -85,7 +85,7 @@ const sectors = [
     image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80',
     pct: 66,
     color: '#0f5fa8',
-    folderColor: 'orange',
+    folderColor: 'green',
   },
   {
     title: 'Agriculture',
@@ -95,7 +95,7 @@ const sectors = [
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80',
     pct: 40,
     color: '#3b9ae0',
-    folderColor: 'orange',
+    folderColor: 'green',
   },
 ]
 
@@ -127,7 +127,7 @@ export default function Investment() {
             >
               <span className="section-label text-center lg:text-left">Services</span>
               <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-                Strategic Investments Across <span className="gold-accent">High-Growth Sectors</span>
+                Strategic Investments Across <span className="accent-gradient">High-Growth Sectors</span>
               </h1>
               <p className="text-lg text-on-surface-variant/70 max-w-3xl mx-auto lg:mx-0">
                 We deploy disciplined capital in opportunities demonstrating strong fundamentals, exceptional management, and clear paths to sustainable value creation.
@@ -136,7 +136,7 @@ export default function Investment() {
 
             <ScrollReveal className="relative">
               <div className="relative rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)] p-3 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_35%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_35%)]" />
                 <img
                   src={investmentHeroImage}
                   alt="Original uploaded investment image"
@@ -150,7 +150,7 @@ export default function Investment() {
       </section>
 
       {/* PORTFOLIO PARTNERS */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-16 bg-gradient-to-br from-primary/10 via-white to-secondary/10">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <div className="sr-only">Marquee animation defined in global CSS</div>
           <ScrollReveal className="text-center mb-10">
@@ -186,12 +186,12 @@ export default function Investment() {
       </section>
 
       {/* SECTORS FOLDERS */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
+      <section className="py-24 bg-gradient-to-br from-primary/[0.05] via-white to-secondary/[0.08]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="text-center mb-20">
             <span className="section-label text-center">Explore Our Investment Sectors</span>
             <h2 className="text-3xl md:text-5xl font-display font-bold" id="portfolio-organized">
-              Our <span className="gold-accent">Portfolio</span> Organized
+              Our <span className="accent-gradient">Portfolio</span> Organized
             </h2>
             <p className="text-lg text-on-surface-variant/70 max-w-3xl mx-auto mt-4">
               Hover over each folder to explore the details of our investment sectors
@@ -222,11 +222,11 @@ export default function Investment() {
       <TextParallaxDemo />
 
       {/* CTA */}
-      <section className="py-24 bg-[#0c1929]">
+      <section className="py-24 bg-gradient-to-br from-[#04131f] via-[#0a2c48] to-[#062a1f]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
-              Ready to <span className="gold-accent">Invest</span> with Us?
+              Ready to <span className="accent-gradient-dark">Invest</span> with Us?
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mb-8">
               Whether you are seeking information, exploring partnership opportunities, or ready to start a conversation, we are here to help.
@@ -240,3 +240,6 @@ export default function Investment() {
     </div>
   )
 }
+
+
+

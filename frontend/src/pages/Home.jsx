@@ -57,12 +57,12 @@ export default function Home() {
   }
 
   const stepColors = [
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
-    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-secondary' },
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
-    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-secondary' },
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
-    { border: 'border-tertiary', shadow: 'shadow-[0_0_30px_rgba(245,158,11,0.6)]', icon: 'text-tertiary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(11,58,102,0.6)]', icon: 'text-primary' },
+    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(11,58,102,0.6)]', icon: 'text-secondary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(11,58,102,0.6)]', icon: 'text-primary' },
+    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(11,58,102,0.6)]', icon: 'text-secondary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(11,58,102,0.6)]', icon: 'text-primary' },
+    { border: 'border-tertiary', shadow: 'shadow-[0_0_30px_rgba(16,185,129,0.6)]', icon: 'text-tertiary' },
   ]
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function Home() {
     const container = document.getElementById('particle-container')
     if (!container) return
     const isMobile = window.innerWidth < 768
-    const colors = ['#ffffff', '#0f5fa8', '#f59e0b', '#3b9ae0']
+    const colors = ['#ffffff', '#0f5fa8', '#059669', '#3b9ae0']
     const particles = []
     const count = isMobile ? 15 : 50
     for (let i = 0; i < count; i++) {
@@ -161,16 +161,16 @@ export default function Home() {
             if (node) {
               const glowIntensity = Math.max(0, 1 - dist * 0.8)
               const colors = [
-                'rgba(15,95,168,0.6)',
-                'rgba(15,95,168,0.6)',
-                'rgba(15,95,168,0.6)',
-                'rgba(15,95,168,0.6)',
-                'rgba(15,95,168,0.6)',
-                'rgba(245,158,11,0.6)',
+                'rgba(11,58,102,0.6)',
+                'rgba(11,58,102,0.6)',
+                'rgba(11,58,102,0.6)',
+                'rgba(11,58,102,0.6)',
+                'rgba(11,58,102,0.6)',
+                'rgba(16,185,129,0.6)',
               ]
-              const glowRgba = i === 5 ? '249,115,22' : '14,165,233'
+              const glowRgba = i === 5 ? '16,185,129' : '11,58,102'
               node.style.boxShadow = `0 0 ${15 + glowIntensity * 30}px rgba(${glowRgba},${0.3 + glowIntensity * 0.4})`
-              node.style.borderColor = `rgba(${i === 5 ? '249,115,22' : '14,165,233'}, ${0.4 + glowIntensity * 0.6})`
+              node.style.borderColor = `rgba(${i === 5 ? '16,185,129' : '11,58,102'}, ${0.4 + glowIntensity * 0.6})`
             }
           })
 
@@ -289,13 +289,13 @@ export default function Home() {
 
       {/* INVESTMENT SECTORS */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(15,95,168,0.05)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(11,58,102,0.05)_0%,transparent_60%)]" />
 
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative py-16 sm:py-24">
           <ScrollReveal className="mb-8 sm:mb-12 text-center md:text-left">
             <span className="section-label">What We Do</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-3 sm:mb-4">
-              Our <span className="gold-accent">Investment Sectors</span>
+              Our <span className="accent-gradient">Investment Sectors</span>
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-on-surface-variant/70 max-w-2xl">
               We deploy disciplined capital across diversified sectors driving Nepal's economic transformation.
@@ -312,7 +312,7 @@ export default function Home() {
           <ScrollReveal className="text-center mb-8 sm:mb-12">
             <span className="section-label text-center">Testimonials</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold">
-              What Our <span className="gold-accent">Clients Say</span>
+              What Our <span className="accent-gradient">Clients Say</span>
             </h2>
           </ScrollReveal>
           <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
@@ -320,7 +320,7 @@ export default function Home() {
       </section>
 
       {/* HOW WE WORK - THE SKYTOUCH PROTOCOL */}
-      <section className="py-16 sm:py-24 relative overflow-hidden bg-black" id="process">
+      <section className="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-br from-[#04131f] via-[#0a2740] to-[#062a1f]" id="process">
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] via-transparent to-white/[0.02]" />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.04) 0%, transparent 60%)' }} />
 
@@ -385,7 +385,7 @@ export default function Home() {
           <ScrollReveal className="text-center mb-8 sm:mb-12 md:mb-16">
             <span className="inline-block text-[10px] sm:text-xs tracking-[0.3em] font-bold text-white/40 uppercase mb-3 sm:mb-4">How We Work</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 min-h-[1.2em]">
-              <span className="bg-gradient-to-r from-tertiary to-primary-light bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-300 via-secondary to-primary-light bg-clip-text text-transparent">
                 The{' '}
                 <Typewriter
                   text={["SkyTouch Protocol", "Investment Protocol", "Wealth Protocol"]}
@@ -406,18 +406,18 @@ export default function Home() {
               <svg className="w-full h-full" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" style={{ opacity: 0.7 }}>
                 <defs>
                   <linearGradient id="curveGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f59e0b" stopOpacity="0" />
-                    <stop offset="15%" stopColor="#f59e0b" stopOpacity="0.08" />
-                    <stop offset="50%" stopColor="#f59e0b" stopOpacity="0.2" />
-                    <stop offset="85%" stopColor="#f59e0b" stopOpacity="0.08" />
-                    <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#059669" stopOpacity="0" />
+                    <stop offset="15%" stopColor="#059669" stopOpacity="0.08" />
+                    <stop offset="50%" stopColor="#059669" stopOpacity="0.2" />
+                    <stop offset="85%" stopColor="#059669" stopOpacity="0.08" />
+                    <stop offset="100%" stopColor="#059669" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient id="curveMain" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f59e0b" stopOpacity="0" />
-                    <stop offset="15%" stopColor="#f59e0b" stopOpacity="0.6" />
-                    <stop offset="50%" stopColor="#f59e0b" stopOpacity="1" />
-                    <stop offset="85%" stopColor="#f59e0b" stopOpacity="0.6" />
-                    <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#059669" stopOpacity="0" />
+                    <stop offset="15%" stopColor="#059669" stopOpacity="0.6" />
+                    <stop offset="50%" stopColor="#059669" stopOpacity="1" />
+                    <stop offset="85%" stopColor="#059669" stopOpacity="0.6" />
+                    <stop offset="100%" stopColor="#059669" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <path d="M 400,0 C 400,25 470,45 470,80 S 330,145 330,190 S 470,255 470,300 S 330,365 330,410 S 470,475 470,520 S 330,585 330,630 S 400,680 400,730"
@@ -445,7 +445,7 @@ export default function Home() {
                           )}
                         </div>
                         <div className="inline-flex items-center justify-center gap-2 mb-3 sm:mb-4 w-full">
-                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] tracking-[0.15em] font-bold text-tertiary bg-amber-50 rounded-full border border-amber-200">
+                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] tracking-[0.15em] font-bold text-tertiary bg-emerald-50 rounded-full border border-emerald-200">
                             STEP {String(i + 1).padStart(2, '0')}
                           </span>
                           <span className="h-[1px] w-4 sm:w-6 bg-gradient-to-r from-tertiary/60 to-transparent" />
@@ -492,7 +492,7 @@ export default function Home() {
             <ScrollReveal delay={0.1} className="text-center lg:text-left">
               <span className="section-label inline-block">Why SkyTouch</span>
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-4 sm:mb-6">
-                About our <span className="gold-accent">company</span>
+                About our <span className="accent-gradient">company</span>
               </h2>
               <p className="text-xs sm:text-sm md:text-base text-on-surface-variant/70 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 text-left sm:text-justify">
                 Sky Touch Investment & Consultant Pvt. Ltd. is a Nepal-based private company established on 2066-03-14 B.S. and registered under Reg. No. 63835. Located in Kathmandu, Bagmati Province, the company focuses on investment and consultancy services, providing professional guidance and strategic solutions for business growth and financial development in Nepal. With years of industry presence, the company aims to deliver reliable consulting services while supporting clients in achieving long-term business success.
@@ -523,3 +523,5 @@ function LazyInvestmentCard() {
     </div>
   )
 }
+
+

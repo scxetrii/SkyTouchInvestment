@@ -61,7 +61,7 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
       <div className="relative grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-20">
         <div className="flex items-center justify-center">
             <div className="relative h-80 w-full max-w-xs">
-              <div className="absolute -inset-4 bg-gradient-to-br from-amber-400/20 via-tertiary/10 to-amber-600/20 rounded-[2rem] blur-2xl" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-emerald-400/20 via-tertiary/10 to-emerald-600/20 rounded-[2rem] blur-2xl" />
               <AnimatePresence>
                 {testimonials.map((testimonial, index) => (
                   <motion.div
@@ -80,8 +80,8 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
                     className="absolute inset-0 origin-bottom"
                     style={{ perspective: '1000px' }}
                   >
-                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-tertiary/15 via-amber-600/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
-                      <MessageSquareQuote className="w-32 h-32 text-amber-400/30" />
+                    <div className="h-full w-full rounded-3xl bg-gradient-to-br from-tertiary/15 via-emerald-600/5 to-transparent flex items-center justify-center shadow-2xl ring-1 ring-white/10 backdrop-blur-sm">
+                      <MessageSquareQuote className="w-32 h-32 text-emerald-400/30" />
                     </div>
                   </motion.div>
                 ))}
@@ -101,10 +101,10 @@ const AnimatedTestimonials = ({ testimonials, autoplay = true }) => {
             >
                 <div>
                     <div className="inline-flex items-center gap-2 mb-4">
-                      <span className="h-px w-8 bg-gradient-to-r from-amber-400 to-amber-600" />
+                      <span className="h-px w-8 bg-gradient-to-r from-emerald-400 to-emerald-600" />
                       <span className="text-xs tracking-[0.2em] font-semibold text-tertiary uppercase">Testimonial</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold mb-1 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
                         {testimonials[active].name}
                     </h3>
                     <p className="text-sm text-tertiary/70">
@@ -143,39 +143,41 @@ export { AnimatedTestimonials }
 export function Component() {
   return (
     <div className="relative flex w-full items-center justify-center overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(245,158,11,0.1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(245,158,11,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 opacity-[0.1] bg-[linear-gradient(to_right,rgba(245,158,11,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(245,158,11,0.12)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(16,185,129,0.1),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(16,185,129,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 opacity-[0.1] bg-[linear-gradient(to_right,rgba(16,185,129,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(16,185,129,0.12)_1px,transparent_1px)] bg-[size:48px_48px]" />
         
-        {/* Spinning orange curved lines */}
+        {/* Spinning brand curved lines */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
           <defs>
             <style>{`
               @keyframes spin-slow { to { transform: rotate(360deg); } }
               @keyframes spin-slow-reverse { to { transform: rotate(-360deg); } }
-              .spin-orange-1 { transform-origin: 720px 450px; animation: spin-slow 30s linear infinite; }
-              .spin-orange-2 { transform-origin: 720px 450px; animation: spin-slow-reverse 40s linear infinite; }
-              .spin-orange-3 { transform-origin: 720px 450px; animation: spin-slow 50s linear infinite; }
+              .spin-brand-1 { transform-origin: 720px 450px; animation: spin-slow 30s linear infinite; }
+              .spin-brand-2 { transform-origin: 720px 450px; animation: spin-slow-reverse 40s linear infinite; }
+              .spin-brand-3 { transform-origin: 720px 450px; animation: spin-slow 50s linear infinite; }
             `}</style>
           </defs>
-          <g className="spin-orange-1" opacity="0.15">
-            <path d="M720,450 C720,250 920,150 920,350 C920,550 720,650 720,450" fill="none" stroke="#f59e0b" strokeWidth="2" />
-            <path d="M720,450 C520,250 520,150 520,350 C520,550 720,650 720,450" fill="none" stroke="#f59e0b" strokeWidth="1.5" />
+          <g className="spin-brand-1" opacity="0.15">
+            <path d="M720,450 C720,250 920,150 920,350 C920,550 720,650 720,450" fill="none" stroke="#059669" strokeWidth="2" />
+            <path d="M720,450 C520,250 520,150 520,350 C520,550 720,650 720,450" fill="none" stroke="#059669" strokeWidth="1.5" />
           </g>
-          <g className="spin-orange-2" opacity="0.12">
-            <path d="M720,450 C820,200 1020,250 920,450 C820,650 620,700 720,450" fill="none" stroke="#ea580c" strokeWidth="2" />
-            <path d="M720,450 C620,200 420,250 520,450 C620,650 820,700 720,450" fill="none" stroke="#ea580c" strokeWidth="1.5" />
+          <g className="spin-brand-2" opacity="0.12">
+            <path d="M720,450 C820,200 1020,250 920,450 C820,650 620,700 720,450" fill="none" stroke="#2f7db3" strokeWidth="2" />
+            <path d="M720,450 C620,200 420,250 520,450 C620,650 820,700 720,450" fill="none" stroke="#2f7db3" strokeWidth="1.5" />
           </g>
-          <g className="spin-orange-3" opacity="0.1">
-            <path d="M720,450 C920,300 1120,400 920,550 C720,700 520,600 720,450" fill="none" stroke="#f59e0b" strokeWidth="3" />
-            <path d="M720,450 C520,300 320,400 520,550 C720,700 920,600 720,450" fill="none" stroke="#f59e0b" strokeWidth="2" />
+          <g className="spin-brand-3" opacity="0.1">
+            <path d="M720,450 C920,300 1120,400 920,550 C720,700 520,600 720,450" fill="none" stroke="#059669" strokeWidth="3" />
+            <path d="M720,450 C520,300 320,400 520,550 C720,700 920,600 720,450" fill="none" stroke="#059669" strokeWidth="2" />
           </g>
         </svg>
 
         <div className="absolute -top-1/4 -right-1/4 w-[500px] h-[500px] bg-tertiary/10 rounded-full blur-[150px]" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-[150px]" />
+        <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[150px]" />
         <div className="relative z-10 w-full">
             <AnimatedTestimonials testimonials={testimonials} />
         </div>
     </div>
   )
 }
+
+

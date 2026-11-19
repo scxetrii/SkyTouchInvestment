@@ -72,7 +72,7 @@ export default function DirectorHoverCard({
         className="relative h-full"
       >
         <div className="relative h-full bg-white rounded-[2rem] overflow-hidden border border-slate-200 shadow-[0_18px_45px_rgba(15,23,42,0.08)] hover:shadow-[0_28px_70px_rgba(15,23,42,0.12)] transition-shadow duration-300 p-5 flex flex-col group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.08),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.06),transparent_30%)] opacity-90" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.08),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.06),transparent_30%)] opacity-90" />
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
 
           <div className="relative z-10">
@@ -208,3 +208,4 @@ export default function DirectorHoverCard({
     </motion.div>
   )
 }
+

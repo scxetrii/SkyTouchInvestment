@@ -19,7 +19,7 @@ export default function Careers() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-tertiary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ export default function Careers() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              <span className="gold-accent">Careers</span>
+              <span className="accent-gradient">Careers</span>
             </h1>
             <p className="text-lg text-on-surface-variant/70 max-w-2xl mx-auto">
               Build your career with Sky Touch Investment & Consultant Pvt. Ltd.
@@ -72,7 +72,7 @@ export default function Careers() {
 
         <ScrollReveal className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            We're <span className="gold-accent">Hiring!</span>
+            We're <span className="accent-gradient">Hiring!</span>
           </h2>
           <p className="text-on-surface-variant/70 max-w-xl mx-auto">
             No open positions at the moment. Please check back later or send your resume for future opportunities.
@@ -114,3 +114,5 @@ export default function Careers() {
     </div>
   )
 }
+
+

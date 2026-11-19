@@ -38,7 +38,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Real Estate', 
       pct: 44, 
-      color: '#f59e0b', 
+      color: '#059669', 
       desc: 'Creating value through strategic property investment',
       icon: '🏗️',
       details: 'Premium commercial and residential properties in prime locations with strong rental yields.',
@@ -65,7 +65,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Tourism', 
       pct: 43, 
-      color: '#f59e0b', 
+      color: '#059669', 
       desc: 'Growth in Nepal tourism sector',
       icon: '🏔️',
       details: 'Strategic investments in tourism infrastructure and hospitality ventures.',
@@ -234,13 +234,13 @@ export function InvestmentSectorCard() {
               
               {/* Tags overlay */}
               <div className="absolute top-4 right-4 flex flex-col gap-2">
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-amber-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-emerald-600 rounded-full shadow-lg backdrop-blur-sm">
                   Profit +
                 </span>
                 <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg backdrop-blur-sm">
                   Growth
                 </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-amber-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-emerald-600 rounded-full shadow-lg backdrop-blur-sm">
                   Secure
                 </span>
               </div>
@@ -259,3 +259,4 @@ export function InvestmentSectorCard() {
     </>
   )
 }
+

@@ -31,10 +31,10 @@ function NepalTime() {
   return (
     <div className="flex items-center gap-1.5 text-[10px] tracking-[0.15em] font-semibold leading-none">
       <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary" />
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-300" />
       </span>
-      <span className="text-tertiary/90">{time}</span>
+      <span className="text-emerald-300/90">{time}</span>
       <span className="text-white/40 hidden sm:inline">NPT</span>
     </div>
   )
@@ -88,7 +88,7 @@ export default function Navbar() {
                 : 'w-full rounded-none border-b border-white/10 bg-transparent')
               : (scrolled
                 ? 'max-w-[1320px] mx-auto rounded-[2rem] border border-primary/25 bg-gradient-to-r from-primary/10 via-white/85 to-tertiary/10 backdrop-blur-3xl backdrop-saturate-150 shadow-2xl shadow-black/20'
-                : 'w-full rounded-none border-b border-primary/20 bg-gradient-to-r from-primary/90 via-slate-950 to-tertiary/90')
+                : 'w-full rounded-none border-b border-primary/20 bg-gradient-to-r from-primary/90 via-[#06182b] to-tertiary/90')
           } ${scrolled ? 'navbar-gradient-bg' : ''}`}
         >
           {scrolled && (
@@ -130,12 +130,12 @@ export default function Navbar() {
                   to={link.path}
                   className={`relative text-xs tracking-[0.15em] font-semibold transition-all duration-300 nav-link-underline group ${
                     location.pathname === link.path
-                      ? 'text-white bg-tertiary/20 border border-tertiary/30 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(245,158,11,0.18)]'
+                      ? 'text-white bg-emerald-400/20 border border-emerald-300/30 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(16,185,129,0.18)]'
                       : (isHomePage ? (scrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white') : (scrolled ? 'text-slate-700 hover:text-slate-950' : 'text-white/80 hover:text-white'))
                   }`}
                 >
                   <span className="inline-flex items-center gap-2">
-                    <link.icon size={14} strokeWidth={2.25} className={location.pathname === link.path ? 'text-tertiary' : 'text-current'} />
+                    <link.icon size={14} strokeWidth={2.25} className={location.pathname === link.path ? 'text-emerald-300' : 'text-current'} />
                     <span>{link.label}</span>
                   </span>
                   
@@ -160,7 +160,7 @@ export default function Navbar() {
           >
             <Link
               to="/contact#contact-form"
-              className={`glow-button relative group inline-flex items-center justify-center min-h-[44px] px-8 py-3 text-xs tracking-[0.1em] font-bold rounded-full transition-all duration-300 border ${isHomePage ? (scrolled ? 'bg-white/10 text-white hover:shadow-2xl hover:shadow-white/10 border-white/25 hover:border-white/35 backdrop-blur-2xl backdrop-saturate-150' : 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40') : (scrolled ? 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-2xl hover:shadow-primary/25 border-primary/70 hover:border-tertiary/70' : 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40')}`}
+              className={`glow-button relative group inline-flex items-center justify-center min-h-[44px] px-8 py-3 text-xs tracking-[0.1em] font-bold rounded-full transition-all duration-300 border ${isHomePage ? (scrolled ? 'bg-white/10 text-white hover:shadow-2xl hover:shadow-white/10 border-white/25 hover:border-white/35 backdrop-blur-2xl backdrop-saturate-150' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40') : (scrolled ? 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-primary/25 border-primary/70 hover:border-tertiary/70' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-2xl hover:shadow-black/30 border-white/20 hover:border-white/40')}`}
             >
               <span>GET IN TOUCH</span>
             </Link>
@@ -198,7 +198,7 @@ export default function Navbar() {
           className={`lg:hidden border-t overflow-hidden transition-all duration-300 ease-in-out ${
             mobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
           } ${
-            isHomePage ? (scrolled ? 'bg-white/10 border-white/20 backdrop-blur-xl' : 'bg-transparent border-white/10 backdrop-blur-xl') : (scrolled ? 'bg-gradient-to-b from-primary/10 via-white to-tertiary/10 border-primary/20' : 'bg-gradient-to-b from-primary/90 via-slate-950 to-tertiary/90 border-primary/20')
+            isHomePage ? (scrolled ? 'bg-white/10 border-white/20 backdrop-blur-xl' : 'bg-transparent border-white/10 backdrop-blur-xl') : (scrolled ? 'bg-gradient-to-b from-primary/10 via-white to-tertiary/10 border-primary/20' : 'bg-gradient-to-b from-primary/90 via-[#06182b] to-tertiary/90 border-primary/20')
           }`}
         >
           <div className="px-4 sm:px-6 py-6 sm:py-8 flex flex-col gap-1.5 sm:gap-2">
@@ -208,12 +208,12 @@ export default function Navbar() {
                 to={link.path}
                 className={`block px-4 py-3 sm:py-3 rounded-lg text-sm tracking-wider font-semibold transition-all duration-300 min-h-[44px] flex items-center ${
                   location.pathname === link.path
-                    ? 'text-white bg-tertiary/20 border border-tertiary/30 shadow-[0_0_18px_rgba(245,158,11,0.18)]'
+                    ? 'text-white bg-emerald-400/20 border border-emerald-300/30 shadow-[0_0_18px_rgba(16,185,129,0.18)]'
                     : (isHomePage ? (scrolled ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10') : (scrolled ? 'text-slate-700 hover:text-slate-950 hover:bg-white/50' : 'text-white/80 hover:text-white hover:bg-white/10'))
                 }`}
               >
                 <span className="inline-flex items-center gap-2">
-                  <link.icon size={16} strokeWidth={2.2} className={location.pathname === link.path ? 'text-tertiary' : 'text-current'} />
+                  <link.icon size={16} strokeWidth={2.2} className={location.pathname === link.path ? 'text-emerald-300' : 'text-current'} />
                   <span>{link.label}</span>
                 </span>
               </Link>
@@ -221,7 +221,7 @@ export default function Navbar() {
             <div className={`pt-3 sm:pt-4 ${isHomePage ? (scrolled ? 'border-t border-white/20' : 'border-t border-white/10') : (scrolled ? 'border-t border-primary/20' : 'border-t border-white/10')}`}>
               <Link
                 to="/contact#contact-form"
-                className={`block mt-3 sm:mt-4 px-6 py-3 rounded-full text-sm tracking-wider font-bold text-center transition-all duration-300 min-h-[44px] flex items-center justify-center ${isHomePage ? (scrolled ? 'bg-white/15 text-white hover:shadow-lg hover:shadow-white/10 backdrop-blur-md' : 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-lg hover:shadow-black/30') : (scrolled ? 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-lg hover:shadow-primary/25' : 'bg-gradient-to-r from-primary via-white to-tertiary text-slate-900 hover:shadow-lg hover:shadow-black/30')}`}
+                className={`block mt-3 sm:mt-4 px-6 py-3 rounded-full text-sm tracking-wider font-bold text-center transition-all duration-300 min-h-[44px] flex items-center justify-center ${isHomePage ? (scrolled ? 'bg-white/15 text-white hover:shadow-lg hover:shadow-white/10 backdrop-blur-md' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-black/30') : (scrolled ? 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-primary/25' : 'bg-gradient-to-r from-primary via-[#0a4f5a] to-tertiary text-white hover:shadow-lg hover:shadow-black/30')}`}
               >
                 GET IN TOUCH
               </Link>
@@ -233,3 +233,5 @@ export default function Navbar() {
     </>
   )
 }
+
+

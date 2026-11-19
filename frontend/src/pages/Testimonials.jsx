@@ -45,7 +45,7 @@ export default function Testimonials() {
   return (
     <div className="pt-24">
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-tertiary/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-white/50 to-secondary/10" />
         <div className="max-w-[1440px] mx-auto px-6 md:px-16 relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -53,7 +53,7 @@ export default function Testimonials() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              Client <span className="gold-accent">Testimonials</span>
+              Client <span className="accent-gradient">Testimonials</span>
             </h1>
             <p className="text-lg text-on-surface-variant/70 max-w-2xl mx-auto">
               Hear from our partners and clients about their experience working with us.
@@ -108,3 +108,5 @@ export default function Testimonials() {
     </div>
   )
 }
+
+

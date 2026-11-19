@@ -67,7 +67,7 @@ export default function Contact() {
                 Get in Touch
               </span>
               <h1 className="text-4xl md:text-6xl font-display font-bold leading-tight mb-6">
-                Contact <span className="gold-accent">Us</span>
+                Contact <span className="accent-gradient">Us</span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 max-w-2xl leading-relaxed mb-8">
                 A direct line to our team for investment discussions, partnerships, and general inquiries. We respond with clarity, speed, and professionalism.
@@ -245,7 +245,7 @@ export default function Contact() {
               Find Us
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-6 mb-4">
-              Our <span className="gold-accent">Location</span>
+              Our <span className="accent-gradient">Location</span>
             </h2>
             <p className="text-slate-500 max-w-xl mx-auto text-sm md:text-base">
               Visit our headquarters in the heart of Kathmandu. We look forward to meeting you.
@@ -303,3 +303,4 @@ export default function Contact() {
     </div>
   )
 }
+

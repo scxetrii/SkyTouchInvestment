@@ -64,12 +64,12 @@ export default function Blogs() {
   return (
     <div className="pt-24">
       {/* FEATURED BLOGS CAROUSEL */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-slate-100">
+      <section className="py-24 bg-gradient-to-br from-primary/[0.06] via-white to-secondary/[0.08]">
         <div className="max-w-[1440px] mx-auto px-6 md:px-16">
           <ScrollReveal className="text-center mb-16">
             <span className="section-label text-center">Latest Insights</span>
             <h2 className="text-3xl md:text-5xl font-display font-bold">
-              Featured <span className="gold-accent">Blog Posts</span>
+              Featured <span className="accent-gradient">Blog Posts</span>
             </h2>
             <p className="text-lg text-on-surface-variant/70 max-w-3xl mx-auto mt-4">
               Explore our latest investment insights, sector analysis, and market perspectives
@@ -83,7 +83,7 @@ export default function Blogs() {
       <section className="py-20 max-w-[1440px] mx-auto px-6 md:px-16">
         <ScrollReveal className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-display font-bold">
-            All <span className="gold-accent">Articles</span>
+            All <span className="accent-gradient">Articles</span>
           </h2>
         </ScrollReveal>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -159,3 +159,4 @@ export default function Blogs() {
     </div>
   )
 }
+

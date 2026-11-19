@@ -51,8 +51,8 @@ const milestones = [
 
 const values = [
   { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-primary to-primary-light' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-amber-400 to-tertiary' },
-  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-tertiary to-amber-600' },
+  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-emerald-400 to-tertiary' },
+  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-tertiary to-emerald-600' },
   { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-primary-light to-primary' },
 ]
 
@@ -60,7 +60,7 @@ export default function About() {
   return (
     <div className="pt-16 sm:pt-24">
       {/* HERO */}
-      <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-[#0c1930] to-slate-950">
+      <section className="relative min-h-[50vh] sm:min-h-[70vh] flex items-center overflow-hidden bg-gradient-to-br from-[#04131f] via-[#0a2c48] to-[#052a1f]">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent" />
           <div className="absolute bottom-0 left-1/3 w-48 sm:w-96 h-48 sm:h-96 bg-tertiary/10 rounded-full blur-[60px] sm:blur-[120px]" />
@@ -77,7 +77,7 @@ export default function About() {
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
                   About{' '}
-                  <span className="bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent">SkyTouch</span>
+                  <span className="bg-gradient-to-r from-primary-light via-secondary to-emerald-300 bg-clip-text text-transparent">SkyTouch</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-6 sm:mb-8">
                   A privately-held investment and consulting company built on principles of strategic capital allocation, 
@@ -104,13 +104,13 @@ export default function About() {
                       <p className="text-xs text-white/40 mt-1">Years</p>
                     </div>
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-tertiary"><AnimatedCounter target={10} suffix="+" /></p>
+                      <p className="text-3xl font-bold text-emerald-300"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Team</p>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm text-center">
-                      <p className="text-3xl font-bold text-primary"><AnimatedCounter target={10} suffix="+" /></p>
+                      <p className="text-3xl font-bold text-primary-light"><AnimatedCounter target={10} suffix="+" /></p>
                       <p className="text-xs text-white/40 mt-1">Sectors</p>
                     </div>
                   </div>
@@ -127,7 +127,7 @@ export default function About() {
           <ScrollReveal className="text-center mb-8 sm:mb-16">
             <span className="section-label text-center">OUR JOURNEY</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-3 sm:mb-4">
-              The <span className="gold-accent">SkyTouch</span> Story
+              The <span className="accent-gradient">SkyTouch</span> Story
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-on-surface-variant/70 max-w-2xl mx-auto">
               From a bold vision in 2009 to a leading investment and consulting firm — our journey reflects 
@@ -204,7 +204,7 @@ export default function About() {
             <span className="section-label text-center">OUR FOUNDATION</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-display font-bold mb-3 sm:mb-4">
               Mission, Vision &{' '}
-              <span className="gold-accent">Values</span>
+              <span className="accent-gradient">Values</span>
             </h2>
             <p className="text-on-surface-variant/70 max-w-2xl mx-auto">
               The core principles that guide every decision, every partnership, and every investment we make.
@@ -249,11 +249,11 @@ export default function About() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(245,158,11,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(16,185,129,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-tertiary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tertiary via-amber-400 to-tertiary/50 group-hover:h-1.5 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-tertiary via-emerald-400 to-tertiary/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-tertiary/20 to-tertiary/5 border border-tertiary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(245,158,11,0.25)] transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-tertiary/20 to-tertiary/5 border border-tertiary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.25)] transition-all duration-500">
                     <Handshake className="text-tertiary" size={26} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-tertiary transition-colors duration-500">Our Commitment</h3>
@@ -295,7 +295,7 @@ export default function About() {
             <ScrollReveal>
               <span className="section-label">Our Global Network</span>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-                Worldwide <span className="gold-accent">Presence</span>
+                Worldwide <span className="accent-gradient">Presence</span>
               </h2>
               <p className="text-on-surface-variant/70 leading-relaxed mb-6">
                 SkyTouch operates through a global network of investment professionals and strategic partners. 
@@ -308,7 +308,7 @@ export default function About() {
                   <p className="text-xs text-on-surface-variant/60 mt-2">Team Members</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-primary"><AnimatedCounter target={10} suffix="+" /></p>
+                  <p className="text-3xl font-bold text-primary-light"><AnimatedCounter target={10} suffix="+" /></p>
                   <p className="text-xs text-on-surface-variant/60 mt-2">Sectors Invested</p>
                 </div>
               </div>
@@ -325,21 +325,21 @@ export default function About() {
        {/* INVESTMENT APPROACH */}
       <section className="py-16 sm:py-24 bg-primary/5">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
-          <div className="relative overflow-hidden bg-black text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(15,95,168,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.22),transparent_30%)]" />
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#04131f] via-[#0a2740] to-[#062a1f] text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(15,95,168,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.22),transparent_30%)]" />
             <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent" />
             <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/8 to-transparent" />
 
             <div className="relative z-10 px-6 md:px-16 pt-10 pb-24">
               <ScrollReveal className="mb-12 text-center">
                 <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 backdrop-blur-xl">
-                  <span className="h-2 w-2 rounded-full bg-tertiary shadow-[0_0_18px_rgba(245,158,11,0.8)]" />
+                  <span className="h-2 w-2 rounded-full bg-tertiary shadow-[0_0_18px_rgba(16,185,129,0.8)]" />
                   <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">How We Invest</span>
                   <span className="h-1 w-1 rounded-full bg-white/30" />
                   <span className="text-[11px] uppercase tracking-[0.24em] text-white/45">The SkyTouch Perspective</span>
                 </div>
                 <h2 className="mt-6 text-3xl md:text-5xl font-display font-bold leading-tight">
-                  Our <span className="bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent">Investment Approach</span>
+                  Our <span className="bg-gradient-to-r from-primary-light via-secondary to-emerald-300 bg-clip-text text-transparent">Investment Approach</span>
                 </h2>
                 <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent" />
                 <p className="mt-5 text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -423,7 +423,7 @@ export default function About() {
                         <p className="text-sm text-white/70 mt-2">Curated opportunities</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-amber-300">02</p>
+                        <p className="text-2xl font-bold text-emerald-300">02</p>
                         <p className="text-sm text-white/70 mt-2">Strategic structure</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
@@ -431,7 +431,7 @@ export default function About() {
                         <p className="text-sm text-white/70 mt-2">Reliable execution</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-amber-300">04</p>
+                        <p className="text-2xl font-bold text-emerald-300">04</p>
                         <p className="text-sm text-white/70 mt-2">Long-term value</p>
                       </div>
                     </div>
@@ -449,10 +449,10 @@ export default function About() {
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Client Retention</span>
-                        <span className="text-2xl font-bold text-amber-300">98%</span>
+                        <span className="text-2xl font-bold text-emerald-300">98%</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-amber-400 to-tertiary h-2 rounded-full" style={{width: '98%'}} />
+                        <div className="bg-gradient-to-r from-emerald-400 to-tertiary h-2 rounded-full" style={{width: '98%'}} />
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Projects Delivered</span>
@@ -521,7 +521,7 @@ export default function About() {
               <span className="section-label">OUR IMPACT</span>
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
                 Sustainability &{' '}
-                <span className="gold-accent">Responsible Investing</span>
+                <span className="accent-gradient">Responsible Investing</span>
               </h2>
               <p className="text-on-surface-variant/70 leading-relaxed mb-6">
                 We believe that long-term value creation goes hand in hand with environmental stewardship, 
@@ -560,7 +560,7 @@ export default function About() {
       </section>
 
       {/* WHY CHOOSE SKYTOUCH */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-[#0a1628] via-[#0f2035] to-[#0a1628]">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-[#04131f] via-[#0a2c48] to-[#062a1f]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <ScrollReveal className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
@@ -568,7 +568,7 @@ export default function About() {
               <span className="text-xs font-semibold uppercase tracking-widest text-white/60">The SkyTouch Difference</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
-              Why Choose <span className="bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">SkyTouch</span>
+              Why Choose <span className="bg-gradient-to-r from-secondary-light to-primary-light bg-clip-text text-transparent">SkyTouch</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4">
               Discover what sets us apart in the world of strategic investments
@@ -592,7 +592,7 @@ export default function About() {
                      <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                      <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
                      <div className="pt-6 border-t border-slate-100">
-                       <p className="text-3xl font-bold bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">{feature.stat}</p>
+                       <p className="text-3xl font-bold bg-gradient-to-r from-secondary-light to-primary-light bg-clip-text text-transparent">{feature.stat}</p>
                        <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
                      </div>
                    </div>
@@ -619,7 +619,7 @@ export default function About() {
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
               Ready to Invest in{' '}
-              <span className="bg-gradient-to-r from-amber-300 to-amber-200 bg-clip-text text-transparent">Nepal's Future?</span>
+              <span className="bg-gradient-to-r from-emerald-300 to-emerald-200 bg-clip-text text-transparent">Nepal's Future?</span>
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
               Partner with SkyTouch for strategic investment opportunities that deliver sustainable growth 
@@ -640,3 +640,5 @@ export default function About() {
     </div>
   )
 }
+
+

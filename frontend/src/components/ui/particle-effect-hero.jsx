@@ -88,7 +88,7 @@ const AntiGravityCanvas = () => {
         centerX, centerY, 0, 
         centerX, centerY, Math.max(canvas.width, canvas.height) * 0.7
     );
-    gradient.addColorStop(0, `rgba(14, 165, 233, ${pulseOpacity})`);
+    gradient.addColorStop(0, `rgba(11,58,102, ${pulseOpacity})`);
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
     
     ctx.fillStyle = gradient;
@@ -267,7 +267,7 @@ const AntiGravityCanvas = () => {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 z-0 overflow-hidden bg-black cursor-crosshair"
+      className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-br from-[#04131f] via-[#081f33] to-[#052a1f] cursor-crosshair"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -341,7 +341,7 @@ const HeroContent = () => {
 
 export default function ParticleHero() {
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden selection:bg-primary selection:text-white">
+    <div className="relative w-full h-screen bg-gradient-to-br from-[#04131f] via-[#081f33] to-[#052a1f] overflow-hidden selection:bg-primary selection:text-white">
       <AntiGravityCanvas />
       <div className="pointer-events-none absolute left-[10%] top-[53%] z-10 hidden xl:block -translate-y-1/2 opacity-95">
         <div className="scale-[1.32] origin-center drop-shadow-[0_0_40px_rgba(15,95,168,0.2)]">
@@ -358,3 +358,4 @@ export default function ParticleHero() {
     </div>
   );
 }
+
