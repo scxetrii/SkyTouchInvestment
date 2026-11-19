@@ -109,24 +109,21 @@ export function InvestmentSectorCard() {
           className="absolute inset-0 h-full w-full object-cover"
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#04131f]/95 via-[#04131f]/85 to-[#04131f]/50" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#020a12]/90 via-transparent to-[#020a12]/40" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#04131f]/92 via-[#062033]/75 to-[#04131f]/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#020a12]/90 via-transparent to-[#020a12]/30" />
 
-      {/* Accent glow */}
+      {/* Rich color mesh */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(15,95,168,0.5),transparent_55%),radial-gradient(ellipse_at_top_right,rgba(16,185,129,0.3),transparent_50%),radial-gradient(ellipse_at_bottom_right,rgba(212,160,23,0.22),transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,transparent_35%,rgba(212,160,23,0.09)_50%,transparent_65%)]" />
+
+      {/* Accent glows */}
       <div
         className="pointer-events-none absolute -left-40 top-1/3 h-[30rem] w-[30rem] rounded-full opacity-25 blur-[130px] transition-colors duration-700"
         style={{ backgroundColor: currentSector.color }}
       />
+      <div className="pointer-events-none absolute -bottom-32 -right-24 h-[26rem] w-[26rem] rounded-full bg-gold/15 blur-[120px]" />
 
-      {/* Grid + cursor spotlight */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.05]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.7) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.7) 1px, transparent 1px)',
-          backgroundSize: '44px 44px',
-        }}
-      />
+      {/* Cursor spotlight */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
