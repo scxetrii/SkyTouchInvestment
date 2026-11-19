@@ -69,9 +69,9 @@ export default function About() {
             className="h-full w-full object-cover object-center"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#03140d]/95 via-[#03140d]/75 to-[#03140d]/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#03140d]/80 via-transparent to-[#03140d]/40" />
-          <div className="absolute inset-0 bg-[#03140d]/35 sm:hidden" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#03140d]/80 via-[#03140d]/55 to-[#03140d]/15" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#03140d]/60 via-transparent to-[#03140d]/25" />
+          <div className="absolute inset-0 bg-[#03140d]/25 sm:hidden" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-gold/40" />
         </div>
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative w-full">
