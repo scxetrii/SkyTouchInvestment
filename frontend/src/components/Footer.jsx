@@ -125,13 +125,13 @@ export default function Footer() {
                 </a>
               </li>
               <li className="group">
-                <a href="tel:+977-1-4XXXXXX" className="flex items-start gap-3.5 text-sm text-white/70 hover:text-white transition-colors">
+                <a href="tel:+977-1-14016181" className="flex items-start gap-3.5 text-sm text-white/70 hover:text-white transition-colors">
                   <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/20 flex items-center justify-center group-hover:bg-white/10 group-hover:text-white group-hover:border-white/40 transition-all">
                     <Phone size={14} />
                   </span>
                   <span>
                     <span className="block text-[10px] tracking-wider text-white/50 uppercase mb-0.5">Phone</span>
-                    <span className="text-white/80 group-hover:text-white transition-colors">+977-1-4XXXXXX</span>
+                    <span className="text-white/80 group-hover:text-white transition-colors">+977-1-14016181</span>
                   </span>
                 </a>
               </li>

@@ -196,14 +196,14 @@ export default function Contact() {
               {
                 icon: Mail,
                 title: 'Email Us',
-                text: 'info@skytouch.com.np',
-                link: 'mailto:info@skytouch.com.np',
+                text: 'info@skytouchinvestment.com.np',
+                link: 'mailto:info@skytouchinvestment.com.np',
               },
               {
                 icon: Phone,
                 title: 'Call Us',
-                text: '01-4XXXXXX',
-                link: 'tel:+977-1-4XXXXXX',
+                text: '01-14016181',
+                link: 'tel:+977-1-14016181',
               },
               {
                 icon: Clock,
