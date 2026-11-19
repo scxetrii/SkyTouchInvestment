@@ -8,7 +8,7 @@ export function SectorHoverCard({
   desc,
   details,
   pct,
-  color = '#0ea5e9',
+  color = '#0f5fa8',
   index = 0,
 }) {
   const [isHovered, setIsHovered] = useState(false)
@@ -69,7 +69,7 @@ export function SectorHoverCard({
         className="relative h-full"
       >
         <div className="relative h-full rounded-3xl overflow-hidden border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-slate-100 shadow-[0_20px_60px_rgba(15,23,42,0.08)] flex flex-col group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.10),transparent_30%)] opacity-80" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_30%)] opacity-80" />
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
           <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
 
@@ -159,7 +159,7 @@ export function SectorHoverCard({
                 className="absolute inset-0 z-20 pointer-events-none"
               >
                 <div className="relative h-full rounded-2xl overflow-hidden border-2 border-primary/35 shadow-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-4 flex flex-col pointer-events-auto">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.12),transparent_30%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_30%)]" />
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
 
                   <div className="relative z-10 flex flex-col h-full overflow-y-auto custom-scrollbar">

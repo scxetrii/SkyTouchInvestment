@@ -29,7 +29,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Private Equity', 
       pct: 65, 
-      color: '#0ea5e9', 
+      color: '#0f5fa8', 
       desc: 'Partnering for growth and transformation',
       icon: '📈',
       details: 'Strategic investments in high-growth companies with strong fundamentals and experienced management teams.',
@@ -38,7 +38,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Real Estate', 
       pct: 44, 
-      color: '#f97316', 
+      color: '#f59e0b', 
       desc: 'Creating value through strategic property investment',
       icon: '🏗️',
       details: 'Premium commercial and residential properties in prime locations with strong rental yields.',
@@ -47,7 +47,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Capital Markets', 
       pct: 84, 
-      color: '#0ea5e9', 
+      color: '#0f5fa8', 
       desc: 'Strategic public market investments',
       icon: '📊',
       details: 'Well-researched public market investments across diverse sectors and geographies.',
@@ -56,7 +56,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Hydropower', 
       pct: 48, 
-      color: '#38bdf8', 
+      color: '#3b9ae0', 
       desc: 'Sustainable energy production',
       icon: '💧',
       details: 'Long-term investments in renewable energy projects with stable cash flows.',
@@ -65,7 +65,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Tourism', 
       pct: 43, 
-      color: '#f97316', 
+      color: '#f59e0b', 
       desc: 'Growth in Nepal tourism sector',
       icon: '🏔️',
       details: 'Strategic investments in tourism infrastructure and hospitality ventures.',
@@ -74,7 +74,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Hospitality', 
       pct: 66, 
-      color: '#0ea5e9', 
+      color: '#0f5fa8', 
       desc: 'Premium hotel and resort investments',
       icon: '🏨',
       details: 'High-quality hotel properties with consistent occupancy and revenue growth.',
@@ -83,7 +83,7 @@ export function InvestmentSectorCard() {
     { 
       title: 'Technology & AI', 
       pct: 72, 
-      color: '#8b5cf6', 
+      color: '#3b9ae0', 
       desc: 'Innovation in digital transformation',
       icon: '🤖',
       details: 'Strategic investments in cutting-edge technology and artificial intelligence companies driving digital innovation and automation.',
@@ -234,13 +234,13 @@ export function InvestmentSectorCard() {
               
               {/* Tags overlay */}
               <div className="absolute top-4 right-4 flex flex-col gap-2">
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-emerald-500 to-green-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-amber-600 rounded-full shadow-lg backdrop-blur-sm">
                   Profit +
                 </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-primary to-blue-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-primary to-primary-dark rounded-full shadow-lg backdrop-blur-sm">
                   Growth
                 </span>
-                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-violet-500 to-purple-600 rounded-full shadow-lg backdrop-blur-sm">
+                <span className="px-3 py-1.5 text-xs font-bold tracking-wide text-white bg-gradient-to-r from-tertiary to-amber-600 rounded-full shadow-lg backdrop-blur-sm">
                   Secure
                 </span>
               </div>

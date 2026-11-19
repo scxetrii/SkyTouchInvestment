@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ChevronUp } from 'lucide-react'
-import ThemeToggle from './ThemeToggle'
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false)
@@ -32,7 +31,6 @@ export default function ScrollToTop() {
 
   return (
     <div className="fixed bottom-8 right-8 z-50 flex flex-col items-center gap-3">
-      <ThemeToggle />
       <div
         className={`transition-all duration-300 ease-out ${
           visible ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-50 pointer-events-none'

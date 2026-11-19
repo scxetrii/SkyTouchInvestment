@@ -57,18 +57,18 @@ function Scene() {
   })
 
   const pillars = useMemo(() => [
-    { position: [-2.5, 0, -1], color: '#0ea5e9', delay: 0 },
-    { position: [-0.8, 0.5, -1.5], color: '#f97316', delay: 1 },
-    { position: [0.8, -0.3, -1.2], color: '#0ea5e9', delay: 2 },
-    { position: [2.5, 0.2, -1], color: '#f97316', delay: 0.5 },
-    { position: [-1.6, -0.5, -2], color: '#38bdf8', delay: 1.5 },
-    { position: [1.6, 0.4, -2.2], color: '#f97316', delay: 2.5 },
+    { position: [-2.5, 0, -1], color: '#0f5fa8', delay: 0 },
+    { position: [-0.8, 0.5, -1.5], color: '#f59e0b', delay: 1 },
+    { position: [0.8, -0.3, -1.2], color: '#0f5fa8', delay: 2 },
+    { position: [2.5, 0.2, -1], color: '#f59e0b', delay: 0.5 },
+    { position: [-1.6, -0.5, -2], color: '#3b9ae0', delay: 1.5 },
+    { position: [1.6, 0.4, -2.2], color: '#f59e0b', delay: 2.5 },
   ], [])
 
   const rings = useMemo(() => [
-    { position: [-1.5, 0.8, -3], color: '#0ea5e9' },
-    { position: [1.5, -0.6, -3.5], color: '#f97316' },
-    { position: [0, 0, -4], color: '#38bdf8' },
+    { position: [-1.5, 0.8, -3], color: '#0f5fa8' },
+    { position: [1.5, -0.6, -3.5], color: '#f59e0b' },
+    { position: [0, 0, -4], color: '#3b9ae0' },
   ], [])
 
   return (
@@ -82,7 +82,7 @@ function Scene() {
         <FloatingRing key={`ring-${i}`} {...r} />
       ))}
       <directionalLight position={[5, 5, 5]} intensity={0.5} />
-      <directionalLight position={[-5, 3, -5]} intensity={0.3} color="#f97316" />
+      <directionalLight position={[-5, 3, -5]} intensity={0.3} color="#f59e0b" />
       <ambientLight intensity={0.3} />
     </group>
   )

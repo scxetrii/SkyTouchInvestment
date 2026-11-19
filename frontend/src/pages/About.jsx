@@ -50,10 +50,10 @@ const milestones = [
 
 
 const values = [
-  { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-blue-500 to-cyan-500' },
-  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-purple-500 to-pink-500' },
-  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-orange-500 to-red-500' },
-  { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-green-500 to-emerald-500' },
+  { icon: Shield, title: 'Integrity', desc: 'Uncompromising ethical standards in every transaction and relationship we build.', color: 'from-primary to-primary-light' },
+  { icon: Lightbulb, title: 'Innovation', desc: 'Forward-thinking solutions that leverage market insights and emerging opportunities.', color: 'from-amber-400 to-tertiary' },
+  { icon: Heart, title: 'Excellence', desc: 'Relentless pursuit of the highest quality in analysis, execution, and client service.', color: 'from-tertiary to-amber-600' },
+  { icon: Leaf, title: 'Sustainability', desc: 'Responsible investing that creates lasting value for communities and the environment.', color: 'from-primary-light to-primary' },
 ]
 
 export default function About() {
@@ -77,7 +77,7 @@ export default function About() {
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
                   About{' '}
-                  <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">SkyTouch</span>
+                  <span className="bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent">SkyTouch</span>
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg text-white/60 max-w-xl leading-relaxed mb-6 sm:mb-8">
                   A privately-held investment and consulting company built on principles of strategic capital allocation, 
@@ -213,11 +213,11 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
             <ScrollReveal>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(14,165,233,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(15,95,168,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-blue-400 to-primary/50 group-hover:h-1.5 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-light to-primary/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(14,165,233,0.25)] transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(15,95,168,0.25)] transition-all duration-500">
                     <Target className="text-primary" size={26} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors duration-500">Our Vision</h3>
@@ -231,11 +231,11 @@ export default function About() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(124,58,237,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
+              <div className="group relative h-full rounded-[2rem] bg-white border border-slate-200/80 p-8 shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(59,154,224,0.10)] transition-all duration-500 hover:-translate-y-1 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-purple-400 to-secondary/50 group-hover:h-1.5 transition-all duration-500" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-primary-light to-secondary/50 group-hover:h-1.5 transition-all duration-500" />
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(124,58,237,0.25)] transition-all duration-500">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(59,154,224,0.25)] transition-all duration-500">
                     <BarChart3 className="text-secondary" size={26} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-secondary transition-colors duration-500">Our Mission</h3>
@@ -326,20 +326,20 @@ export default function About() {
       <section className="py-16 sm:py-24 bg-primary/5">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="relative overflow-hidden bg-black text-white rounded-[2rem] mb-12 border border-white/10 shadow-[0_40px_140px_rgba(0,0,0,0.35)]">
-            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(249,115,22,0.22),transparent_30%)]" />
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_left,rgba(15,95,168,0.28),transparent_32%),radial-gradient(circle_at_bottom_right,rgba(245,158,11,0.22),transparent_30%)]" />
             <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent" />
             <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-white/8 to-transparent" />
 
             <div className="relative z-10 px-6 md:px-16 pt-10 pb-24">
               <ScrollReveal className="mb-12 text-center">
                 <div className="mx-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/8 px-4 py-2 backdrop-blur-xl">
-                  <span className="h-2 w-2 rounded-full bg-sky-400 shadow-[0_0_18px_rgba(56,189,248,0.8)]" />
+                  <span className="h-2 w-2 rounded-full bg-tertiary shadow-[0_0_18px_rgba(245,158,11,0.8)]" />
                   <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">How We Invest</span>
                   <span className="h-1 w-1 rounded-full bg-white/30" />
                   <span className="text-[11px] uppercase tracking-[0.24em] text-white/45">The SkyTouch Perspective</span>
                 </div>
                 <h2 className="mt-6 text-3xl md:text-5xl font-display font-bold leading-tight">
-                  Our <span className="bg-gradient-to-r from-sky-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">Investment Approach</span>
+                  Our <span className="bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent">Investment Approach</span>
                 </h2>
                 <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-white/35 to-transparent" />
                 <p className="mt-5 text-white/70 max-w-3xl mx-auto leading-relaxed">
@@ -419,19 +419,19 @@ export default function About() {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-sky-300">01</p>
+                        <p className="text-2xl font-bold text-primary-light">01</p>
                         <p className="text-sm text-white/70 mt-2">Curated opportunities</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-orange-300">02</p>
+                        <p className="text-2xl font-bold text-amber-300">02</p>
                         <p className="text-sm text-white/70 mt-2">Strategic structure</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-sky-300">03</p>
+                        <p className="text-2xl font-bold text-primary-light">03</p>
                         <p className="text-sm text-white/70 mt-2">Reliable execution</p>
                       </div>
                       <div className="rounded-2xl bg-white/8 border border-white/10 p-4">
-                        <p className="text-2xl font-bold text-orange-300">04</p>
+                        <p className="text-2xl font-bold text-amber-300">04</p>
                         <p className="text-sm text-white/70 mt-2">Long-term value</p>
                       </div>
                     </div>
@@ -442,24 +442,24 @@ export default function About() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Portfolio IRR</span>
-                        <span className="text-2xl font-bold text-sky-300">18.5%</span>
+                        <span className="text-2xl font-bold text-primary-light">18.5%</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-sky-400 to-primary h-2 rounded-full" style={{width: '85%'}} />
+                        <div className="bg-gradient-to-r from-primary-light to-primary h-2 rounded-full" style={{width: '85%'}} />
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Client Retention</span>
-                        <span className="text-2xl font-bold text-orange-300">98%</span>
+                        <span className="text-2xl font-bold text-amber-300">98%</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-orange-400 to-tertiary h-2 rounded-full" style={{width: '98%'}} />
+                        <div className="bg-gradient-to-r from-amber-400 to-tertiary h-2 rounded-full" style={{width: '98%'}} />
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/70 text-sm">Projects Delivered</span>
-                        <span className="text-2xl font-bold text-sky-300">150+</span>
+                        <span className="text-2xl font-bold text-primary-light">150+</span>
                       </div>
                       <div className="w-full bg-white/10 rounded-full h-2">
-                        <div className="bg-gradient-to-r from-sky-400 to-primary h-2 rounded-full" style={{width: '92%'}} />
+                        <div className="bg-gradient-to-r from-primary-light to-primary h-2 rounded-full" style={{width: '92%'}} />
                       </div>
                     </div>
                   </div>
@@ -500,9 +500,9 @@ export default function About() {
               name: "#0a0a0a",
               designation: "#6b7280",
               testimony: "#4b5563",
-              arrowBackground: "#0ea5e9",
+              arrowBackground: "#0f5fa8",
               arrowForeground: "#ffffff",
-              arrowHoverBackground: "#0284c7",
+              arrowHoverBackground: "#0b4c86",
             }}
             fontSizes={{
               name: "24px",
@@ -514,7 +514,7 @@ export default function About() {
       </section>
 
       {/* IMPACT & SUSTAINABILITY */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-primary/[0.04] via-white to-tertiary/[0.04]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ScrollReveal>
@@ -536,8 +536,8 @@ export default function About() {
                   { icon: GraduationCap, title: 'Knowledge Transfer', desc: 'We invest in capacity building and professional development for local talent and partners.' },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center shrink-0">
-                      <item.icon size={20} className="text-emerald-600" />
+                    <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                      <item.icon size={20} className="text-primary" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">{item.title}</h4>
@@ -568,7 +568,7 @@ export default function About() {
               <span className="text-xs font-semibold uppercase tracking-widest text-white/60">The SkyTouch Difference</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-white">
-              Why Choose <span className="bg-gradient-to-r from-sky-400 to-primary bg-clip-text text-transparent">SkyTouch</span>
+              Why Choose <span className="bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">SkyTouch</span>
             </h2>
             <p className="text-white/50 max-w-2xl mx-auto mt-4">
               Discover what sets us apart in the world of strategic investments
@@ -592,7 +592,7 @@ export default function About() {
                      <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                      <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-grow">{feature.desc}</p>
                      <div className="pt-6 border-t border-slate-100">
-                       <p className="text-3xl font-bold bg-gradient-to-r from-sky-400 to-primary bg-clip-text text-transparent">{feature.stat}</p>
+                       <p className="text-3xl font-bold bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">{feature.stat}</p>
                        <p className="text-xs text-slate-400 mt-1 uppercase tracking-wider">{feature.statLabel}</p>
                      </div>
                    </div>
@@ -619,7 +619,7 @@ export default function About() {
             </div>
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 leading-tight">
               Ready to Invest in{' '}
-              <span className="bg-gradient-to-r from-orange-300 to-orange-200 bg-clip-text text-transparent">Nepal's Future?</span>
+              <span className="bg-gradient-to-r from-amber-300 to-amber-200 bg-clip-text text-transparent">Nepal's Future?</span>
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
               Partner with SkyTouch for strategic investment opportunities that deliver sustainable growth 

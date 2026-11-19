@@ -1,14 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         primary: '#0f5fa8',
         'primary-dark': '#0b4c86',
-        secondary: '#7c3aed',
+        'primary-light': '#3b9ae0',
+        secondary: '#3b9ae0',
         tertiary: '#f59e0b',
+        'tertiary-light': '#fbbf24',
         'on-primary': '#ffffff',
         'on-surface': '#0f172a',
         'on-surface-variant': '#475569',
@@ -36,8 +37,8 @@ export default {
           '100%': { backgroundPosition: '200% 0' },
         },
         'pulse-glow': {
-          '0%, 100%': { opacity: '0.4', transform: 'scale(1)', boxShadow: '0 0 10px rgba(14,165,233,0.2)' },
-          '50%': { opacity: '1', transform: 'scale(1.08)', boxShadow: '0 0 30px rgba(14,165,233,0.6)' },
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)', boxShadow: '0 0 10px rgba(15,95,168,0.2)' },
+          '50%': { opacity: '1', transform: 'scale(1.08)', boxShadow: '0 0 30px rgba(15,95,168,0.6)' },
         },
         'pulse-soft': {
           '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },

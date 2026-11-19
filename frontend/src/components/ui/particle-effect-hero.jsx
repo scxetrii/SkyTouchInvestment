@@ -40,7 +40,7 @@ const AntiGravityCanvas = () => {
         vx: 0,
         vy: 0,
         size: randomRange(1, 2.5), 
-        color: Math.random() > 0.9 ? '#0ea5e9' : '#ffffff', 
+        color: Math.random() > 0.9 ? '#0f5fa8' : '#ffffff', 
         angle: Math.random() * Math.PI * 2,
       });
     }
@@ -319,7 +319,7 @@ const HeroContent = () => {
                     speed={90}
                     cursor="|"
                     loop={true}
-                    className="inline-block bg-gradient-to-r from-sky-400 via-blue-500 to-orange-400 bg-clip-text text-transparent"
+                    className="inline-block bg-gradient-to-r from-primary-light via-primary to-tertiary bg-clip-text text-transparent"
                   />
                 </h1>
                 
@@ -344,7 +344,7 @@ export default function ParticleHero() {
     <div className="relative w-full h-screen bg-black overflow-hidden selection:bg-primary selection:text-white">
       <AntiGravityCanvas />
       <div className="pointer-events-none absolute left-[10%] top-[53%] z-10 hidden xl:block -translate-y-1/2 opacity-95">
-        <div className="scale-[1.32] origin-center drop-shadow-[0_0_40px_rgba(14,165,233,0.2)]">
+        <div className="scale-[1.32] origin-center drop-shadow-[0_0_40px_rgba(15,95,168,0.2)]">
           <Globe />
         </div>
       </div>

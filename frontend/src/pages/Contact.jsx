@@ -113,7 +113,7 @@ export default function Contact() {
                         name="company"
                         value={form.company}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(14,165,233,0.08)]"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
                         placeholder="Your company or organization"
                       />
                     </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                           required
                           value={form.name}
                           onChange={handleChange}
-                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(14,165,233,0.08)]"
+                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
                           placeholder="Full name"
                         />
                       </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                           required
                           value={form.email}
                           onChange={handleChange}
-                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(14,165,233,0.08)]"
+                          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
                           placeholder="name@company.com"
                         />
                       </div>
@@ -152,7 +152,7 @@ export default function Contact() {
                         name="phone"
                         value={form.phone}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(14,165,233,0.08)]"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)]"
                         placeholder="Phone number"
                       />
                     </div>
@@ -165,14 +165,14 @@ export default function Contact() {
                         rows={6}
                         value={form.message}
                         onChange={handleChange}
-                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(14,165,233,0.08)] resize-none"
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition-all placeholder:text-slate-400 focus:border-primary focus:bg-white focus:shadow-[0_0_0_4px_rgba(15,95,168,0.08)] resize-none"
                         placeholder="How can we help you?"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="btn-primary w-full rounded-2xl shadow-[0_20px_45px_rgba(14,165,233,0.18)]"
+                      className="btn-primary w-full rounded-2xl shadow-[0_20px_45px_rgba(15,95,168,0.18)]"
                     >
                       SEND MESSAGE
                     </button>
@@ -212,7 +212,7 @@ export default function Contact() {
               },
             ].map((item, index) => (
               <ScrollReveal key={item.title} delay={index * 0.08}>
-                <div className="group h-full rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_16px_50px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(14,165,233,0.10)]">
+                <div className="group h-full rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-[0_16px_50px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,95,168,0.10)]">
                   <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                     <item.icon size={22} />
                   </div>

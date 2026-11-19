@@ -57,12 +57,12 @@ export default function Home() {
   }
 
   const stepColors = [
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(14,165,233,0.6)]', icon: 'text-primary' },
-    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(14,165,233,0.6)]', icon: 'text-secondary' },
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(14,165,233,0.6)]', icon: 'text-primary' },
-    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(14,165,233,0.6)]', icon: 'text-secondary' },
-    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(14,165,233,0.6)]', icon: 'text-primary' },
-    { border: 'border-tertiary', shadow: 'shadow-[0_0_30px_rgba(249,115,22,0.6)]', icon: 'text-tertiary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
+    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-secondary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
+    { border: 'border-secondary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-secondary' },
+    { border: 'border-primary', shadow: 'shadow-[0_0_30px_rgba(15,95,168,0.6)]', icon: 'text-primary' },
+    { border: 'border-tertiary', shadow: 'shadow-[0_0_30px_rgba(245,158,11,0.6)]', icon: 'text-tertiary' },
   ]
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function Home() {
     const container = document.getElementById('particle-container')
     if (!container) return
     const isMobile = window.innerWidth < 768
-    const colors = ['#ffffff', '#0ea5e9', '#f97316', '#7bd0ff']
+    const colors = ['#ffffff', '#0f5fa8', '#f59e0b', '#3b9ae0']
     const particles = []
     const count = isMobile ? 15 : 50
     for (let i = 0; i < count; i++) {
@@ -161,12 +161,12 @@ export default function Home() {
             if (node) {
               const glowIntensity = Math.max(0, 1 - dist * 0.8)
               const colors = [
-                'rgba(14,165,233,0.6)',
-                'rgba(14,165,233,0.6)',
-                'rgba(14,165,233,0.6)',
-                'rgba(14,165,233,0.6)',
-                'rgba(14,165,233,0.6)',
-                'rgba(249,115,22,0.6)',
+                'rgba(15,95,168,0.6)',
+                'rgba(15,95,168,0.6)',
+                'rgba(15,95,168,0.6)',
+                'rgba(15,95,168,0.6)',
+                'rgba(15,95,168,0.6)',
+                'rgba(245,158,11,0.6)',
               ]
               const glowRgba = i === 5 ? '249,115,22' : '14,165,233'
               node.style.boxShadow = `0 0 ${15 + glowIntensity * 30}px rgba(${glowRgba},${0.3 + glowIntensity * 0.4})`
@@ -289,7 +289,7 @@ export default function Home() {
 
       {/* INVESTMENT SECTORS */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(14,165,233,0.04)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(15,95,168,0.05)_0%,transparent_60%)]" />
 
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-16 relative py-16 sm:py-24">
           <ScrollReveal className="mb-8 sm:mb-12 text-center md:text-left">
@@ -326,8 +326,8 @@ export default function Home() {
 
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
 
-        <div className="absolute top-32 left-16 w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-orange-500/5 blur-[60px] sm:blur-[100px]" />
-        <div className="absolute bottom-32 right-16 w-40 sm:w-80 h-40 sm:h-80 rounded-full bg-blue-500/5 blur-[60px] sm:blur-[120px]" />
+        <div className="absolute top-32 left-16 w-32 sm:w-64 h-32 sm:h-64 rounded-full bg-tertiary/5 blur-[60px] sm:blur-[100px]" />
+        <div className="absolute bottom-32 right-16 w-40 sm:w-80 h-40 sm:h-80 rounded-full bg-primary/5 blur-[60px] sm:blur-[120px]" />
 
         <div className="hidden sm:block absolute top-0 left-[15%] w-[1px] h-24 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
         <div className="hidden sm:block absolute top-0 right-[20%] w-[1px] h-20 bg-gradient-to-b from-transparent via-white/15 to-transparent" />
@@ -385,7 +385,7 @@ export default function Home() {
           <ScrollReveal className="text-center mb-8 sm:mb-12 md:mb-16">
             <span className="inline-block text-[10px] sm:text-xs tracking-[0.3em] font-bold text-white/40 uppercase mb-3 sm:mb-4">How We Work</span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 min-h-[1.2em]">
-              <span className="bg-gradient-to-r from-orange-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-tertiary to-primary-light bg-clip-text text-transparent">
                 The{' '}
                 <Typewriter
                   text={["SkyTouch Protocol", "Investment Protocol", "Wealth Protocol"]}
@@ -406,18 +406,18 @@ export default function Home() {
               <svg className="w-full h-full" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" style={{ opacity: 0.7 }}>
                 <defs>
                   <linearGradient id="curveGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f97316" stopOpacity="0" />
-                    <stop offset="15%" stopColor="#f97316" stopOpacity="0.08" />
-                    <stop offset="50%" stopColor="#f97316" stopOpacity="0.2" />
-                    <stop offset="85%" stopColor="#f97316" stopOpacity="0.08" />
-                    <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#f59e0b" stopOpacity="0" />
+                    <stop offset="15%" stopColor="#f59e0b" stopOpacity="0.08" />
+                    <stop offset="50%" stopColor="#f59e0b" stopOpacity="0.2" />
+                    <stop offset="85%" stopColor="#f59e0b" stopOpacity="0.08" />
+                    <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient id="curveMain" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#f97316" stopOpacity="0" />
-                    <stop offset="15%" stopColor="#f97316" stopOpacity="0.6" />
-                    <stop offset="50%" stopColor="#f97316" stopOpacity="1" />
-                    <stop offset="85%" stopColor="#f97316" stopOpacity="0.6" />
-                    <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
+                    <stop offset="0%" stopColor="#f59e0b" stopOpacity="0" />
+                    <stop offset="15%" stopColor="#f59e0b" stopOpacity="0.6" />
+                    <stop offset="50%" stopColor="#f59e0b" stopOpacity="1" />
+                    <stop offset="85%" stopColor="#f59e0b" stopOpacity="0.6" />
+                    <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <path d="M 400,0 C 400,25 470,45 470,80 S 330,145 330,190 S 470,255 470,300 S 330,365 330,410 S 470,475 470,520 S 330,585 330,630 S 400,680 400,730"
@@ -436,7 +436,7 @@ export default function Home() {
                 <div key={step.title} className="timeline-step flex flex-col md:flex-row items-start mb-10 sm:mb-14 md:mb-20 last:mb-0 will-change-transform duration-75 group">
                   <div className={`w-full md:flex-1 text-center ${isLeft ? 'md:text-right md:pr-8' : 'md:order-3 md:text-left md:pl-8'} mb-4 sm:mb-6 md:mb-0`}>
                     <div className={`relative ${isLeft ? 'md:text-right' : 'md:text-left'} text-left`}>
-                      <div className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200 hover:border-orange-400/30 transition-all duration-500 overflow-hidden bg-white text-center shadow-sm">
+                      <div className="relative rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-slate-200 hover:border-tertiary/40 transition-all duration-500 overflow-hidden bg-white text-center shadow-sm">
                         <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-5 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center ${c.icon}`}>
                           {iconMap[step.icon] && (
                             <span className={c.icon}>
@@ -445,10 +445,10 @@ export default function Home() {
                           )}
                         </div>
                         <div className="inline-flex items-center justify-center gap-2 mb-3 sm:mb-4 w-full">
-                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] tracking-[0.15em] font-bold text-orange-500 bg-orange-50 rounded-full border border-orange-200">
+                          <span className="px-2 sm:px-3 py-0.5 sm:py-1 text-[10px] tracking-[0.15em] font-bold text-tertiary bg-amber-50 rounded-full border border-amber-200">
                             STEP {String(i + 1).padStart(2, '0')}
                           </span>
-                          <span className="h-[1px] w-4 sm:w-6 bg-gradient-to-r from-orange-400/60 to-transparent" />
+                          <span className="h-[1px] w-4 sm:w-6 bg-gradient-to-r from-tertiary/60 to-transparent" />
                         </div>
                         <h3 className="text-base sm:text-lg md:text-[26px] font-semibold text-slate-900 mb-2 sm:mb-3">{step.title}</h3>
                         <p className="text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed">{step.desc}</p>

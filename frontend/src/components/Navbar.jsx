@@ -31,10 +31,10 @@ function NepalTime() {
   return (
     <div className="flex items-center gap-1.5 text-[10px] tracking-[0.15em] font-semibold leading-none">
       <span className="relative flex h-2 w-2">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-tertiary" />
       </span>
-      <span className="text-emerald-400/90">{time}</span>
+      <span className="text-tertiary/90">{time}</span>
       <span className="text-white/40 hidden sm:inline">NPT</span>
     </div>
   )
@@ -130,7 +130,7 @@ export default function Navbar() {
                   to={link.path}
                   className={`relative text-xs tracking-[0.15em] font-semibold transition-all duration-300 nav-link-underline group ${
                     location.pathname === link.path
-                      ? 'text-white bg-tertiary/20 border border-tertiary/30 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(249,115,22,0.18)]'
+                      ? 'text-white bg-tertiary/20 border border-tertiary/30 rounded-full px-3 py-1.5 shadow-[0_0_18px_rgba(245,158,11,0.18)]'
                       : (isHomePage ? (scrolled ? 'text-white/90 hover:text-white' : 'text-white/80 hover:text-white') : (scrolled ? 'text-slate-700 hover:text-slate-950' : 'text-white/80 hover:text-white'))
                   }`}
                 >
@@ -208,7 +208,7 @@ export default function Navbar() {
                 to={link.path}
                 className={`block px-4 py-3 sm:py-3 rounded-lg text-sm tracking-wider font-semibold transition-all duration-300 min-h-[44px] flex items-center ${
                   location.pathname === link.path
-                    ? 'text-white bg-tertiary/20 border border-tertiary/30 shadow-[0_0_18px_rgba(249,115,22,0.18)]'
+                    ? 'text-white bg-tertiary/20 border border-tertiary/30 shadow-[0_0_18px_rgba(245,158,11,0.18)]'
                     : (isHomePage ? (scrolled ? 'text-white/80 hover:text-white hover:bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/10') : (scrolled ? 'text-slate-700 hover:text-slate-950 hover:bg-white/50' : 'text-white/80 hover:text-white hover:bg-white/10'))
                 }`}
               >

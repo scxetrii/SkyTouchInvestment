@@ -75,14 +75,14 @@ export default function Boards() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-16 pt-32 pb-16 md:pb-24">
             <motion.div variants={staggerWrap} initial="hidden" animate="visible" className="text-center max-w-4xl mx-auto">
               <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-6">
-                <span className="h-px w-8 bg-gradient-to-r from-transparent to-orange-500/40" />
-                <span className="text-xs tracking-[0.3em] font-bold text-orange-500 uppercase">Leadership</span>
-                <span className="h-px w-8 bg-gradient-to-l from-transparent to-orange-500/40" />
+                <span className="h-px w-8 bg-gradient-to-r from-transparent to-tertiary/40" />
+                <span className="text-xs tracking-[0.3em] font-bold text-tertiary uppercase">Leadership</span>
+                <span className="h-px w-8 bg-gradient-to-l from-transparent to-tertiary/40" />
               </motion.div>
 
               <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-bold text-slate-900 mb-6">
                 Board of{' '}
-                <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">Director</span>
+                <span className="bg-gradient-to-r from-tertiary via-amber-400 to-amber-500 bg-clip-text text-transparent">Director</span>
               </motion.h1>
 
               <motion.p variants={fadeUp} className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed">
@@ -90,7 +90,7 @@ export default function Boards() {
               </motion.p>
 
               <motion.div variants={fadeUp} className="mt-10 flex items-center justify-center gap-6 text-sm text-slate-400">
-                <span className="flex items-center gap-2"><Award size={16} className="text-orange-500" /> 30+ Years Experience</span>
+                <span className="flex items-center gap-2"><Award size={16} className="text-tertiary" /> 30+ Years Experience</span>
                 <span className="w-1 h-1 rounded-full bg-slate-300" />
                 <span className="flex items-center gap-2"><Building2 size={16} className="text-amber-500" /> Multiple Sectors</span>
                 <span className="w-1 h-1 rounded-full bg-slate-300" />
@@ -107,7 +107,7 @@ export default function Boards() {
           <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: 'radial-gradient(circle at 30% 30%, rgba(245,158,11,0.6) 1px, transparent 1px), radial-gradient(circle at 70% 70%, rgba(245,158,11,0.4) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
           {/* Gold ambient glow — top-left */}
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-amber-400/10 via-amber-500/5 to-transparent rounded-full blur-[130px]" />
-          {/* Deep blue-purple ambient — bottom-right */}
+          {/* Deep blue ambient — bottom-right */}
           <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-primary/10 via-secondary/6 to-transparent rounded-full blur-[120px]" />
           {/* Center spotlight behind chairman — radial gold glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-br from-amber-400/8 via-amber-500/4 to-transparent rounded-full blur-[150px] opacity-60" />
@@ -355,12 +355,12 @@ export default function Boards() {
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 25% 25%, white 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
             <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-orange-500/15 rounded-full blur-[100px] group-hover/cta:bg-orange-500/20 transition-all duration-700" />
-            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-sky-400/12 rounded-full blur-[100px] group-hover/cta:bg-sky-400/20 transition-all duration-700" />
+            <div className="absolute top-0 left-1/4 w-64 h-64 bg-tertiary/15 rounded-full blur-[100px] group-hover/cta:bg-tertiary/20 transition-all duration-700" />
+            <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary-light/10 rounded-full blur-[100px] group-hover/cta:bg-primary-light/20 transition-all duration-700" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-400/8 rounded-full blur-[120px]" />
 
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-400/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-sky-400/40 to-transparent" />
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-tertiary/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary-light/40 to-transparent" />
 
             <div className="relative px-8 py-20 md:px-20 md:py-24 text-center">
               <motion.span
@@ -372,7 +372,7 @@ export default function Boards() {
 
               <motion.h3 variants={fadeUp} className="text-3xl md:text-5xl font-bold text-white mb-5 leading-[1.15]">
                 Ready to Work With{' '}
-                <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-300 bg-clip-text text-transparent">Our Leadership</span>
+                <span className="bg-gradient-to-r from-amber-400 via-tertiary to-amber-300 bg-clip-text text-transparent">Our Leadership</span>
                 {' '}?
               </motion.h3>
 
@@ -385,7 +385,7 @@ export default function Boards() {
                   href="/contact"
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group/btn relative px-9 py-4 font-semibold rounded-2xl inline-flex items-center gap-3 overflow-hidden transition-all duration-500 bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-white shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_50px_rgba(249,115,22,0.5)]"
+                  className="group/btn relative px-9 py-4 font-semibold rounded-2xl inline-flex items-center gap-3 overflow-hidden transition-all duration-500 bg-gradient-to-r from-tertiary via-amber-500 to-tertiary text-white shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.5)]"
                 >
                   <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-all duration-700" />
                   <span className="relative z-10 flex items-center gap-2.5">

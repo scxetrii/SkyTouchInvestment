@@ -9,8 +9,8 @@ import { SectorHoverCard } from '../components/ui/sector-hover-card'
 const investmentHeroImage = 'https://img.lightshot.app/edM1-W54Ro2nYBDHgMMFJw.png'
 
 const portfolioPartners = [
-  { name: 'IME Prudential Insurance', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/imepraillogo.png', tint: 'from-sky-500/20 via-white to-sky-100' },
-  { name: 'Gaura Construction', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/gaurg.png', tint: 'from-emerald-500/20 via-white to-emerald-100' },
+  { name: 'IME Prudential Insurance', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/imepraillogo.png', tint: 'from-primary/15 via-white to-primary/5' },
+  { name: 'Gaura Construction', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/gaurg.png', tint: 'from-primary-light/20 via-white to-primary-light/10' },
   { name: 'Hathway Investment', logo: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/Hathway-Logo-2.png', tint: 'from-amber-500/20 via-white to-amber-100' },
 ]
 
@@ -24,7 +24,7 @@ const sectors = [
     details: 'Strategic private equity investments focused on businesses with clear expansion plans, disciplined governance, and long-term value creation potential across Nepal and the region.',
     image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80&fit=crop',
     pct: 65,
-    color: '#0ea5e9',
+    color: '#0f5fa8',
     folderColor: 'blue',
   },
   {
@@ -34,7 +34,7 @@ const sectors = [
     details: 'Renewable energy investments in hydropower and solar that support national energy security while delivering stable long-term returns.',
     image: 'https://imperialholdings.com.np/wp-content/uploads/2026/01/landscape-view-of-hydroelectric-power-plant-free-photo.jpg',
     pct: 48,
-    color: '#38bdf8',
+    color: '#3b9ae0',
     folderColor: 'blue',
   },
   {
@@ -44,8 +44,8 @@ const sectors = [
     details: 'Public market exposure across diversified listed sectors, targeting undervalued opportunities with strong fundamentals and market depth.',
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80',
     pct: 84,
-    color: '#0ea5e9',
-    folderColor: 'grey',
+    color: '#0f5fa8',
+    folderColor: 'blue',
   },
   {
     title: 'Real Estate',
@@ -54,7 +54,7 @@ const sectors = [
     details: 'Commercial and residential property projects in prime growth corridors, focused on rental yield, occupancy, and capital appreciation.',
     image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80',
     pct: 44,
-    color: '#f97316',
+    color: '#f59e0b',
     folderColor: 'orange',
   },
   {
@@ -64,7 +64,7 @@ const sectors = [
     details: 'Digital businesses, software platforms, and technology infrastructure that accelerate productivity and create scalable recurring revenue.',
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80',
     pct: 55,
-    color: '#0ea5e9',
+    color: '#0f5fa8',
     folderColor: 'blue',
   },
   {
@@ -74,8 +74,8 @@ const sectors = [
     details: 'Hospitality and tourism assets that benefit from Nepal growing visitor economy, premium destinations, and infrastructure upgrades.',
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80',
     pct: 43,
-    color: '#f97316',
-    folderColor: 'yellow',
+    color: '#f59e0b',
+    folderColor: 'orange',
   },
   {
     title: 'Healthcare',
@@ -84,8 +84,8 @@ const sectors = [
     details: 'Healthcare facilities and service businesses that address unmet demand for quality care, diagnostics, and medical infrastructure.',
     image: 'https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80',
     pct: 66,
-    color: '#0ea5e9',
-    folderColor: 'red',
+    color: '#0f5fa8',
+    folderColor: 'orange',
   },
   {
     title: 'Agriculture',
@@ -94,7 +94,7 @@ const sectors = [
     details: 'Agro-processing and sustainable farming initiatives designed to modernize rural value chains and strengthen food security.',
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80',
     pct: 40,
-    color: '#38bdf8',
+    color: '#3b9ae0',
     folderColor: 'orange',
   },
 ]
@@ -136,7 +136,7 @@ export default function Investment() {
 
             <ScrollReveal className="relative">
               <div className="relative rounded-[2rem] border border-slate-200 bg-white shadow-[0_28px_90px_rgba(15,23,42,0.08)] p-3 overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.12),transparent_35%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.14),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_35%)]" />
                 <img
                   src={investmentHeroImage}
                   alt="Original uploaded investment image"

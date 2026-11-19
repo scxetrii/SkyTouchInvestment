@@ -94,10 +94,10 @@ export default function Careers() {
         <ContainerScroll
           titleComponent={
             <>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-sky-400 via-blue-500 to-orange-400 bg-clip-text text-transparent">
-                Join Our <span className="bg-gradient-to-r from-sky-400 via-blue-500 to-orange-400 bg-clip-text text-transparent">Dynamic Team</span>
+              <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">
+                Join Our <span className="bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">Dynamic Team</span>
               </h2>
-              <p className="text-lg max-w-2xl mx-auto bg-gradient-to-r from-sky-400 via-blue-400 to-orange-400 bg-clip-text text-transparent">
+              <p className="text-lg max-w-2xl mx-auto bg-gradient-to-r from-primary via-primary-light to-tertiary bg-clip-text text-transparent">
                 Experience the innovation and culture that drives SkyTouch Investment & Consultant
               </p>
             </>

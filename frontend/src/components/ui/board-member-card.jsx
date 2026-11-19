@@ -70,7 +70,7 @@ export function BoardMemberCard({
         className="relative h-full"
       >
         <div className="relative h-full bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.08)] hover:shadow-[0_28px_80px_rgba(15,23,42,0.12)] transition-shadow duration-300 p-6 flex flex-col justify-between group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.10),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.08),transparent_30%)] opacity-90" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.10),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.08),transparent_30%)] opacity-90" />
           <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
 
           <div className="relative z-10">
@@ -134,7 +134,7 @@ export function BoardMemberCard({
               className="absolute inset-0 z-50 pointer-events-none"
             >
               <div className="relative h-full bg-white rounded-2xl overflow-hidden border-2 border-primary/35 shadow-2xl p-5 flex flex-col pointer-events-auto">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.10),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.08),transparent_30%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.10),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.08),transparent_30%)]" />
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
 
                 <div className="relative z-10 flex flex-col h-full overflow-y-auto custom-scrollbar">

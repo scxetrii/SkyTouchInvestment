@@ -69,14 +69,14 @@ const Globe = ({ className = '' }) => {
 
           <div className="absolute left-[58%] top-[46%] z-10 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <span className="relative flex h-4 w-4 items-center justify-center">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-tertiary shadow-[0_0_12px_rgba(245,158,11,0.9)]" />
             </span>
-            <span className="mt-1 rounded-full border border-red-400/40 bg-black/60 px-2 py-0.5 text-[9px] font-semibold tracking-[0.18em] text-red-300 backdrop-blur-sm">
+            <span className="mt-1 rounded-full border border-tertiary/40 bg-black/60 px-2 py-0.5 text-[9px] font-semibold tracking-[0.18em] text-tertiary-light backdrop-blur-sm">
               Nepal
             </span>
             {nepalTime && (
-              <span className="mt-0.5 rounded-full bg-black/60 px-1.5 py-0.5 text-[9px] font-mono font-semibold tracking-wider text-emerald-400 backdrop-blur-sm">
+              <span className="mt-0.5 rounded-full bg-black/60 px-1.5 py-0.5 text-[9px] font-mono font-semibold tracking-wider text-amber-300 backdrop-blur-sm">
                 {nepalTime}
               </span>
             )}

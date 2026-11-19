@@ -22,13 +22,13 @@ const sizeMap = {
 
 const colorMap = {
   blue: {
-    folder: "from-blue-400 to-blue-500",
-    flap: "bg-blue-300/50",
-    paperBack: "bg-blue-100/60",
-    paperFront: "bg-blue-50",
-    paperLine: "bg-blue-300/40",
-    paperBorder: "border-blue-200",
-    labelBg: "bg-blue-800/20",
+    folder: "from-primary-light to-primary",
+    flap: "bg-primary-light/40",
+    paperBack: "bg-primary/10",
+    paperFront: "bg-primary/5",
+    paperLine: "bg-primary-light/30",
+    paperBorder: "border-primary/20",
+    labelBg: "bg-primary-dark/20",
     folderBorder: "border-white/30",
   },
   black: {
@@ -52,13 +52,13 @@ const colorMap = {
     folderBorder: "border-white/30",
   },
   orange: {
-    folder: "from-orange-400 to-orange-500",
-    flap: "bg-orange-300/50",
-    paperBack: "bg-orange-100/60",
-    paperFront: "bg-orange-50",
-    paperLine: "bg-orange-400/40",
-    paperBorder: "border-orange-200",
-    labelBg: "bg-orange-900/20",
+    folder: "from-tertiary-light to-tertiary",
+    flap: "bg-amber-300/50",
+    paperBack: "bg-amber-100/60",
+    paperFront: "bg-amber-50",
+    paperLine: "bg-tertiary/40",
+    paperBorder: "border-amber-200",
+    labelBg: "bg-amber-900/20",
     folderBorder: "border-white/30",
   },
   red: {
@@ -116,7 +116,7 @@ export const Folder = ({
         className
       )}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.10),transparent_30%)] opacity-80" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.12),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.10),transparent_30%)] opacity-80" />
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary" />
       <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
 
@@ -198,7 +198,7 @@ export const Folder = ({
             className="absolute inset-0 z-20 pointer-events-none"
           >
             <div className="relative h-full rounded-[28px] border border-primary/30 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 p-4 shadow-2xl pointer-events-auto">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.12),transparent_30%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(15,95,168,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(245,158,11,0.12),transparent_30%)]" />
               <div className="relative z-10 flex h-full flex-col overflow-hidden">
                 {image && (
                   <div className="mb-3 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
