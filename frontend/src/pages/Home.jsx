@@ -316,6 +316,28 @@ export default function Home() {
 
         <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
 
+        {/* Decorative glow field spanning the full scroll height */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -left-28 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.16),transparent_65%)] blur-3xl" />
+          <div className="absolute top-[18%] -right-32 h-[460px] w-[460px] rounded-full bg-[radial-gradient(circle,rgba(212,160,23,0.13),transparent_65%)] blur-3xl" />
+          <div className="absolute top-[42%] -left-24 h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(59,154,224,0.14),transparent_65%)] blur-3xl" />
+          <div className="absolute top-[64%] -right-20 h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.12),transparent_65%)] blur-3xl" />
+          <div className="absolute bottom-0 left-[15%] h-[380px] w-[380px] rounded-full bg-[radial-gradient(circle,rgba(212,160,23,0.10),transparent_65%)] blur-3xl" />
+        </div>
+
+        {/* Subtle diagonal texture */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.035]" style={{ backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.8) 0px, rgba(255,255,255,0.8) 1px, transparent 1px, transparent 18px)' }} />
+
+        {/* Floating accent dots */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden hidden sm:block">
+          <span className="absolute top-[12%] left-[12%] h-1.5 w-1.5 rounded-full bg-emerald-300/50 animate-pulse" />
+          <span className="absolute top-[28%] right-[16%] h-2 w-2 rounded-full bg-gold/40 animate-pulse [animation-delay:1s]" />
+          <span className="absolute top-[46%] left-[20%] h-1 w-1 rounded-full bg-white/40 animate-pulse [animation-delay:2s]" />
+          <span className="absolute top-[60%] right-[10%] h-1.5 w-1.5 rounded-full bg-emerald-300/40 animate-pulse [animation-delay:0.5s]" />
+          <span className="absolute top-[76%] left-[10%] h-2 w-2 rounded-full bg-gold/30 animate-pulse [animation-delay:1.5s]" />
+          <span className="absolute bottom-[8%] right-[24%] h-1 w-1 rounded-full bg-white/30 animate-pulse [animation-delay:2.5s]" />
+        </div>
+
         <div className="hidden sm:block absolute top-0 left-[15%] w-[1px] h-24 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
         <div className="hidden sm:block absolute top-0 right-[20%] w-[1px] h-20 bg-gradient-to-b from-transparent via-white/15 to-transparent" />
         <div className="hidden sm:block absolute bottom-0 left-[25%] w-[1px] h-28 bg-gradient-to-b from-transparent via-white/20 to-transparent" />

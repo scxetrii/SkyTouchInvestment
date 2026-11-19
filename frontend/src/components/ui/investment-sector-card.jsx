@@ -105,10 +105,10 @@ export function InvestmentSectorCard() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover brightness-110 contrast-105 saturate-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/45 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
         <div className="absolute inset-x-0 top-0 h-[16px] bg-white/10 backdrop-blur-md border-b border-white/20 shadow-[0_8px_30px_rgba(255,255,255,0.08)]" />
         <div className="absolute inset-x-0 top-0 h-[2px] bg-white/35" />
         
